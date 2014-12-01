@@ -293,24 +293,56 @@ $(function () {
     if ($checkout.length == 1) {
 
 		//zoek alle payment methods
-    	var $paymentmethods = $('.paymentmethod');
+		var $payments = $('.paymentmethods');
+		var $paymentmethods = $('.paymentmethod');
 		 $paymentmethods.hide();
 
-		 $paymentmethods.filter('.paypal').show();
-		 $paymentmethods.filter('.mastercard').show();
-		 $paymentmethods.filter('.americanexpress').show();
-
         if (WebPage.Data.country == 'nl') {
-            $paymentmethods.filter('.ideal').show();
             $paymentmethods.filter('.account').show();
             $paymentmethods.filter('.manual').show();
         }
 
-
-        switch (WebPage.Data.country) {
+		var p = $paymentmethods.first();
+		switch (WebPage.Data.country) {
+			case 'nl':
+				p.before($paymentmethods.filter('.ideal').show())
+				p.before($paymentmethods.filter('.mastercard').show());
+				p.before($paymentmethods.filter('.paypal').show());
+				p.before($paymentmethods.filter('.visa').show());
+				p.before($paymentmethods.filter('.maestro').show());
+				p.before($paymentmethods.filter('.americanexpress').show());
+				p.before($paymentmethods.filter('.kbconline').show());
+				p.before($paymentmethods.filter('.bankcontactmrcash').show());
+				p.before($paymentmethods.filter('.cbconline').show());
+				p.before($paymentmethods.filter('.belfius').show());
+				break;
+			case 'be':
+				p.before($paymentmethods.filter('.mastercard').show());
+				p.before($paymentmethods.filter('.bankcontactmrcash').show());
+				p.before($paymentmethods.filter('.paypal').show());
+				p.before($paymentmethods.filter('.visa').show());
+				p.before($paymentmethods.filter('.kbconline').show());
+				p.before($paymentmethods.filter('.maestro').show());
+				p.before($paymentmethods.filter('.americanexpress').show());
+				p.before($paymentmethods.filter('.cbconline').show());
+				break;
 	    	case 'de':
-	    		$paymentmethods.filter('.bankcontactmrcash').show();
-	    		break;
+				p.before($paymentmethods.filter('.mastercard').show());
+				p.before($paymentmethods.filter('.sofortuberweisungde').show());
+				p.before($paymentmethods.filter('.paypal').show());
+				p.before($paymentmethods.filter('.manual').show());
+				p.before($paymentmethods.filter('.giropay').show());
+				p.before($paymentmethods.filter('.maestro').show());
+				p.before($paymentmethods.filter('.visa').show());
+				p.before($paymentmethods.filter('.americanexpress').show());
+				break;
+			case 'en':
+				p.before($paymentmethods.filter('.visa').show());
+				p.before($paymentmethods.filter('.mastercard').show());
+				p.before($paymentmethods.filter('.americanexpress').show());
+				p.before($paymentmethods.filter('.paypal').show());
+				p.before($paymentmethods.filter('.maestro').show());
+				break;
 	    }
 
 	    var labelMore = '';
