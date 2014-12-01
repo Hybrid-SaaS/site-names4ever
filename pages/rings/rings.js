@@ -76,6 +76,22 @@ var WebPage;
         function CheckTextSize() {
             var rest = WebPage.References.ringInfo.maxSize - WebPage.References.$ringName.val().length;
 
+            var displayText = '';
+            switch (WebPage.Data.language) {
+                case 'nl': {
+                    displayText = 'Maximaal <span>' + WebPage.References.ringInfo.maxSize + '</span> tekens, <span>' + rest + '</span> ' + (rest == 1 ? 'teken' : 'tekens') + ' resterend';
+                    break;
+                }
+                case 'de': {
+                    displayText = 'Max. <span>' + WebPage.References.ringInfo.maxSize + '</span> zeichen <span>' + rest + '</span> restliche zeichen';
+                    break;
+                }
+                case 'en': {
+                    displayText = 'Maximum of <span>' + WebPage.References.ringInfo.maxSize + '</span> character, <span>' + rest + '</span> ' + (rest == 1 ? 'character' : 'characters') + ' remaining';
+                    break;
+                }
+            }
+
             var word = (rest == 1) ? 'teken' : 'tekens';
 
             WebPage.References.$maxChars.html('Maximaal <span>' + WebPage.References.ringInfo.maxSize + '</span> tekens, <span>' + rest + '</span> ' + word + ' resterend');
@@ -85,7 +101,7 @@ var WebPage;
     var RingConfigurator = WebPage.RingConfigurator;
 })(WebPage || (WebPage = {}));
 
-WebPage.Events.on(1 /* Load */, function () {
+WebPage.Events.on(WebPage.EventType.Load, function () {
     init();
 
     WebPage.References.$ringName = $('#ringname');
