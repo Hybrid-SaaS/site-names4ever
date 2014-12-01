@@ -102,7 +102,7 @@ module WebPage {
                 }
                 case 'en':
                 {
-                    displayText = 'Maximum of <span>' + WebPage.References.ringInfo.maxSize + '</span> character, <span>' + rest + '</span> ' + (rest == 1 ? 'character' : 'characters') + ' remaining';
+                    displayText = 'Maximum of <span>' + WebPage.References.ringInfo.maxSize + '</span> characters, <span>' + rest + '</span> ' + (rest == 1 ? 'character' : 'characters') + ' remaining';
                     break;
                 }
             }
