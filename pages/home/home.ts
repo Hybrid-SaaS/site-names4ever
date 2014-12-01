@@ -61,8 +61,35 @@ $(() => {
                 $deal.append($img);
 
                 $deal.append($('<div class="title"></div>').text(product.description));
-                $deal.append($('<div class="price-original"></div>').text('Van € ' + product['price-original'].toFixed(2).replace('.', ',')));
-                $deal.append($('<div class="price"></div>').text('Voor € ' + product.price.toFixed(2).replace('.', ',')));
+
+
+                var from = '';
+                var to = '';
+                switch (WebPage.Data.language) {
+                case 'nl':
+                {
+
+                    from = 'Van';
+                    to = 'Voor';
+                    break;
+                }
+                case 'de':
+                {
+                    from = 'Bisher';
+                    to = 'Kurtzzeitig';
+                    break;
+                }
+                case 'en':
+                {
+                    from = 'From';
+                    to = 'Only';
+                    break;
+                }
+                }
+
+
+                $deal.append($('<div class="price-original"></div>').text(from + ' € ' + product['price-original'].toFixed(2).replace('.', ',')));
+                $deal.append($('<div class="price"></div>').text(to + ' € ' + product.price.toFixed(2).replace('.', ',')));
 
                 $deal.attr({ 'title': product.productcode + '\n' + product.description });
 
