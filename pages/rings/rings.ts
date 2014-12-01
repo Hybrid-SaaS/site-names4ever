@@ -107,9 +107,7 @@ module WebPage {
                 }
             }
 
-            var word = (rest == 1) ? 'teken' : 'tekens';
-
-            WebPage.References.$maxChars.html('Maximaal <span>' + WebPage.References.ringInfo.maxSize + '</span> tekens, <span>' + rest + '</span> ' + word + ' resterend');
+            WebPage.References.$maxChars.html(displayText);
         }
     }
 }
