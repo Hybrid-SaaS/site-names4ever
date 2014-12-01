@@ -1,6 +1,7 @@
 /// <reference path="../../definition/jquery.d.ts" />
 
 declare var ga: any;
+declare var beslistQueue: any;
 
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -12,6 +13,7 @@ function getParameterByName(name) {
 $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByName('hash'))
     .done((data) => {
         ga('require', 'ecommerce');
+        var orderdata = [];
         for (var x = 0; x < data.orderLines.length; x++) {
             var orderLine = data.orderLines[x];
             ga('ecommerce:addItem', {
@@ -22,7 +24,26 @@ $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByNam
                 price: orderLine.priceIncludingVat.toFixed(2), // Stukprijs - VERPLICHT (Geen euroteken meegeven)
                 quantity: orderLine.amount // Aantal - VERPLICHT
             });
+
+            orderdata.push([orderLine.productCode, orderLine.amount, orderLine.priceIncludingVat]);
         }
         ga('ecommerce:send');
+
+        // Beslist Nederland
+        beslistQueue = [];
+        beslistQueue.push(['setShopId', '3JHCC39SN']);
+        beslistQueue.push(['cps', 'setTestmode', false]);
+        beslistQueue.push(['cps', 'setTransactionId', data.orderNumber]);
+        beslistQueue.push(['cps', 'setOrdersum', data.totalIncludingVat]);
+        beslistQueue.push(['cps', 'setOrderCosts', 0.00]);
+        beslistQueue.push(['cps', 'setOrderProducts', orderdata]);
+        beslistQueue.push(['cps', 'trackSale']);
+        (function () {
+            var ba = document.createElement('script');
+            ba.async = true;
+            ba.src = '//pt1.beslist.nl/pt.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ba, s);
+        })();
 
     });
