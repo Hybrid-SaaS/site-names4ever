@@ -1,0 +1,337 @@
+//basis breedte
+@width-base: 200px;
+
+//offset breedte
+@offset-base: 10px;
+
+//pagina breedte:
+@width-page: 1060px;
+
+//hoogte van het logo:
+@height-logo: 125px;
+//hoogte van de wrappers in header
+@height-wrapper: 50px;
+@height-wrapper2: 70px;
+
+//breedte van het logo:
+@width-logo: 125px;
+
+@offset-default: 200px;
+@color-highlight: #8C3292;
+@color-normal: #707070;
+@color-darker: #545454;
+@color-border: #efebe8;
+@color-background: #F4F4F2;
+
+//logos social media:
+@facebook : url(../icon-facebook.svg);
+@youtube: url(../icon-youtube.svg);
+@pinterest: url(../icon-pinterest.svg);
+@copyright: url(../icon-copyright.svg);
+
+//global
+.names4ever {
+    .column {
+        width: @offset-default + @offset-base;
+        display: table-cell;
+        vertical-align: top;
+
+        &.x4 {
+            width: (@offset-default + @offset-base) * 4;
+        }
+        &.x3 {
+            width: (@offset-default + @offset-base) * 3;
+        }
+        &.x2 {
+            width: (@offset-default + @offset-base) * 2;
+        }
+    }
+
+
+
+    .wrapper {
+        width: @width-page;
+        margin: auto;
+        vertical-align: top;
+        
+    }
+}
+
+#header {
+    .names4ever {
+    
+        height: @height-wrapper;
+        margin-top: 20px;
+        margin-bottom: @height-wrapper2;
+        border-top: solid 1px @color-border;
+        border-bottom: solid 1px @color-border;
+        background-color: @color-background;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
+
+        .wrapper {
+            height: @height-wrapper;
+            //2e rij:
+            &.second {
+                color: @color-normal;
+                font-weight: bold;
+                height: @height-wrapper2;
+
+                .column {
+                    padding-top: 25px;
+                    float:left;
+                    font-size:17px;
+
+                    &.trust {
+                        padding-top: 15px;
+                    }
+
+                    &.phone {
+                        padding-top: 20px;
+                        color: @color-highlight;
+                        font-size: 27px;
+                        text-align: right;
+
+                        a {
+                            color: @color-highlight;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .verisign {
+                        position: absolute;
+                        margin-left: -8px;
+                    }
+                }
+            }
+
+            .logo {
+                position: absolute;
+                width: @width-logo;
+                height: @height-logo;
+                margin-top: -17px;
+                margin-left: (@offset-default - @width-logo)/2;
+                -webkit-filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15));
+                -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+                filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+            }
+
+
+
+
+            .slogan {
+                margin-top: 13px;
+                position: absolute;
+            }
+
+
+            .cart {
+                text-align: right;
+            }
+
+            .cart-wrap {
+                display: inline-block;
+                font-weight: bold;
+                font-size: 15px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: @color-highlight;
+                }
+
+
+                .image, .text {
+                    padding-top: 4px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: right;
+                }
+
+                .text {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    .names4ever {
+        margin-top: 50px;
+        border-top: solid 1px @color-border;
+        border-bottom: solid 1px @color-border;
+        background-color: @color-background;
+        box-shadow: 0 0 4px rgba(0,0,0,0.15);
+        padding: @offset-base*2 0 0 0;
+
+
+
+        .logo {
+            width: 115px;
+            height: 115px;
+            display: block;
+            margin: auto;
+            -webkit-filter: drop-shadow(5px 5px 10px rgba(0,0,0,.15));
+            -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+            filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        }
+
+        .name {
+            margin-top: 2px;
+            font-weight: bold;
+            font-size: 22px;
+            color: @color-darker;
+            text-align: center;
+        }
+
+        .contact {
+            font-weight: bold;
+            text-align: center;
+            color: @color-darker;
+
+            a {
+                color: @color-darker;
+                text-decoration: none;
+
+                &:hover {
+                    color: @color-highlight;
+                }
+            }    
+            
+            .mail {
+                margin-right:3px;
+            }        
+        }
+
+
+        .trust {
+            margin-top: 20px;
+            background-color: white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-top: solid 7px @color-border;
+            li.copyright {
+                background: @copyright left center no-repeat;
+                padding-left:15px;
+                background-size: 12px;
+            }
+        }
+
+        #menulocation {
+            nav {
+                & > ul {
+
+                    li {
+                        margin-top: 10px;
+                    }
+                    
+                    .col2 {
+                        margin-left: 10px;
+                        width: 200px;
+                    }
+
+                    .col2, .col3,  {
+                        height: 200px;
+                    }
+
+                    .col4a, .col4b, .col5a, .col5b {
+                        height:100px;
+                    }
+                    .col4b {
+                        position : relative;
+                        top:6px;
+                    }
+
+                    & > li {
+                        width: 210px;
+                        float: left;
+                        color: @color-highlight;
+                        //text-transform: uppercase;
+                        //font-weight: bold;
+                        font-size: 18px;
+
+                        ul {
+                            text-transform: none;
+                            font-size: 14px;
+
+                            a {
+                                color: @color-darker;
+                                text-decoration: none;
+
+                                &:hover {
+                                    color: @color-highlight;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social {
+              display: inline-block;
+              margin-right: 12px;
+              -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+              -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+              filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+
+              }
+            #facebook {
+              a {
+                background: @facebook;
+                background-size:50px;
+                display: block;
+                width:50px;
+                height:50px;
+              }
+            }
+            #youtube {
+              a {
+              background: @youtube;
+              background-size:50px;
+              display: block;
+              width:50px;
+              height:50px;
+              }
+            }
+            #pinterest {
+              a {
+              background: @pinterest;
+              background-size:50px;
+              display: block;
+              width:50px;
+              height:50px;
+              }
+            }
+        }
+
+        #menulocation2 {
+            text-align: right;
+            font-size: 14px;
+
+            li {
+                display: inline-block;
+                margin-left: 40px;
+                color: @color-normal;
+                float:right;
+
+                a {
+                    text-decoration: none;
+                    color: @color-normal;
+
+                    &:hover {
+                        color: @color-highlight;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #top {
+        display: none;
+    }
+
+    #bottommenu, #bottommenu2 {
+        display: none;
+    }
