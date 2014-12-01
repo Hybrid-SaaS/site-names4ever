@@ -1,4 +1,4 @@
-.names4ever .column {
+﻿.names4ever .column {
   width: 210px;
   display: table-cell;
   vertical-align: top;
@@ -144,42 +144,42 @@
   padding-left: 15px;
   background-size: 12px;
 }
-#footer .names4ever #menulocation nav  > ul li {
+#footer .names4ever #menulocation nav > ul li {
   margin-top: 10px;
 }
-#footer .names4ever #menulocation nav  > ul .col2 {
+#footer .names4ever #menulocation nav > ul .col2 {
   margin-left: 10px;
   width: 200px;
 }
-#footer .names4ever #menulocation nav  > ul .col2,
-#footer .names4ever #menulocation nav  > ul .col3 {
+#footer .names4ever #menulocation nav > ul .col2,
+#footer .names4ever #menulocation nav > ul .col3 {
   height: 200px;
 }
-#footer .names4ever #menulocation nav  > ul .col4a,
-#footer .names4ever #menulocation nav  > ul .col4b,
-#footer .names4ever #menulocation nav  > ul .col5a,
-#footer .names4ever #menulocation nav  > ul .col5b {
+#footer .names4ever #menulocation nav > ul .col4a,
+#footer .names4ever #menulocation nav > ul .col4b,
+#footer .names4ever #menulocation nav > ul .col5a,
+#footer .names4ever #menulocation nav > ul .col5b {
   height: 100px;
 }
-#footer .names4ever #menulocation nav  > ul .col4b {
+#footer .names4ever #menulocation nav > ul .col4b {
   position: relative;
   top: 6px;
 }
-#footer .names4ever #menulocation nav  > ul  > li {
+#footer .names4ever #menulocation nav > ul > li {
   width: 210px;
   float: left;
   color: #8c3292;
   font-size: 18px;
 }
-#footer .names4ever #menulocation nav  > ul  > li ul {
+#footer .names4ever #menulocation nav > ul > li ul {
   text-transform: none;
   font-size: 14px;
 }
-#footer .names4ever #menulocation nav  > ul  > li ul a {
+#footer .names4ever #menulocation nav > ul > li ul a {
   color: #545454;
   text-decoration: none;
 }
-#footer .names4ever #menulocation nav  > ul  > li ul a:hover {
+#footer .names4ever #menulocation nav > ul > li ul a:hover {
   color: #8c3292;
 }
 #footer .names4ever #menulocation .social {
@@ -234,3 +234,52 @@
 #bottommenu2 {
   display: none;
 }
+.language-nl .product-right .product-options .header:after,
+.language-de .product-right .product-options .header:after,
+language-en .product-right .product-options .header:after {
+  background-image: url('personaliseer.png');
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.25);
+  width: 399px;
+  height: 51px;
+  display: block;
+  font-size: 16pt;
+  padding-top: 8px;
+  position: absolute;
+}
+.language-nl .product-right .product-options .footer:after,
+.language-de .product-right .product-options .footer:after,
+language-en .product-right .product-options .footer:after {
+  background-image: url('personaliseer-onder.png');
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.25);
+  height: 42px;
+  width: 386px;
+  display: block;
+  font-size: 14pt;
+  padding-top: 8px;
+  position: absolute;
+}
+.language-nl .product-right .product-options .header:after {
+  content: 'Personaliseer je sierraad';
+}
+.language-nl .product-right .product-options .footer:after {
+  content: 'Altijd gratis verzending!';
+}
+.language-de .product-right .product-options .header:after {
+  content: 'Personalisieren Sie Ihren Schmuck';
+}
+.language-de .product-right .product-options .footer:after {
+  content: 'Versandkostenfreie lieferung!';
+}
+.language-en .product-right .product-options .header:after {
+  content: 'Personalise Your Jewellry';
+}
+.language-en .product-right .product-options .footer:after {
+  content: 'Always Free Shipping!';
+}
+/*# sourceMappingURL=names4ever.css.map */
