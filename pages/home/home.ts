@@ -76,7 +76,7 @@ $(() => {
                 case 'de':
                 {
                     from = 'Bisher';
-                    to = 'Kurtzzeitig';
+                    to = 'Jetzt';
                     break;
                 }
                 case 'en':
