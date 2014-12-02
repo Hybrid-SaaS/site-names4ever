@@ -24,6 +24,8 @@ $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByNam
     }
     ga('ecommerce:send');
 
+    console.log(orderdata);
+
     // Beslist Nederland
     beslistQueue = [];
     beslistQueue.push(['setShopId', '3JHCC39SN']);
