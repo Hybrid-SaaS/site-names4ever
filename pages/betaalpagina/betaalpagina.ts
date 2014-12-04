@@ -12,7 +12,16 @@ function getParameterByName(name) {
 
 $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByName('hash'))
     .done((data) => {
-        ga('require', 'ecommerce');
+        ga('require', 'ecommerce', 'ecommerce.js');
+
+        ga('ecommerce:addTransaction', {
+            id: data.orderNumber,
+            affiliation: 'Names4Ever',
+            revenue: data.totalExcludingVat.toFixed(2),
+            shipping: '0',
+            tax: data.totalVat.toFixed(2)
+        });
+
         var orderdata = [];
         for (var x = 0; x < data.orderLines.length; x++) {
             var orderLine = data.orderLines[x];
