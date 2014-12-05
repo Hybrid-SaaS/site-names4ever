@@ -120,6 +120,16 @@ u{
 
 
 .maincontent {
+    font-size: 10pt;
+    width: @width-page;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: @color-background-frame;
+    min-height: 500px;
+    border: solid 3px @color-border;
+    border-radius: @borderRadius;
+    box-shadow: @box-shadow-frame;
+    padding-bottom: 30px;
 
     &.nomenu {
 
@@ -311,15 +321,7 @@ u{
         }
     }
 
-    font-size: 10pt;
-    width: @width-page;
-    margin: auto;
-    margin-bottom: 20px;
-    background-color: @color-background-frame;
-    min-height: 500px;
-    border: solid 3px @color-border;
-    border-radius: @borderRadius;
-    box-shadow: @box-shadow-frame;
+    
     //top menu
     .topmenu {
         padding: @offset-base;
@@ -381,7 +383,6 @@ u{
             vertical-align: top;
             width: @width-base - 10px;
             margin-right: 10px;
-            margin-bottom: 30px;
 
             ul {
                 margin: 0;
