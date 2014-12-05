@@ -153,19 +153,16 @@ u{
             min-height: 500px;
 
             .fb-like-box {
-                width: @width-base;
+                width: @width-base - 15px;
                 max-width: @width-base;
-                height: 410px;
+                height: 440px;
                 margin-top: 2.5 * @offset-base;
                 margin-bottom: @offset-base;
-                //margin-left: @offset-base * 2 + 1px; //minus 2 voor 2xborder
-                border: solid 1px silver;
-                border-radius: @borderRadius;
-                box-shadow: @box-shadow-frame;
+                margin-left: @offset-base;
                 overflow: hidden;
 
                 iframe {
-                    height: 410px !important;
+                    height: 440px !important;
                 }
             }
         }

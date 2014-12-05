@@ -79,18 +79,16 @@ u {
   min-height: 500px;
 }
 .maincontent #columns .main-column-left .fb-like-box {
-  width: 200px;
+  width: 185px;
   max-width: 200px;
-  height: 410px;
+  height: 440px;
   margin-top: 25px;
   margin-bottom: 10px;
-  border: solid 1px silver;
-  border-radius: 0.75em;
-  box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
+  margin-left: 10px;
   overflow: hidden;
 }
 .maincontent #columns .main-column-left .fb-like-box iframe {
-  height: 410px !important;
+  height: 440px !important;
 }
 .maincontent #columns .main-column-right {
   padding-left: 10px;
