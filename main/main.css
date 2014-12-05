@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: #ffffff;
+  background-color: white;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
 }
@@ -55,7 +55,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: white;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -144,7 +144,7 @@ u {
 .maincontent #columns .main-column-right .container .product {
   background: none !important;
   background: #FFFFFF;
-  min-height: 275px;
+  min-height: 225px;
   max-height: 275px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #D5D5CE;
@@ -172,6 +172,7 @@ u {
   font-size: 22px;
   margin-top: 10px;
   height: 30px;
+  display: none;
 }
 .maincontent #columns .main-column-right .container .product a {
   font-weight: bold;
@@ -253,11 +254,12 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: #ffffff;
+  background: white;
   display: inline-block;
   vertical-align: top;
   width: 190px;
   margin-right: 10px;
+  margin-bottom: 30px;
 }
 .maincontent .menucontent nav ul {
   margin: 0;
@@ -308,7 +310,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -370,7 +372,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -549,7 +551,7 @@ u {
   top: 1px;
 }
 #message-container {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
@@ -558,6 +560,9 @@ u {
   overflow: hidden;
 }
 #message-container .message {
+  -webkit-background-size: 40px 40px;
+  -moz-background-size: 40px 40px;
+  -o-background-size: 40px 40px;
   background-size: 40px 40px;
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.25, rgba(255, 255, 255, 0.05)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.05)), color-stop(0.75, rgba(255, 255, 255, 0.05)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent);
@@ -627,31 +632,5 @@ u {
   box-shadow: 4px 2px 9px rgba(0, 0, 0, 0.4);
   border: solid 1px gray;
   text-shadow: 1px 1px 2px rgba(244, 244, 244, 0.4);
-}
-.flags .flag {
-  width: 16px;
-  height: 11px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  display: inline-block;
-  margin-top: 20px;
-  margin-right: 4px;
-  cursor: pointer;
-}
-.flags .flag:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-  -moz-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
-  -o-transform: rotate(15deg);
-  -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);
-}
-.flags .flag.nl {
-  background-image: url(//hybridsaasblob.blob.core.windows.net/aspekto-public/website/images/flags/nl.png);
-}
-.flags .flag.de {
-  background-image: url(//hybridsaasblob.blob.core.windows.net/aspekto-public/website/images/flags/de.png);
-}
-.flags .flag.en {
-  background-image: url(//hybridsaasblob.blob.core.windows.net/aspekto-public/website/images/flags/en.png);
 }
 /*# sourceMappingURL=main.css.map */
