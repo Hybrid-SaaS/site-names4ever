@@ -346,7 +346,7 @@ $(function () {
                 p.before($paymentmethods.filter('.visa').show());
                 p.before($paymentmethods.filter('.americanexpress').show());
                 break;
-            case 'en':
+            case 'gb':
                 p.before($paymentmethods.filter('.visa').show());
                 p.before($paymentmethods.filter('.mastercard').show());
                 p.before($paymentmethods.filter('.americanexpress').show());
