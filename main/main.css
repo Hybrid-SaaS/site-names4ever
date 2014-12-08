@@ -407,8 +407,6 @@ u {
   font-size: 15px;
   letter-spacing: 1px;
   font-weight: bold;
-  display: inline-table;
-  width: 50%;
 }
 .defaultStyle .input-text {
   border: solid 1px steelblue;
@@ -433,10 +431,6 @@ u {
 }
 .defaultStyle .input-text:focus {
   background-image: none;
-}
-.defaultStyle .input-row {
-  width: 50%;
-  display: inline-table;
 }
 .defaultStyle .input-row .label {
   font-size: 15px;
@@ -507,6 +501,9 @@ u {
   vertical-align: text-top;
   margin-top: 1px;
   margin-right: 6px;
+}
+.checkout {
+  min-height: 700px;
 }
 .checkout .paymentmethods {
   width: 47%;
