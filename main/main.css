@@ -404,7 +404,7 @@ u {
   color: darkorange;
   margin-bottom: 5px;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
   font-weight: bold;
   display: inline-table;
@@ -527,7 +527,7 @@ u {
 }
 .checkout .paymentmethods .paymentmethod .text {
   float: left;
-  width: 100%;
+  width: 60%;
   font-size: 14px;
 }
 .checkout .paymentmethods .paymentmethod .extra {
@@ -535,8 +535,8 @@ u {
 }
 .checkout .paymentmethods .paymentmethod .options .idealBank {
   margin-top: 3px !important;
-  widht: 200px !important;
-  font-size: 14px;
+  width: 200px !important;
+  font-size: 14px !important;
 }
 .buttonlink {
   cursor: pointer;
