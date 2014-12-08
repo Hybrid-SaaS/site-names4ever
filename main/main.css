@@ -396,9 +396,8 @@ u {
 }
 .defaultStyle .header-big {
   color: steelblue;
-  margin-bottom: 10px;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 .defaultStyle .header-small {
@@ -408,12 +407,14 @@ u {
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: bold;
+  display: inline-table;
+  width: 50%;
 }
 .defaultStyle .input-text {
   border: solid 1px steelblue;
   background-color: #ffd;
   border-radius: 2px;
-  font-size: 11px;
+  font-size: 14px;
   padding: 2px;
   color: #333;
   margin: 0;
@@ -433,11 +434,18 @@ u {
 .defaultStyle .input-text:focus {
   background-image: none;
 }
+.defaultStyle .input-row {
+  width: 50%;
+  display: inline-table;
+}
+.defaultStyle .input-row .label {
+  font-size: 15px;
+}
 .defaultStyle .input-pulldown {
   background-color: #ffd;
   border: solid 1px steelblue;
   border-radius: 2px;
-  font-size: 11px;
+  font-size: 15px;
   padding: 2px;
   color: #333;
   margin: 0;
@@ -454,6 +462,10 @@ u {
 }
 .defaultStyle .input-label {
   color: darkgreen;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: inline-table;
+  width: 50%;
 }
 .defaultStyle .input-label:hover {
   color: darkorange;
@@ -494,6 +506,37 @@ u {
   vertical-align: text-top;
   margin-top: 1px;
   margin-right: 6px;
+}
+.checkout .paymentmethods {
+  float: right;
+  width: 48%;
+  margin-top: -530px;
+}
+.checkout .paymentmethods .paymentmethod {
+  height: 58px;
+  width: 205px !important;
+  padding-top: 5px !important;
+  border-radius: 7px !important;
+}
+.checkout .paymentmethods .paymentmethod .image {
+  height: 5px !important;
+}
+.checkout .paymentmethods .paymentmethod .image img {
+  height: 40px !important;
+  float: right;
+}
+.checkout .paymentmethods .paymentmethod .text {
+  float: left;
+  width: 100%;
+  font-size: 14px;
+}
+.checkout .paymentmethods .paymentmethod .extra {
+  display: none;
+}
+.checkout .paymentmethods .paymentmethod .options .idealBank {
+  margin-top: 3px !important;
+  widht: 200px !important;
+  font-size: 14px;
 }
 .buttonlink {
   cursor: pointer;
