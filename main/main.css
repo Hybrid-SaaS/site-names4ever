@@ -494,7 +494,10 @@ u {
   top: 1px;
 }
 .defaultStyle label {
-  font-size: 12px;
+  font-size: 12px 3px;
+}
+.defaultStyle label .text {
+  font-size: 14px;
 }
 .defaultStyle label input[type=checkbox] {
   float: left;
