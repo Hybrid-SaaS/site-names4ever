@@ -526,6 +526,7 @@ u {
 }
 .checkout .paymentmethods .paymentmethod .image img {
   height: 40px !important;
+  width: 72px !important;
   float: right;
 }
 .checkout .paymentmethods .paymentmethod .text {
