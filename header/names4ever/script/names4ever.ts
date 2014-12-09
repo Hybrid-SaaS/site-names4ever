@@ -335,7 +335,27 @@ $(function () {
 				p.before($paymentmethods.filter('.maestro').show());
 				p.before($paymentmethods.filter('.visa').show());
 				p.before($paymentmethods.filter('.americanexpress').show());
-				break;
+                break;
+            case 'at':
+                p.before($paymentmethods.filter('.mastercard').show());
+                p.before($paymentmethods.filter('.sofortuberweisungde').show());
+                p.before($paymentmethods.filter('.paypal').show());
+                p.before($paymentmethods.filter('.manual').show());
+                p.before($paymentmethods.filter('.giropay').show());
+                p.before($paymentmethods.filter('.maestro').show());
+                p.before($paymentmethods.filter('.visa').show());
+                p.before($paymentmethods.filter('.americanexpress').show());
+                break;
+            case 'ch':
+                p.before($paymentmethods.filter('.mastercard').show());
+                p.before($paymentmethods.filter('.sofortuberweisungde').show());
+                p.before($paymentmethods.filter('.paypal').show());
+                p.before($paymentmethods.filter('.manual').show());
+                p.before($paymentmethods.filter('.giropay').show());
+                p.before($paymentmethods.filter('.maestro').show());
+                p.before($paymentmethods.filter('.visa').show());
+                p.before($paymentmethods.filter('.americanexpress').show());
+                break;
 			case 'gb':
 				p.before($paymentmethods.filter('.visa').show());
 				p.before($paymentmethods.filter('.mastercard').show());
@@ -353,7 +373,15 @@ $(function () {
 
 	    	case 'de':
 	    		labelMore = 'Zeige mehr Zahlungsmethoden';
-	    		break;
+                break;
+
+            case 'at':
+                labelMore = 'Zeige mehr Zahlungsmethoden';
+                break;
+
+            case 'ch':
+                labelMore = 'Zeige mehr Zahlungsmethoden';
+                break;
 
 	    	default:
 	    		labelMore = 'Show more paymentmethods';
