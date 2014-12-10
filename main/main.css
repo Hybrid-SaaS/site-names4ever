@@ -175,6 +175,7 @@ u {
 }
 .maincontent #columns .main-column-right .container .product a {
   font-weight: bold;
+  font-size: 10px;
 }
 .maincontent #columns .main-column-right .container .product a:visited {
   color: #0066ee;
@@ -182,6 +183,8 @@ u {
 .maincontent #columns .main-column-right .container .product a .title {
   color: #5d5d5d;
   height: 50px;
+  width: 182px;
+  font-size: 13px;
 }
 .maincontent #columns .main-column-right .container .product.hover .details {
   display: block;
@@ -195,9 +198,7 @@ u {
   display: none;
 }
 .maincontent #columns .main-column-right .container a {
-  display: inline-block;
-  margin-left: 0;
-  margin-right: 15px;
+  float: left;
 }
 .maincontent #columns .main-column-right .container a .path {
   width: 405px;
