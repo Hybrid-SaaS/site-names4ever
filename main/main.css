@@ -132,6 +132,7 @@ u {
 .maincontent #columns .main-column-right .container {
   width: 840px;
   margin: 0;
+  float: left;
 }
 .maincontent #columns .main-column-right .container .product.hover .price {
   position: relative;
@@ -145,7 +146,8 @@ u {
   background: #FFFFFF;
   min-height: 225px;
   max-height: 275px;
-  margin-right: 6px !important;
+  margin-right: 10px !important;
+  float: left;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #D5D5CE;
 }
@@ -208,6 +210,7 @@ u {
 .maincontent #columns .main-column-right .usercontent.below {
   margin-bottom: 50px;
   padding-right: 20px;
+  float: left;
 }
 .maincontent.hasmenu .content {
   width: 858px;
