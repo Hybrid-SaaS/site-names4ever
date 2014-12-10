@@ -203,6 +203,7 @@ u {
 .maincontent #columns .main-column-right .container a {
   float: left;
   margin-right: 15px;
+  margin-left: 0;
 }
 .maincontent #columns .main-column-right .container a .path {
   width: 405px;
