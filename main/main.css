@@ -202,6 +202,7 @@ u {
 }
 .maincontent #columns .main-column-right .container a {
   float: left;
+  margin-right: 15px;
 }
 .maincontent #columns .main-column-right .container a .path {
   width: 405px;
