@@ -147,7 +147,6 @@ u {
   max-height: 275px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #D5D5CE;
-  width: 15em !important;
 }
 .maincontent #columns .main-column-right .container .product:hover {
   border: 1px solid #707070;
