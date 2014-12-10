@@ -145,6 +145,7 @@ u {
   background: #FFFFFF;
   min-height: 225px;
   max-height: 275px;
+  margin-right: 6px !important;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #D5D5CE;
 }
