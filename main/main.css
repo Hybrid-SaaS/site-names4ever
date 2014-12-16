@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: white;
+  background-color: #ffffff;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
 }
@@ -40,6 +40,32 @@ u {
   font-size: 12px;
   color: red;
 }
+.flags .flag {
+  width: 16px;
+  height: 11px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.flags .flag.nl {
+  background-image: url(//hybridsaasblob.blob.core.windows.net/aspekto-public/website/images/flags/nl.png);
+}
+.flags .flag.de {
+  background-image: url(//hybridsaasblob.blob.core.windows.net/aspekto-public/website/images/flags/de.png);
+}
+.flags .flag.en {
+  background-image: url(//hybridsaasblob.blob.core.windows.net/aspekto-public/website/images/flags/en.png);
+}
+.flags .flag:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
 .logged-in {
   padding: 10px;
   border: solid 1px #ffacac;
@@ -55,7 +81,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #ffffff;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -263,7 +289,7 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: white;
+  background: #ffffff;
   display: inline-block;
   vertical-align: top;
   width: 190px;
@@ -318,7 +344,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: white;
+  background-color: #ffffff;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -380,7 +406,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: white;
+  background-color: #ffffff;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
