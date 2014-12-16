@@ -542,4 +542,66 @@ $(function () {
         });
     }
     ;
+
+    $('#newsletter').append('<input class="ph" type="text" value="e-mail" id="newsletter_input" style="display: inline; width: 140px; font-size: 14px; font-style: italic; color: #888;"></input><input type="button" id="mailBtn" value="Ok" style="display: inline; height: 22px; margin-left: 5px; top: -1px; position: relative; font-size: 12px;"></input><span id="doneMsg" style="float: left; color: red; font-size: 12px;"></span>').on('focusin', "#newsletter_input", function () {
+        var styles = {
+            fontStyle: "normal",
+            color: "black"
+        };
+        if ($(this).hasClass('ph')) {
+            $(this).val('').css(styles);
+        }
+    }).on('focusout', "#newsletter_input", function () {
+        if (!$(this).val()) {
+            var styles = {
+                fontStyle: "italic",
+                color: "#888"
+            };
+            $(this).addClass('ph');
+            $(this).val('e-mail').css(styles);
+        } else {
+            $(this).removeClass('ph');
+        }
+    }).on('click', "#mailBtn", function () {
+        var mail = $('#newsletter_input').val();
+        if (isValidEmailAddress(mail)) {
+            $.ajax({
+                type: "POST",
+                url: "test.html",
+                data: {
+                    mail: $('#newsletter_input').val()
+                }
+            }).done(function () {
+                $('#doneMsg').text('');
+                $('#doneMsg').text('Ingeschreven voor de nieuwsbrief');
+            }).fail(function () {
+                $('#doneMsg').text('');
+                $('#doneMsg').text('Fout bij het inschrijven');
+            });
+        } else {
+            $('#doneMsg').text('');
+            $('#doneMsg').text('Fout bij het inschrijven');
+        }
+    });
+
+    function isValidEmailAddress(emailAddress) {
+        var sQtext = '[^\\x0d\\x22\\x5c\\x80-\\xff]';
+        var sDtext = '[^\\x0d\\x5b-\\x5d\\x80-\\xff]';
+        var sAtom = '[^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+';
+        var sQuotedPair = '\\x5c[\\x00-\\x7f]';
+        var sDomainLiteral = '\\x5b(' + sDtext + '|' + sQuotedPair + ')*\\x5d';
+        var sQuotedString = '\\x22(' + sQtext + '|' + sQuotedPair + ')*\\x22';
+        var sDomainRef = sAtom;
+        var sSubDomain = '(' + sDomainRef + '|' + sDomainLiteral + ')';
+        var sWord = '(' + sAtom + '|' + sQuotedString + ')';
+        var sDomain = sSubDomain + '(\\x2e' + sSubDomain + ')*';
+        var sLocalPart = sWord + '(\\x2e' + sWord + ')*';
+        var sAddrSpec = sLocalPart + '\\x40' + sDomain;
+        var sValidEmail = '^' + sAddrSpec + '$';
+
+        var reValidEmail = new RegExp(sValidEmail);
+
+        return reValidEmail.test(emailAddress);
+    }
+    ;
 });
