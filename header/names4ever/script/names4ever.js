@@ -423,7 +423,10 @@ $(function () {
 
     for (var x = 0; x < $flags.length; x++) {
         var $flag = $flags.eq(x);
-        if ($flag.data('flag') == WebPage.Data.country)
+        if ($flag.data('flag') == WebPage.Data.language)
+            $flag.hide();
+
+        if ($flag.data('flag') == 'en' && WebPage.Data.language == 'fr')
             $flag.hide();
     }
 
@@ -439,7 +442,7 @@ $(function () {
                     location.href = 'https://www.namesforever.de/product/' + webData.productGuid;
                     return;
                 case 'en':
-                    location.href = 'https://www.namenecklace.co.uk/product/' + webData.productGuid;
+                    location.href = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
                     return;
             }
         }
@@ -452,7 +455,7 @@ $(function () {
                 location.href = 'https://www.namesforever.de/';
                 return;
             case 'en':
-                location.href = 'https://www.namenecklace.co.uk/';
+                location.href = 'https://www.names4ever.co.uk/';
                 return;
         }
     });
