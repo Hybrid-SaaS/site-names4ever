@@ -423,10 +423,10 @@ $(function () {
 
     for (var x = 0; x < $flags.length; x++) {
         var $flag = $flags.eq(x);
-        if ($flag.data('flag') == WebPage.Data.language)
+        if ($flag.data('flag') == WebPage.Data.country)
             $flag.hide();
 
-        if ($flag.data('flag') == 'en' && WebPage.Data.language == 'fr')
+        if ($flag.data('flag') == 'en' && WebPage.Data.country == 'gb')
             $flag.hide();
     }
 
@@ -438,8 +438,17 @@ $(function () {
                 case 'nl':
                     location.href = 'https://www.names4ever.nl/product/' + webData.productGuid;
                     return;
+                case 'be':
+                    location.href = 'https://www.names4ever.be/product/' + webData.productGuid;
+                    return;
                 case 'de':
                     location.href = 'https://www.namesforever.de/product/' + webData.productGuid;
+                    return;
+                case 'at':
+                    location.href = 'https://www.names4ever.at/product/' + webData.productGuid;
+                    return;
+                case 'ch':
+                    location.href = 'https://www.names4ever.ch/product/' + webData.productGuid;
                     return;
                 case 'en':
                     location.href = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
@@ -451,8 +460,17 @@ $(function () {
             case 'nl':
                 location.href = 'https://www.names4ever.nl/';
                 return;
+            case 'be':
+                location.href = 'https://www.names4ever.be/';
+                return;
             case 'de':
                 location.href = 'https://www.namesforever.de/';
+                return;
+            case 'at':
+                location.href = 'https://www.names4ever.at/';
+                return;
+            case 'ch':
+                location.href = 'https://www.names4ever.ch/';
                 return;
             case 'en':
                 location.href = 'https://www.names4ever.co.uk/';
