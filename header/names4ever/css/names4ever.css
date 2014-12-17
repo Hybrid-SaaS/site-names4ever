@@ -29,6 +29,9 @@
 #header .names4ever .wrapper {
   height: 50px;
 }
+#header .names4ever .wrapper .flags {
+  text-align: center;
+}
 #header .names4ever .wrapper.second {
   color: #707070;
   font-weight: bold;
@@ -55,9 +58,6 @@
 #header .names4ever .wrapper.second .column .verisign {
   position: absolute;
   margin-left: -8px;
-}
-#header .names4ever .wrapper.second .column .flags {
-  text-align: center;
 }
 #header .names4ever .wrapper .logo {
   position: absolute;
