@@ -79,18 +79,22 @@ $(() => {
                     to = 'Jetzt';
                     break;
                 }
-                case 'en':
+                case 'fr':
                 {
                     from = 'From';
-                    to = 'Only';
+                    to = 'Now only';
                     break;
                 }
                 }
 
-
-                $deal.append($('<div class="price-original"></div>').text(from + ' € ' + product['price-original'].toFixed(2).replace('.', ',')));
-                $deal.append($('<div class="price"></div>').text(to + ' € ' + product.price.toFixed(2).replace('.', ',')));
-
+                if (WebPage.Data.country == 'gb') {
+                    $deal.append($('<div class="price-original"></div>').text(from + ' £ ' + product['price-original'].toFixed(2).replace('.', ',')));
+                    $deal.append($('<div class="price"></div>').text(to + ' £ ' + product.price.toFixed(2).replace('.', ',')));
+                }
+                else {
+                    $deal.append($('<div class="price-original"></div>').text(from + ' € ' + product['price-original'].toFixed(2).replace('.', ',')));
+                    $deal.append($('<div class="price"></div>').text(to + ' € ' + product.price.toFixed(2).replace('.', ',')));
+                }
                 $deal.attr({ 'title': product.productcode + '\n' + product.description });
 
                 $deal.click(() => {
