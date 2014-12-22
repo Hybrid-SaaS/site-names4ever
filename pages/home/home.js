@@ -64,7 +64,7 @@ $(function () {
                 }
                 case 'fr': {
                     from = 'From';
-                    to = 'Now only';
+                    to = 'Now';
                     break;
                 }
             }
