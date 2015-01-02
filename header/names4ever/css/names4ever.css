@@ -239,7 +239,7 @@
 }
 .language-nl .product-right .product-options .header:after,
 .language-de .product-right .product-options .header:after,
-language-en .product-right .product-options .header:after {
+.country-gb .product-right .product-options .header:after {
   background-image: url('personaliseer.png');
   background-repeat: no-repeat;
   color: white;
@@ -254,7 +254,7 @@ language-en .product-right .product-options .header:after {
 }
 .language-nl .product-right .product-options .footer:after,
 .language-de .product-right .product-options .footer:after,
-language-en .product-right .product-options .footer:after {
+.country-gb .product-right .product-options .footer:after {
   background-image: url('personaliseer-onder.png');
   background-repeat: no-repeat;
   color: white;
@@ -279,10 +279,10 @@ language-en .product-right .product-options .footer:after {
 .language-de .product-right .product-options .footer:after {
   content: 'Versandkostenfreie Lieferung!';
 }
-.language-en .product-right .product-options .header:after {
+.country-gb .product-right .product-options .header:after {
   content: 'Personalise Your Jewellry';
 }
-.language-en .product-right .product-options .footer:after {
+.country-gb .product-right .product-options .footer:after {
   content: 'Always Free Shipping!';
 }
 /*# sourceMappingURL=names4ever.css.map */
