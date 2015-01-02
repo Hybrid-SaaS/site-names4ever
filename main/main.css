@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: #ffffff;
+  background-color: white;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
 }
@@ -70,11 +70,6 @@ u {
 }
 .flags .flag:hover {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-  -moz-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
-  -o-transform: rotate(15deg);
-  -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);
 }
 .logged-in {
   padding: 10px;
@@ -91,7 +86,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: white;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -299,7 +294,7 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: #ffffff;
+  background: white;
   display: inline-block;
   vertical-align: top;
   width: 190px;
@@ -354,7 +349,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -416,7 +411,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
