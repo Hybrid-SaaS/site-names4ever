@@ -81,6 +81,24 @@ body {
 	background-color: @color-background;
 	font-size: @defaultFontSize;
 	font-family: 'Droid Sans', sans-serif;
+    -moz-user-select:text;
+    -khtml-user-select:text;
+    -webkit-user-select:text;
+    -ms-user-select: text;
+    user-select:text;
+
+}
+::-moz-selection {
+  background: #328efe  ;
+  color: #fff;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+}
+::selection {
+  background: #328efe;
+  color: #fff;
+  -webkit-text-shadow: none;
+  text-shadow: none;
 }
 
 
