@@ -500,8 +500,9 @@ $(function () {
         if (isValidEmailAddress(mail)) {
             $.ajax({
                 type: "POST",
-                url: "/system/newsletter/subscribe?source=Website",
+                url: "/system/newsletter/subscribe",
                 data: {
+                    source: 'Website',
                     email: $('#newsletter_input').val()
                 }
             }).done(function () {
