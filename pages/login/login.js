@@ -4,13 +4,18 @@ $(function () {
         $.ajax({
             type: 'POST',
             dataType: 'json',
-            url: 'test.html',
+            cache: false,
+            url: '/website/system/login',
             data: {
                 "username": $("#usernameLogin input").val(),
                 "password": $("#passwordLogin input").val()
             }
         }).done(function (data) {
-            //Succes!
-        });
+            if (data.status == 'valid')
+                location.href = '/';
+            else {
+                alert('Ongeldige inlognaam of wachtwoord!');
+            }
+        }).fail(function () { return alert('Fout tijdens controleren'); });
     });
 });

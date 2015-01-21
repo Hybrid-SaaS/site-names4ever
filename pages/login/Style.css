@@ -94,7 +94,7 @@
 #right #submit {
   padding: 20px 40px;
 }
-#right #submit input {
+#right #submit #submitLogin {
   font-size: 28px;
   font-weight: bold;
   background-color: #8c3292;
