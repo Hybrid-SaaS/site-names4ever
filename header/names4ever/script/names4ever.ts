@@ -571,9 +571,9 @@ $(function () {
 			if (isValidEmailAddress(mail)) {
 				$.ajax({
 					type: "POST",
-					url: "test.html",
+					url: "/system/newsletter/subscribe?source=Website",
 					data: {
-						mail: $('#newsletter_input').val()
+						email: $('#newsletter_input').val()
 					}
 				}).done(function () {
 					$('#doneMsg').text('');
