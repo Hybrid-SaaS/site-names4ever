@@ -7,8 +7,8 @@ $(function () {
             cache: false,
             url: '/website/system/login',
             data: {
-                "username": $("#usernameLogin input").val(),
-                "password": $("#passwordLogin input").val()
+                "username": $("#usernameLogin").val(),
+                "password": $("#passwordLogin").val()
             }
         }).done(function (data) {
             if (data.status == 'valid')
