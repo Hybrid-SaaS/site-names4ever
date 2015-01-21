@@ -1,0 +1,126 @@
+﻿body {
+	margin:0;
+	padding:0;
+}
+
+#loginpage {
+	width: 750px;
+	height: 400px;
+	position:absolute;
+    left:50%;
+    top:50%;
+    margin:-200px 0 0 -375px;
+}
+
+#sidemessage {
+	border-radius: 10px 0 0 10px;
+	width: 40px;
+	position: relative;
+	top: 75px;
+	height: 200px;
+	background-color: darkgray;
+	float: left;
+
+	span {
+		display: block;
+		width: 175px;
+		font-size: 24px;
+		color: white;
+		padding: 5px;
+		-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);
+		transform-origin: 50% 235%;
+	}
+}
+
+#login_container {
+	float: left;
+	font-family: Arial;
+	position: relative;
+	border: 2px solid black;
+	width: 700px;
+	background-color: rgb(244, 244, 242);
+}
+#top {
+	font-size: 38px;
+	padding: 5px;
+	text-align: center;
+	background-color: rgb(140, 50, 146);
+	color: white;
+	border-bottom: 2px solid black;
+}
+#content {
+	height: 325px;
+	padding: 0 5px 5px 5px;
+	overflow: hidden;
+}
+#left {
+	float: left;
+	padding: 15px;
+	width: 250px;
+	height: 100%;
+	border-right: 2px solid black;
+
+	.logo-image {
+		padding: 0 25px;
+		width: 70%;
+		height: auto;
+	}
+}
+#right {
+	float: left;
+	padding: 5px;
+	height: 100%;
+	width: 390px;
+	display: inline-block;
+
+	div {
+		padding: 15px;
+
+		span {
+			font-size: 25px;
+			padding: 5px;
+		}
+		input {
+			font-size: 24px;
+			height: 40px;
+			border: 2px solid black;
+		}	
+		span, input {
+			display: block;
+			width: 90%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+	#submit {
+		padding: 20px 40px;
+
+		input {
+			font-size: 28px;
+			font-weight: bold;
+			background-color: rgb(140, 50, 146);
+			color: white;
+			height: 50px;
+		}
+	}
+}
+.message-container {
+	position: absolute;
+	bottom: 20px;
+	width: inherit;
+}
+.contact, .message {
+	text-align: center;
+}
+.contact {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.message {
+	font-size: 20px;
+}
