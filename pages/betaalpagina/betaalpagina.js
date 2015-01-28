@@ -51,7 +51,7 @@ $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByNam
                 var s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(ba, s);
             })();
-            return;
+            break;
         case 'be':
             beslistQueue.push(['setShopId', '3JHCCD2SI']);
             beslistQueue.push(['cps', 'setTestmode', false]);
@@ -67,6 +67,6 @@ $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByNam
                 var s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(ba, s);
             })();
-            return;
+            break;
     }
 });
