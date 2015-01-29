@@ -185,14 +185,13 @@ u {
 .maincontent #columns .main-column-right .container .product.hover .price {
   position: relative;
   top: -29px;
-  font-size: 12px;
+  font-size: 0px;
   right: 4px;
-  margin-top: 20px;
 }
 .maincontent #columns .main-column-right .container .product {
   background: none !important;
   background: #FFFFFF;
-  min-height: 225px;
+  min-height: 265px;
   max-height: 275px;
   margin-right: 10px !important;
   float: left;
@@ -205,6 +204,7 @@ u {
 }
 .maincontent #columns .main-column-right .container .product .imageFrame {
   min-height: 140px;
+  margin-bottom: 0 !important;
   -webkit-filter: drop-shadow(2px 3px 1px rgba(0, 0, 0, 0.2));
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
@@ -213,16 +213,17 @@ u {
   max-height: 140px;
 }
 .maincontent #columns .main-column-right .container .product .number {
-  display: none;
+  font-weight: 100 !important;
+  overflow: visible !important;
+  white-space: normal !important;
 }
 .maincontent #columns .main-column-right .container .product .price {
   color: #63248f;
   text-align: right;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 15px;
   margin-top: 10px;
   height: 30px;
-  display: none;
 }
 .maincontent #columns .main-column-right .container .product a {
   font-weight: bold;
@@ -238,7 +239,7 @@ u {
   font-size: 13px;
 }
 .maincontent #columns .main-column-right .container .product.hover .details {
-  display: block;
+  display: none;
 }
 .maincontent #columns .main-column-right .container .product .details {
   position: relative;

@@ -268,9 +268,9 @@ u{
                     .price {
                         position: relative;
                         top: -29px;
-                        font-size: 12px;
+                        font-size: 0px;
                         right: 4px;
-                        margin-top: 20px;
+                       
 
                         .details {
                         }
@@ -280,7 +280,7 @@ u{
                 .product {
                     background: none !important;
                     background: #FFFFFF;
-                    min-height: @height-product-container - 50px;
+                    min-height: @height-product-container - 10px;
                     max-height: @height-product-container;
                     margin-right:10px !important;
                     float:left;
@@ -294,6 +294,7 @@ u{
 
                     .imageFrame {
                         min-height: 140px;
+                        margin-bottom: 0 !important;
                         -webkit-filter: drop-shadow(2px 3px 1px rgba(0,0,0,0.2));
                         -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
                         filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
@@ -304,17 +305,19 @@ u{
                     }
 
                     .number {
-                        display: none;
+                        font-weight: 100 !important;
+                        overflow:visible !important; 
+                        white-space:normal !important;
                     }
 
                     .price {
                         color: @color-border-menu-head;
                         text-align: right;
                         font-weight: bold;
-                        font-size: 22px;
+                        font-size: 15px;
                         margin-top: 10px;
                         height: 30px;
-					    display:none;
+					    
                     }
 
                     a {
@@ -334,7 +337,7 @@ u{
                     }
 
                     &.hover .details {
-                        display: block;
+                        display: none;
                     }
 
                     .details {
