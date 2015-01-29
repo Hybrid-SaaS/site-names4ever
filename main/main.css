@@ -188,7 +188,7 @@ u {
 .maincontent #columns .main-column-right .container .product {
   background: none !important;
   background: #FFFFFF;
-  min-height: 265px;
+  min-height: 255px;
   max-height: 275px;
   margin-right: 10px !important;
   float: left;
@@ -215,12 +215,10 @@ u {
   white-space: normal !important;
 }
 .maincontent #columns .main-column-right .container .product .price {
-  color: #63248f;
-  text-align: right;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 12px;
   margin-top: 10px;
-  height: 30px;
+  height: 20px;
 }
 .maincontent #columns .main-column-right .container .product a {
   font-weight: bold;
