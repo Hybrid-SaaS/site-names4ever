@@ -183,10 +183,7 @@ u {
   float: left;
 }
 .maincontent #columns .main-column-right .container .product.hover .price {
-  position: relative;
-  top: -29px;
-  font-size: 0px;
-  right: 4px;
+  font-size: 15px;
 }
 .maincontent #columns .main-column-right .container .product {
   background: none !important;
@@ -237,6 +234,7 @@ u {
   height: 50px;
   width: 182px;
   font-size: 13px;
+  min-height: 50px !important;
 }
 .maincontent #columns .main-column-right .container .product.hover .details {
   display: none;
