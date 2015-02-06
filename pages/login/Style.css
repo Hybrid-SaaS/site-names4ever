@@ -79,7 +79,7 @@
 #right div span {
   font-size: 25px;
   padding: 5px;
-  margin-left: 15px;
+  margin-left: 10px !important;
 }
 #right div input {
   font-size: 24px;
@@ -92,6 +92,8 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 #right #submit {
   padding: 20px 40px;
