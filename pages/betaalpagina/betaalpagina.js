@@ -33,10 +33,11 @@ $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByNam
     }
     ga('ecommerce:send');
 
-    // Beslist Nederland & België
+    // Conversiepixels per land
     beslistQueue = [];
     switch (WebPage.Data.country) {
         case 'nl':
+            //beslist NL
             beslistQueue.push(['setShopId', '3JHCC39SN']);
             beslistQueue.push(['cps', 'setTestmode', false]);
             beslistQueue.push(['cps', 'setTransactionId', data.orderNumber]);
@@ -53,6 +54,7 @@ $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByNam
             })();
             break;
         case 'be':
+            //beslist BE
             beslistQueue.push(['setShopId', '3JHCCD2SI']);
             beslistQueue.push(['cps', 'setTestmode', false]);
             beslistQueue.push(['cps', 'setTransactionId', data.orderNumber]);
@@ -67,6 +69,13 @@ $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByNam
                 var s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(ba, s);
             })();
+            break;
+        case 'gb':
+            // become UK
+            var pg_pangora_merchant_id = '107147';
+            var pg_order_id = data.orderNumber;
+            var pg_cart_value = data.totalIncludingVat;
+            var pg_currency = 'GBP';
             break;
     }
 });

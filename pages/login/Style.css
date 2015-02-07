@@ -16,7 +16,7 @@
   position: relative;
   top: 75px;
   height: 200px;
-  background-color: darkgray;
+  background-color: #565556;
   float: left;
 }
 #sidemessage span {
@@ -59,9 +59,10 @@
   width: 250px;
   height: 100%;
   border-right: 2px solid black;
+  margin-right: 5px;
 }
 #left .logo-image {
-  padding: 0 25px;
+  padding: 0 35px;
   width: 70%;
   height: auto;
 }
@@ -78,6 +79,7 @@
 #right div span {
   font-size: 25px;
   padding: 5px;
+  margin-left: 10px !important;
 }
 #right div input {
   font-size: 24px;
@@ -90,6 +92,8 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 #right #submit {
   padding: 20px 40px;
@@ -97,9 +101,10 @@
 #right #submit #submitLogin {
   font-size: 28px;
   font-weight: bold;
-  background-color: #8c3292;
+  background-color: #399E32;
   color: white;
   height: 50px;
+  width: 310px;
 }
 .message-container {
   position: absolute;
