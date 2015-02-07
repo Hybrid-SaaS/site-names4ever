@@ -33,6 +33,9 @@
 //visited link kleur tekst
 @color-link-visited: #1A1E86;
 
+
+@color-names4ever-paars: rgb(140, 50, 146);
+
 //kleur link menu
 @color-link-menu: #992296;
 //hover link kleur
@@ -968,3 +971,98 @@ u{
 }
 
 
+//product uitbreidingen
+.extension {
+    &.type-productconfig {
+        width: 300px;
+        border: solid 1px #7D7D7F;
+        height: 25px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
+        font-size: 12px;
+        padding: 4px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background: white;
+        cursor: pointer;
+
+
+        &:hover {
+            color: @color-names4ever-paars;
+
+            .drop-down {
+                background-color: @color-names4ever-paars;
+                color: white;
+            }
+        }
+
+        .product-config-option {
+            display: none;
+        }
+
+        .content {
+            float: left;
+        }
+
+        .drop-down {
+            border-left: solid 1px #7D7D7F;
+            height: 23px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: inline-block;
+            float: right;
+            width: 25px;
+            text-align: center;
+            padding-top: 6px;
+            position: relative;
+            margin-top: -4px;
+            margin-right: -4px;
+            text-shadow: 1px 1px 4px rgba(255,255,255,0.75);
+        }
+    }
+}
+.productconfig-options {
+    opacity: 0;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    display: none;
+    position: absolute;
+    width: 300px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: solid 1px gray;
+    
+    background-color: #d0d0d0;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+//    overflow-y: auto;
+    margin-top: -1px;
+
+    &.visible {
+        opacity: 1;
+        min-height: 202px;
+        display: block;
+    }
+    
+    .config-product {
+
+
+        .description {
+            padding: 4px;
+            color: @color-names4ever-paars;
+        }
+
+        border-bottom: solid 1px gray;
+        text-align: center;
+        cursor: pointer;
+        background-color: white;
+
+        &:hover {
+            background-color: steelblue;
+        }
+
+    }
+}
