@@ -37,7 +37,7 @@ $(function () {
 
     $.getJSON('/data/product/DEALOFTHEDAY/related-products').done(function (data) {
         var $deal = $('#deal');
-        $('#deal').append('<div class="head">Deal of the Day</div>');
+        $('#deal').append('<div class="head">Deal of the Week</div>');
 
         if (data.related && data.related["Deal"]) {
             var product = data.related["Deal"][0];
