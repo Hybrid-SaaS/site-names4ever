@@ -1,5 +1,12 @@
 ﻿/// <reference path="../../../definition/jquery.d.ts" />
 
+// uitbreidingen op number object
+interface Number {
+    toStringFormat(decimals, dec_point?, thousands_sep?): string;
+    toDecimal() : number;
+}
+
+// webpage object
 module WebPage {
     export module References {
         export module MessageBox {
@@ -19,6 +26,7 @@ module WebPage {
         export var language: string;
         export var country: string;
         export var productGuid: string;
+        export var productPrice: number;
         export var basketGuid: string;
     }
 
@@ -97,8 +105,21 @@ module WebPage {
             } else {
                 $this.removeClass('ok');
             }
-
         });
+
+		//handle number fields
+		$('.input-number').change(function ()
+		{
+
+			var $this = $(this);
+			var val = parseInt($this.val());
+			if (isNaN(val) || val < 1 || val > 100)
+				val = 1;
+			$this.val(val.toString());
+
+			//trigger onchange
+			$this.trigger('value-changed');
+		});
 
         Events.fire(EventType.Load);
     }
@@ -472,44 +493,133 @@ $(function () {
 			case 'en':
 				location.href = 'https://www.names4ever.co.uk/';
 				return;
+        }    });
+
+
+    if (WebPage.Data.productGuid)
+	{
+        // de standaard prijs
+        var defaultPrice = 0;
+
+        //dropdown bij productconfig
+
+        var $more = $('<i class="fa fa-chevron-down drop-down"></i>');
+        var $productConfig = $('.extension.type-productconfig').append($more);
+
+        var $content = $("<div class='content'>Standaard</div>");
+        $productConfig.prepend($content);
+
+        var $container = $("<div class='productconfig-options'></div>");
+        var $options = $productConfig.find('.productconfig-option');
+        for (var x = 0; x < $options.length; x++) {
+
+            //teken de pulldown items
+            var $option = $options.eq(x);
+
+            var $imgContainer = $('<div class="config-product"><div class="description"></div></div>')
+                $imgContainer.data('price', $option.data('price'));
+				$imgContainer.data('related-element', $productConfig.attr('id'));
+                $imgContainer.find('.description').text($option.data('description'));
+				$imgContainer.data('recordguid', $option.data('recordguid'));
+
+            var $img = $('<img />');
+            $img.attr('src', '/image/product/guid/' + $option.data('recordguid') + '?width=400&height=100');
+            $imgContainer.append($img);
+
+            $container.append($imgContainer)
+
+            //zet de default tekst, prijs en value
+            if ($option.data('default')) {
+                $content.text($option.data('description'));
+                defaultPrice = parseFloat($option.data('price'));
+
+				$productConfig.data('value', $option.data('recordguid'));
+            }
         }
 
-    });
+
+        //onclick op pulldown items
+        $('.config-product', $container).on('click',(event) => {
+
+            var $this = $(event.delegateTarget);
+            $content.text($this.find('.description').text());
 
 
-    if (WebPage.Data.productGuid) {
+            var newPrice = (WebPage.Data.productPrice - defaultPrice + parseFloat($this.data('price'))).toDecimal();
+            $('.price-value').text(newPrice.toStringFormat(2));
+
+			//zet value op parent item (voor submit zometeen)
+	        var $related = $('#' + $this.data('related-element'));
+				$related.data('value', $this.data('recordguid'));
+        });
+
+
+        //voeg de pulldownitems toe aan de container
+        //showen en hiden van pulldown
+        $productConfig
+            .after($container)
+            .on('click', (event) => {
+
+                var $this = $(event.delegateTarget).next();
+
+                if ($this.hasClass('visible'))
+                    $this.removeClass('visible');
+                else
+                    $this.addClass('visible');
+
+                event.stopImmediatePropagation();
+
+                $(document.body).one('click', () => {
+                    $this.removeClass('visible');
+                })
+            });
+
+        //dropdown bij productconfig
+       
 
             $('#submit').click((event) => {
-                event.preventDefault();
-                var data = {
-                    basketId: WebPage.Data.basketGuid,
-                    product: WebPage.Data.productGuid,
-                    remark: $('#remark').val(),
-                    amount: 1
-                };
+	            event.preventDefault();
+	            var data = {
+		            basketId: WebPage.Data.basketGuid,
+		            product: WebPage.Data.productGuid,
+		            remark: $('#remark').val(),
+		            amount: 1
+	            };
 
-                var $extension = $('.extension');
-                if ($extension.length > 0) {
-                    var $set = null;
-                    for (var x = 0; x < $extension.length; x++) {
-                        var $element = $extension.eq(x);
-                        if ($element.attr('id') != 'remark') {
-                            if ($element.hasClass('inputrequired')) {
-                                if ($element.val().length == 0) {
-                                    if (!$set) {
-                                        $set = $element;
-                                    }
-                                    $element.addClass('missing');
-                                } else {
-                                    $element.removeClass('missing');
-                                }
-                            }
+	            var $extension = $('.extension');
+	            if ($extension.length > 0) {
+		            var $set = null;
+		            for (var x = 0; x < $extension.length; x++) {
+			            var $element = $extension.eq(x);
 
-                            data["extension:" + $element.attr('id')] = $element.val();
-                        }
-                    }
-                }
-                if ($set) {
+			            if ($element.attr('id') != 'remark') {
+				            switch ($element.data('input-type')) {
+				            case 'productconfig':
+				            {
+					            data["extension:" + $element.attr('id')] = $element.data('value');
+					            break;
+				            }
+				            default:
+				            {
+					            if ($element.hasClass('inputrequired')) {
+						            if ($element.val().length == 0) {
+							            if (!$set) {
+								            $set = $element;
+							            }
+							            $element.addClass('missing');
+						            } else {
+							            $element.removeClass('missing');
+						            }
+					            }
+
+					            data["extension:" + $element.attr('id')] = $element.val();
+					            break;
+				            }
+				            }
+			            }
+		            }
+	            }
+	            if ($set) {
                     //not complete, abort
                     var msg = new WebPage.Message.Settings();
                     msg.type = WebPage.Message.MessageType.Error;
@@ -607,6 +717,35 @@ $(function () {
 		var reValidEmail = new RegExp(sValidEmail);
 
 		return reValidEmail.test(emailAddress);
-	};
+    };
+
+    // prevent decimal rounding errors
+    Number.prototype.toDecimal = function decimal() : number {
+        return parseFloat(this.toFixed(2))
+    }
+    
+    Number.prototype.toStringFormat = function (decimals, dec_point, thousands_sep) {
+        var number = (this + '').replace(/[^0-9+\-Ee.]/g, '');
+
+        var n = !isFinite(+number) ? 0 : +number,
+            prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+            sep = (typeof thousands_sep === 'undefined') ? '.' : thousands_sep,
+            dec = (typeof dec_point === 'undefined') ? ',' : dec_point,
+            s = [],
+            toFixedFix = function (n, prec) {
+                var k = Math.pow(10, prec);
+                return '' + Math.round(n * k) / k;
+            };
+
+        s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+        if (s[0].length > 3) {
+            s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+        }
+        if ((s[1] || '').length < prec) {
+            s[1] = s[1] || '';
+            s[1] += new Array(prec - s[1].length + 1).join('0');
+        }
+        return s.join(dec);
+    }
 
 });
