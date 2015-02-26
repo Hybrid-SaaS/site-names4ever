@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: #ffffff;
+  background-color: white;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
   -moz-user-select: text !important;
@@ -103,7 +103,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: white;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -308,7 +308,7 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: #ffffff;
+  background: white;
   display: inline-block;
   vertical-align: top;
   width: 190px;
@@ -363,7 +363,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -425,7 +425,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -783,11 +783,12 @@ u {
   border: solid 1px gray;
   background-color: #d0d0d0;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
   margin-top: -1px;
+  z-index: 101;
 }
 .productconfig-options.visible {
   opacity: 1;
-  min-height: 202px;
   display: block;
 }
 .productconfig-options .config-product {
@@ -795,6 +796,7 @@ u {
   text-align: center;
   cursor: pointer;
   background-color: white;
+  height: 75px;
 }
 .productconfig-options .config-product .description {
   padding: 4px;
