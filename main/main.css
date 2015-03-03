@@ -796,16 +796,21 @@ u {
   text-align: center;
   cursor: pointer;
   background-color: white;
-  height: 25px;
+  height: 30px;
+  width: 100%;
 }
 .productconfig-options .config-product .description {
-  padding: 4px;
+  padding-left: 5px;
   color: #8c3292;
+  width: 87%;
+  float: right;
+  line-height: 30px;
 }
 .productconfig-options .config-product:hover {
   background-color: steelblue;
 }
 .productconfig-options .config-product img {
-  display: none;
+  width: 25px;
+  margin-top: 2.5px;
 }
 /*# sourceMappingURL=main.css.map */
