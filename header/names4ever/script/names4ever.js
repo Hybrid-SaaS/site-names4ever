@@ -485,7 +485,7 @@ $(function () {
             });
             //voeg de pulldownitems toe aan de container
             //showen en hiden van pulldown
-            $productConfig.after($container).on('click', function (event) {
+            $productConfigItem.after($container).on('click', function (event) {
                 var $this = $(event.delegateTarget).next();
                 if ($this.hasClass('visible'))
                     $this.removeClass('visible');

@@ -580,7 +580,7 @@ $(function () {
 
 			//voeg de pulldownitems toe aan de container
 			//showen en hiden van pulldown
-			$productConfig
+			$productConfigItem
 				.after($container)
 				.on('click',(event) =>
 			{
