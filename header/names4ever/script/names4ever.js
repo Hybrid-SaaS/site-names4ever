@@ -451,8 +451,8 @@ $(function () {
                 break;
         }
         $productConfig.prepend($content);
-        for (var x = 0; x < $productConfig.length; x++) {
-            var $productConfigItem = $productConfig.eq(x);
+        for (var y = 0; y < $productConfig.length; y++) {
+            var $productConfigItem = $productConfig.eq(y);
             var $container = $("<div class='productconfig-options'></div>");
             var $options = $productConfigItem.find('.productconfig-option');
             for (var x = 0; x < $options.length; x++) {
@@ -474,30 +474,30 @@ $(function () {
                     $productConfigItem.data('value', $option.data('recordguid'));
                 }
             }
+            $('.config-product', $container).on('click', function (event) {
+                var $this = $(event.delegateTarget);
+                $content.text($this.find('.description').text());
+                var newPrice = (WebPage.Data.productPrice - defaultPrice + parseFloat($this.data('price'))).toDecimal();
+                $('.price-value').text(newPrice.toStringFormat(2));
+                //zet value op parent item (voor submit zometeen)
+                var $related = $('#' + $this.data('related-element'));
+                $related.data('value', $this.data('recordguid'));
+            });
+            //voeg de pulldownitems toe aan de container
+            //showen en hiden van pulldown
+            $productConfig.after($container).on('click', function (event) {
+                var $this = $(event.delegateTarget).next();
+                if ($this.hasClass('visible'))
+                    $this.removeClass('visible');
+                else
+                    $this.addClass('visible');
+                event.stopImmediatePropagation();
+                $(document.body).one('click', function () {
+                    $this.removeClass('visible');
+                });
+            });
         }
         //onclick op pulldown items
-        $('.config-product', $container).on('click', function (event) {
-            var $this = $(event.delegateTarget);
-            $content.text($this.find('.description').text());
-            var newPrice = (WebPage.Data.productPrice - defaultPrice + parseFloat($this.data('price'))).toDecimal();
-            $('.price-value').text(newPrice.toStringFormat(2));
-            //zet value op parent item (voor submit zometeen)
-            var $related = $('#' + $this.data('related-element'));
-            $related.data('value', $this.data('recordguid'));
-        });
-        //voeg de pulldownitems toe aan de container
-        //showen en hiden van pulldown
-        $productConfig.after($container).on('click', function (event) {
-            var $this = $(event.delegateTarget).next();
-            if ($this.hasClass('visible'))
-                $this.removeClass('visible');
-            else
-                $this.addClass('visible');
-            event.stopImmediatePropagation();
-            $(document.body).one('click', function () {
-                $this.removeClass('visible');
-            });
-        });
         //dropdown bij productconfig
         $('#submit').click(function (event) {
             event.preventDefault();

@@ -530,9 +530,9 @@ $(function () {
         $productConfig.prepend($content);
 
 
-		for (var x = 0; x < $productConfig.length; x++) {
+		for (var y = 0; y < $productConfig.length; y++) {
 
-			var $productConfigItem = $productConfig.eq(x);
+			var $productConfigItem = $productConfig.eq(y);
 
 			var $container = $("<div class='productconfig-options'></div>");
 			var $options = $productConfigItem.find('.productconfig-option');
@@ -561,30 +561,29 @@ $(function () {
 					$productConfigItem.data('value', $option.data('recordguid'));
 				}
 			}
-		}
+
+			$('.config-product', $container).on('click',(event) =>
+			{
+
+				var $this = $(event.delegateTarget);
+				$content.text($this.find('.description').text());
 
 
-		//onclick op pulldown items
-        $('.config-product', $container).on('click',(event) => {
+				var newPrice = (WebPage.Data.productPrice - defaultPrice + parseFloat($this.data('price'))).toDecimal();
+				$('.price-value').text(newPrice.toStringFormat(2));
 
-            var $this = $(event.delegateTarget);
-            $content.text($this.find('.description').text());
-
-
-            var newPrice = (WebPage.Data.productPrice - defaultPrice + parseFloat($this.data('price'))).toDecimal();
-            $('.price-value').text(newPrice.toStringFormat(2));
-
-			//zet value op parent item (voor submit zometeen)
-	        var $related = $('#' + $this.data('related-element'));
+				//zet value op parent item (voor submit zometeen)
+				var $related = $('#' + $this.data('related-element'));
 				$related.data('value', $this.data('recordguid'));
-        });
+			});
 
 
-        //voeg de pulldownitems toe aan de container
-        //showen en hiden van pulldown
-        $productConfig
-            .after($container)
-            .on('click', (event) => {
+			//voeg de pulldownitems toe aan de container
+			//showen en hiden van pulldown
+			$productConfig
+				.after($container)
+				.on('click',(event) =>
+			{
 
                 var $this = $(event.delegateTarget).next();
 
@@ -595,10 +594,16 @@ $(function () {
 
                 event.stopImmediatePropagation();
 
-                $(document.body).one('click', () => {
+                $(document.body).one('click',() =>
+				{
                     $this.removeClass('visible');
                 })
             });
+		}
+
+
+		//onclick op pulldown items
+        
 
         //dropdown bij productconfig
        
