@@ -476,6 +476,7 @@ $(function () {
             }
             $('.config-product', $container).on('click', function (event) {
                 var $this = $(event.delegateTarget);
+                var $content = $this.parents('.type-productconfig').find('.content');
                 $content.text($this.find('.description').text());
                 var newPrice = (WebPage.Data.productPrice - defaultPrice + parseFloat($this.data('price'))).toDecimal();
                 $('.price-value').text(newPrice.toStringFormat(2));
