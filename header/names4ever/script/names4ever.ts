@@ -568,7 +568,7 @@ $(function () {
 
 				var $this = $(event.delegateTarget);
 
-				var $content = $this.parents('.type-productconfig').find('.content');
+				var $content = $this.parents('.productconfig-options').prev().find('.content');
 				$content.text($this.find('.description').text());
 
 
