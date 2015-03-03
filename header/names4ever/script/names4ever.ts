@@ -506,33 +506,34 @@ $(function () {
         var $more = $('<i class="fa fa-chevron-down drop-down"></i>');
         var $productConfig = $('.extension.type-productconfig').append($more);
 
-        switch (WebPage.Data.country) {
-            case 'nl':
-                var $content = $("<div class='content'>Maak hier uw keuze</div>");
-                break;
-
-            case 'de':
-                var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
-                break;
-
-            case 'at':
-                var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
-                break;
-
-            case 'ch':
-                var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
-                break;
-
-            default:
-                var $content = $("<div class='content'>Please make your choice</div>");
-                break;
-        }
-        $productConfig.prepend($content);
-
 
 		for (var y = 0; y < $productConfig.length; y++) {
 
 			var $productConfigItem = $productConfig.eq(y);
+
+			switch (WebPage.Data.country)
+			{
+				case 'nl':
+					var $content = $("<div class='content'>Maak hier uw keuze</div>");
+					break;
+
+				case 'de':
+					var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
+					break;
+
+				case 'at':
+					var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
+					break;
+
+				case 'ch':
+					var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
+					break;
+
+				default:
+					var $content = $("<div class='content'>Please make your choice</div>");
+					break;
+			}
+			$productConfigItem.prepend($content);
 
 			var $container = $("<div class='productconfig-options'></div>");
 			var $options = $productConfigItem.find('.productconfig-option');
