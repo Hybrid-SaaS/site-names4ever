@@ -529,36 +529,42 @@ $(function () {
         }
         $productConfig.prepend($content);
 
-        var $container = $("<div class='productconfig-options'></div>");
-        var $options = $productConfig.find('.productconfig-option');
-        for (var x = 0; x < $options.length; x++) {
 
-            //teken de pulldown items
-            var $option = $options.eq(x);
+		for (var x = 0; x < $productConfig.length; x++) {
 
-            var $imgContainer = $('<div class="config-product"><div class="description"></div></div>')
-                $imgContainer.data('price', $option.data('price'));
-				$imgContainer.data('related-element', $productConfig.attr('id'));
-                $imgContainer.find('.description').text($option.data('description'));
+			var $productConfigItem = $productConfig.eq(x);
+
+			var $container = $("<div class='productconfig-options'></div>");
+			var $options = $productConfigItem.find('.productconfig-option');
+			for (var x = 0; x < $options.length; x++) {
+
+				//teken de pulldown items
+				var $option = $options.eq(x);
+
+				var $imgContainer = $('<div class="config-product"><div class="description"></div></div>')
+				$imgContainer.data('price', $option.data('price'));
+				$imgContainer.data('related-element', $productConfigItem.attr('id'));
+				$imgContainer.find('.description').text($option.data('description'));
 				$imgContainer.data('recordguid', $option.data('recordguid'));
 
-            var $img = $('<img />');
-            $img.attr('src', '/image/product/guid/' + $option.data('recordguid') + '?width=400&height=100');
-            $imgContainer.append($img);
+				var $img = $('<img />');
+				$img.attr('src', '/image/product/guid/' + $option.data('recordguid') + '?width=400&height=100');
+				$imgContainer.append($img);
 
-            $container.append($imgContainer)
+				$container.append($imgContainer)
 
-            //zet de default tekst, prijs en value
-            if ($option.data('default')) {
-                $content.text($option.data('description'));
-                defaultPrice = parseFloat($option.data('price'));
+				//zet de default tekst, prijs en value
+				if ($option.data('default')) {
+					$content.text($option.data('description'));
+					defaultPrice = parseFloat($option.data('price'));
 
-				$productConfig.data('value', $option.data('recordguid'));
-            }
-        }
+					$productConfigItem.data('value', $option.data('recordguid'));
+				}
+			}
+		}
 
 
-        //onclick op pulldown items
+		//onclick op pulldown items
         $('.config-product', $container).on('click',(event) => {
 
             var $this = $(event.delegateTarget);
