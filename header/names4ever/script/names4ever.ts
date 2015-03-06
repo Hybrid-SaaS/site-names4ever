@@ -533,20 +533,13 @@ $(function () {
 					var $content = $("<div class='content'>Please make your choice</div>");
 					break;
 			}
-            $productConfigItem.prepend($content);
-            
+            $productConfigItem.prepend($content);            
 
             var $container = $("<div class='productconfig-options'></div>");                
-
-            switch ($productConfigItem.attr('id')) {
-                case 'Ketting':
-                    {
-                        $container.addClass('custom');
-                    }
-                    break;
+            var id = $productConfigItem.attr('id');
+            if (id) {
+                $container.addClass('productconfig-'+id.toLowerCase());          
             }
-           
-
 
 			var $options = $productConfigItem.find('.productconfig-option');
 			for (var x = 0; x < $options.length; x++) {
