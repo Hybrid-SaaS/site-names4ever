@@ -560,6 +560,9 @@ u {
   margin-top: 1px;
   margin-right: 6px;
 }
+.basket .line .description .extended-properties .extended-property .label {
+  width: 130px !important;
+}
 .checkout {
   min-height: 700px;
   position: relative;
