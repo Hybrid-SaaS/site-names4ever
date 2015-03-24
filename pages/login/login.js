@@ -1,6 +1,12 @@
 /// <reference path="../../definition/jquery.d.ts" />
 $(function () {
-    $("#submitLogin").on("click", function () {
+    var $sumbitLogin = $("#submitLogin");
+    $sumbitLogin.keydown(function (event) {
+        if (event.keyCode == 13) {
+            $sumbitLogin.trigger('click');
+        }
+    });
+    $sumbitLogin.on("click", function () {
         $.ajax({
             type: 'POST',
             dataType: 'json',
