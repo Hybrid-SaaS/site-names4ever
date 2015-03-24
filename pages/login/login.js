@@ -1,7 +1,7 @@
 /// <reference path="../../definition/jquery.d.ts" />
 $(function () {
     var $sumbitLogin = $("#submitLogin");
-    $sumbitLogin.keydown(function (event) {
+    $('div[id=loginpage]').keydown(function (event) {
         if (event.keyCode == 13) {
             $sumbitLogin.trigger('click');
         }
