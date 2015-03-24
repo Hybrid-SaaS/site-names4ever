@@ -273,8 +273,6 @@
 .imageFrame {
   text-align: center;
   margin-bottom: 8px;
-  border: solid 1px #7A7A7A;
-  border-radius: 0.75em;
 }
 .imageFrame img {
   border-radius: 0.75em;
@@ -386,4 +384,4 @@ textarea.input {
   white-space: nowrap;
   margin-top: 5px;
 }
-/*# sourceMappingURL=Product-detail.css.map */
+/*# sourceMappingURL=product-detail.css.map */
