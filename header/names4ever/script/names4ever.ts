@@ -469,7 +469,10 @@ $(function () {
 					return;
                 case 'en':
                     location.href = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
-					return;
+                    return;
+                case 'es':
+                    location.href = 'https://www.names4ever.es/product/' + webData.productGuid;
+                    return;
             }
         }
 
@@ -492,7 +495,10 @@ $(function () {
 				return;
 			case 'en':
 				location.href = 'https://www.names4ever.co.uk/';
-				return;
+                return;
+            case 'es':
+                location.href = 'https://www.names4ever.es/';
+                return;
         }    });
 
 
