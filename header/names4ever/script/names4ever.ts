@@ -471,7 +471,7 @@ $(function () {
                     location.href = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
                     return;
                 case 'es':
-                    location.href = 'https://www.names4ever.es/product/' + webData.productGuid;
+                    location.href = 'http://www.names4ever.es/product/' + webData.productGuid;
                     return;
             }
         }
@@ -497,7 +497,7 @@ $(function () {
 				location.href = 'https://www.names4ever.co.uk/';
                 return;
             case 'es':
-                location.href = 'https://www.names4ever.es/';
+                location.href = 'http://www.names4ever.es/';
                 return;
         }    });
 
