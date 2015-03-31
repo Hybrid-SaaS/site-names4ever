@@ -22,6 +22,7 @@ var WebPage;
     (function (Data) {
         Data.language;
         Data.country;
+        Data.isloggedin;
         Data.productGuid;
         Data.productPrice;
         Data.basketGuid;
@@ -92,6 +93,9 @@ var WebPage;
         //set language
         Data.language = References.$html.attr('lang');
         Data.country = References.$html.data('country');
+
+        //set login guid
+        Data.isloggedin = References.$html.data('login-id');
 
         //init basket
         Basket.init();

@@ -25,6 +25,7 @@ module WebPage {
     export module Data {
         export var language: string;
         export var country: string;
+        export var isloggedin: string;
         export var productGuid: string;
         export var productPrice: number;
         export var basketGuid: string;
@@ -92,6 +93,9 @@ module WebPage {
         //set language
         Data.language = References.$html.attr('lang');
         Data.country = References.$html.data('country');
+
+        //set login guid
+        Data.isloggedin = References.$html.data('login-id');
 
         //init basket
         Basket.init();
