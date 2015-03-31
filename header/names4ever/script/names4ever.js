@@ -321,6 +321,12 @@ $(function () {
     //alleen bij de checkout pagina
     var $checkout = $('.checkout');
     if ($checkout.length == 1) {
+        //geen promotiecode bij inloggen partners
+        var $promotiecode = $('#promotion');
+        if (WebPage.Data.isloggedin) {
+            $promotiecode.hide();
+        }
+
         //zoek alle payment methods
         var $payments = $('.paymentmethods');
         var $paymentmethods = $('.paymentmethod');
