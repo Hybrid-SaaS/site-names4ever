@@ -570,6 +570,9 @@ u {
   min-height: 700px;
   position: relative;
 }
+.checkout .product-details {
+  widht: 100%;
+}
 .checkout .paymentmethods {
   width: 48%;
   position: absolute;
