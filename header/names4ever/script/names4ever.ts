@@ -320,7 +320,7 @@ $(function () {
         //geen promotiecode bij inloggen partners
         var $promotiecode = $('#promotion');
         if (WebPage.Data.isloggedin) {
-            $promotiecode.hide();
+            $promotiecode.parent().parent().hide();
         }
 
 
