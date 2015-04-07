@@ -395,6 +395,15 @@ $(function () {
 				p.before($paymentmethods.filter('.paypal').show());
 				p.before($paymentmethods.filter('.maestro').show());
                 break;
+            case 'es':               
+				
+                p.before($paymentmethods.filter('.paypal').show());
+                p.before($paymentmethods.filter('.mastercard').show());
+                p.before($paymentmethods.filter('.visa').show());
+                p.before($paymentmethods.filter('.americanexpress').show());
+                p.before($paymentmethods.filter('.manual').show());
+                p.before($paymentmethods.filter('.giropay').show());              
+                break;
         }
 
 	    var labelMore = '';
