@@ -440,12 +440,12 @@ $(function () {
                     labelMore = 'Show more paymentmethods';
                     break;
             }
-        }
 
-        var $newElement = $('<span class="morepaymentmethods" style="cursor: pointer; display: block; margin-top: 20px"></span>').text(labelMore).click(function () {
-            $paymentmethods.fadeIn(1000);
-            $(this).remove();
-        });
+            var $newElement = $('<span class="morepaymentmethods" style="cursor: pointer; display: block; margin-top: 20px"></span>').text(labelMore).click(function () {
+                $paymentmethods.fadeIn(1000);
+                $(this).remove();
+            });
+        }
 
         $('#placeorder').before($newElement);
         if (WebPage.Data.country == 'de') {
