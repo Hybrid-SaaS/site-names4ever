@@ -267,11 +267,6 @@ u {
   margin-right: 15px;
   margin-left: 0;
 }
-.maincontent #columns .main-column-right .-hs-container a .path,
-.maincontent #columns .main-column-right .container a .path {
-  width: 405px;
-  height: 188px;
-}
 .maincontent #columns .main-column-right .usercontent.below {
   margin-bottom: 50px;
   padding-right: 20px;
