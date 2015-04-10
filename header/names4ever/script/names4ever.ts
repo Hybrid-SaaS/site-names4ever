@@ -329,12 +329,7 @@ $(function () {
 		var $paymentmethods = $('.paymentmethod');
 		 $paymentmethods.hide();
 
-        if (WebPage.Data.country == 'nl') {
-            $paymentmethods.filter('.account').show();
-            $paymentmethods.filter('.manual').show();
-        }
-
-        if (WebPage.Data.isloggedin) {
+       if (WebPage.Data.isloggedin) {
             p.before($paymentmethods.filter('.account').show());
             p.before($paymentmethods.filter('.ideal').show());
             p.before($paymentmethods.filter('.mastercard').show());
