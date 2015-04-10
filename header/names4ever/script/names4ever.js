@@ -417,26 +417,29 @@ $(function () {
             }
         }
         var labelMore = '';
-        switch (WebPage.Data.country) {
-            case 'nl':
-                labelMore = 'Toon meer betaalmethodes';
-                break;
+        if (WebPage.Data.isloggedin) {
+        } else {
+            switch (WebPage.Data.country) {
+                case 'nl':
+                    labelMore = 'Toon meer betaalmethodes';
+                    break;
 
-            case 'de':
-                labelMore = 'Zeige mehr Zahlungsmethoden';
-                break;
+                case 'de':
+                    labelMore = 'Zeige mehr Zahlungsmethoden';
+                    break;
 
-            case 'at':
-                labelMore = 'Zeige mehr Zahlungsmethoden';
-                break;
+                case 'at':
+                    labelMore = 'Zeige mehr Zahlungsmethoden';
+                    break;
 
-            case 'ch':
-                labelMore = 'Zeige mehr Zahlungsmethoden';
-                break;
+                case 'ch':
+                    labelMore = 'Zeige mehr Zahlungsmethoden';
+                    break;
 
-            default:
-                labelMore = 'Show more paymentmethods';
-                break;
+                default:
+                    labelMore = 'Show more paymentmethods';
+                    break;
+            }
         }
 
         var $newElement = $('<span class="morepaymentmethods" style="cursor: pointer; display: block; margin-top: 20px"></span>').text(labelMore).click(function () {
