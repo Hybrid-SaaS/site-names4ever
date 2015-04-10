@@ -341,6 +341,7 @@ $(function () {
             p.before($paymentmethods.filter('.mastercard').show());
             p.before($paymentmethods.filter('.paypal').show());
             p.before($paymentmethods.filter('.visa').show());
+            $paymentmethods.filter('.manual').hide();
         }
         else {
             switch (WebPage.Data.country) {
