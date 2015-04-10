@@ -285,4 +285,57 @@
 .country-gb .product-right .product-options .footer:after {
   content: 'Always Free Shipping!';
 }
+.-hybridsaas-content-websitepath a {
+  display: inline-block;
+  margin-left: 10px;
+}
+.-hybridsaas-content-websitepath a:first-child {
+  margin-left: 0;
+}
+.-hybridsaas-content-websitepath .path {
+  float: left;
+  width: 410px;
+  height: 190px;
+  display: inline-block;
+  margin-bottom: 15px;
+  border-radius: 0.75em;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(66, 66, 66, 0.25);
+}
+.-hybridsaas-content-websitepath .path:hover {
+  box-shadow: 5px 5px 10px rgba(66, 66, 66, 0.5);
+}
+.-hybridsaas-content-websitepath .path img {
+  margin: 0 auto;
+  display: block;
+}
+.-hybridsaas-content-websitepath .path .name {
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.25);
+  line-height: 35px;
+  padding-left: 10px;
+  position: absolute;
+  font-size: 16px;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background: #642694;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #642694 0%, #8f328e 44%, #842f90 71%, #682893 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #642694), color-stop(44%, #8f328e), color-stop(71%, #842f90), color-stop(100%, #682893));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #642694 0%, #8f328e 44%, #842f90 71%, #682893 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #642694 0%, #8f328e 44%, #842f90 71%, #682893 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #642694 0%, #8f328e 44%, #842f90 71%, #682893 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #642694 0%, #8f328e 44%, #842f90 71%, #682893 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#642694', endColorstr='#682893', GradientType=0);
+  /* IE6-9 */
+}
 /*# sourceMappingURL=names4ever.css.map */

@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: white;
+  background-color: #ffffff;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
   -moz-user-select: text !important;
@@ -106,7 +106,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #ffffff;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -311,7 +311,7 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: white;
+  background: #ffffff;
   display: inline-block;
   vertical-align: top;
   width: 190px;
@@ -366,7 +366,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: white;
+  background-color: #ffffff;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -428,7 +428,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: white;
+  background-color: #ffffff;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -1159,6 +1159,9 @@ td {
 }
 .clearfix {
   *zoom: 1;
+}
+.clear {
+  clear: both;
 }
 /* =============================================================================
    Print Styles
