@@ -285,14 +285,14 @@
 .country-gb .product-right .product-options .footer:after {
   content: 'Always Free Shipping!';
 }
-.-hybridsaas-content-websitepath a {
+.-hs-content-websitepath a {
   display: inline-block;
   margin-left: 10px;
 }
-.-hybridsaas-content-websitepath a:first-child {
+.-hs-content-websitepath a:first-child {
   margin-left: 0;
 }
-.-hybridsaas-content-websitepath .path {
+.-hs-content-websitepath .-hs-websitepath {
   float: left;
   width: 410px;
   height: 190px;
@@ -304,14 +304,14 @@
   cursor: pointer;
   box-shadow: 5px 5px 10px rgba(66, 66, 66, 0.25);
 }
-.-hybridsaas-content-websitepath .path:hover {
+.-hs-content-websitepath .-hs-websitepath:hover {
   box-shadow: 5px 5px 10px rgba(66, 66, 66, 0.5);
 }
-.-hybridsaas-content-websitepath .path img {
+.-hs-content-websitepath .-hs-websitepath img {
   margin: 0 auto;
   display: block;
 }
-.-hybridsaas-content-websitepath .path .name {
+.-hs-content-websitepath .-hs-websitepath .-hs-name {
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.25);
   line-height: 35px;
   padding-left: 10px;

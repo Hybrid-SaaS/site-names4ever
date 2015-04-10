@@ -180,14 +180,17 @@ u {
   max-width: 830px;
   border-radius: 0.75em;
 }
+.maincontent #columns .main-column-right .-hs-container,
 .maincontent #columns .main-column-right .container {
   width: 840px;
   margin: 0;
   float: left;
 }
+.maincontent #columns .main-column-right .-hs-container .product.hover .price,
 .maincontent #columns .main-column-right .container .product.hover .price {
   font-size: 12px;
 }
+.maincontent #columns .main-column-right .-hs-container .product,
 .maincontent #columns .main-column-right .container .product {
   background: none !important;
   background: #FFFFFF;
@@ -198,10 +201,12 @@ u {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #D5D5CE;
 }
+.maincontent #columns .main-column-right .-hs-container .product:hover,
 .maincontent #columns .main-column-right .container .product:hover {
   border: 1px solid #707070;
   box-shadow: 2px 2px 6px rgba(66, 66, 66, 0.4);
 }
+.maincontent #columns .main-column-right .-hs-container .product .imageFrame,
 .maincontent #columns .main-column-right .container .product .imageFrame {
   min-height: 140px;
   margin-bottom: 0 !important;
@@ -209,27 +214,33 @@ u {
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
+.maincontent #columns .main-column-right .-hs-container .product .imageFrame img,
 .maincontent #columns .main-column-right .container .product .imageFrame img {
   max-height: 140px;
 }
+.maincontent #columns .main-column-right .-hs-container .product .number,
 .maincontent #columns .main-column-right .container .product .number {
   font-weight: 100 !important;
   overflow: visible !important;
   white-space: normal !important;
 }
+.maincontent #columns .main-column-right .-hs-container .product .price,
 .maincontent #columns .main-column-right .container .product .price {
   font-weight: bold;
   font-size: 12px;
   margin-top: 10px;
   height: 20px;
 }
+.maincontent #columns .main-column-right .-hs-container .product a,
 .maincontent #columns .main-column-right .container .product a {
   font-weight: bold;
   font-size: 10px;
 }
+.maincontent #columns .main-column-right .-hs-container .product a:visited,
 .maincontent #columns .main-column-right .container .product a:visited {
   color: #0066ee;
 }
+.maincontent #columns .main-column-right .-hs-container .product a .title,
 .maincontent #columns .main-column-right .container .product a .title {
   color: #5d5d5d;
   height: 50px;
@@ -237,9 +248,11 @@ u {
   font-size: 12px;
   min-height: 50px !important;
 }
+.maincontent #columns .main-column-right .-hs-container .product.hover .details,
 .maincontent #columns .main-column-right .container .product.hover .details {
   display: none;
 }
+.maincontent #columns .main-column-right .-hs-container .product .details,
 .maincontent #columns .main-column-right .container .product .details {
   position: relative;
   background-image: url(//hybridsaasblob.blob.core.windows.net/aspekto-public/website/images/product-list/button-details.png);
@@ -248,11 +261,13 @@ u {
   margin: 6px 0 0 4px;
   display: none;
 }
+.maincontent #columns .main-column-right .-hs-container a,
 .maincontent #columns .main-column-right .container a {
   float: left;
   margin-right: 15px;
   margin-left: 0;
 }
+.maincontent #columns .main-column-right .-hs-container a .path,
 .maincontent #columns .main-column-right .container a .path {
   width: 405px;
   height: 188px;
