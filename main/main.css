@@ -763,7 +763,7 @@ u {
   background-size: 24px;
 }
 .extension.type-productconfig .drop-down:hover {
-  color: #9D27A5 ;
+  background-color: #9D27A5 ;
 }
 .extension.type-productconfig .product-config-option {
   display: none;
