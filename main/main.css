@@ -762,7 +762,7 @@ u {
   background: #8c3292 url(https://names4ever.azurewebsites.net/images/icons/arrow-down-dropdown2.png);
   background-size: 24px;
 }
-.extension.type-productconfig:hover {
+.extension.type-productconfig .drop-down:hover {
   color: #9D27A5 ;
 }
 .extension.type-productconfig .product-config-option {
