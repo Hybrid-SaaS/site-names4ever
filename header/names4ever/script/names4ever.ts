@@ -777,7 +777,121 @@ $(function () {
 				$('#doneMsg').text('');
 				$('#doneMsg').text('Fout bij het inschrijven');
 			}
-	});
+        });
+
+
+    //zoekbox
+    var $column = $('<div class="searchbox"></div>');
+    var $searchTextBox = $('<input type="text" name="search">');
+    var isSearching = false;
+    $searchTextBox.keypress((e) => {
+        var key = e.which;
+        if (key == 13) {
+            if (!isSearching) {
+                isSearching = true;
+                var $productsColumn = $('.main-column-right.defaultStyle');
+                $productsColumn.fadeOut('fast',() => {
+                    $productsColumn.find('.usercontent.below').css('display', 'none');
+                    var $container = $productsColumn.find('.container');
+                    $container.empty();
+                    var $loading = $('<div>Zoeken...</div>');
+                    $productsColumn.parent().append($loading);
+
+                    $.ajax({
+                        url: "/website/search/product",
+                        method: "GET",
+                        dataType: "json",
+                        data: { search: $searchTextBox.val() },
+                        success: (json)=> {
+                            isSearching = false;
+                            $loading.remove();
+
+                            debugger
+                            var productsHtml = [];
+                            for (var x = 0; x < json.length; x++) {
+                                var jsonObject = json[x];
+                               
+                                productsHtml.push('<div class="product ');
+                                productsHtml.push(encodeURIComponent(jsonObject.Translation_CSS_class));
+                                productsHtml.push('" data-product-id="');
+                                productsHtml.push(jsonObject.RecordGUID.split('-').join(''));
+                                productsHtml.push('" link="');
+                                productsHtml.push(jsonObject.Translation_Url);
+                                var http = location.protocol;
+                                var slashes = http.concat("//");
+                                var host = slashes.concat(window.location.hostname);
+                                productsHtml.push('" itemscope itemtype="http://schema.org/Product"><meta itemprop="url" content="');
+                                productsHtml.push(host);
+                                productsHtml.push('/product/');
+                                productsHtml.push(jsonObject.Translation_Url);
+                                productsHtml.push('"><div class="imageFrame"><img src="');
+                                var imageUrl = '/image/product/guid/' + jsonObject.RecordGUID.split('-').join('') + '/' + encodeURIComponent(jsonObject.Translation_Description.toLowerCase().split(' ').join('-')) + '.png';
+                                productsHtml.push(imageUrl);
+                                productsHtml.push('?width=185&height=185" alt="');
+                                productsHtml.push(encodeURIComponent(jsonObject.Translation_Description));
+                                productsHtml.push('" title="');
+                                productsHtml.push(encodeURIComponent(jsonObject.Translation_Description));
+                                productsHtml.push('" itemprop="image" /></div><a href="');
+                                productsHtml.push(jsonObject.Translation_Url);
+                                productsHtml.push('"><div class="title" itemprop="name">');
+                                productsHtml.push(encodeURIComponent(jsonObject.Translation_Description));
+                                productsHtml.push('</div></a> <div class="number">');
+                                productsHtml.push(jsonObject.ProductCodeFormat);
+                                productsHtml.push(' ');
+                                productsHtml.push(jsonObject.Productcode);
+                                productsHtml.push('</div><div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><meta itemprop="priceCurrency" content="');
+                                productsHtml.push(jsonObject.Pricemodel_Currency_code);
+                                productsHtml.push('"/>');
+                                productsHtml.push(jsonObject.Pricemodel_Currency_symbol);
+                                productsHtml.push(' <span itemprop="price">');
+                               
+                                var price = jsonObject.Pricemodel_price_incl_vat;
+
+                                if (jsonObject.ShowDisplayPricesExVat == 1) {
+                                    price = jsonObject.Pricemodel_price_excl_vat;
+                                }
+
+                                var originalPrice = price;
+
+                                if (jsonObject.DiscountPercentage > 0) {
+                                    price -= (price / 100) * jsonObject.DiscountPercentage;
+                                }
+
+                                price = price.toFixed(2).replace('.', ',');
+
+                                var originalPriceHtml = '';
+
+                                if (jsonObject.ShowOriginalPrice == 1) {
+                                    if (originalPrice != price) {
+                                        originalPriceHtml += '<div class="originalPrice">';
+                                        originalPriceHtml += jsonObject.Pricemodel_Currency_symbol;
+                                        originalPriceHtml += '<span itemprop="price">';
+                                        originalPriceHtml += originalPrice;
+                                        originalPriceHtml += '</span></div>';
+                                    }
+                                }
+
+                                productsHtml.push(price);
+                                productsHtml.push('</span><div class="details"></div></div>');
+                                productsHtml.push(originalPriceHtml);
+                                productsHtml.push('</div>');
+                               
+                            }
+                            debugger
+                            $container.append(productsHtml.join(''));
+                            $productsColumn.fadeIn('fast');
+                        }
+                    });
+                });
+            }
+        }
+    });   
+
+    $column.append($searchTextBox);
+    $('.topmenu').append($column);
+
+   
+
 
 	function isValidEmailAddress(emailAddress) {
 		var sQtext = '[^\\x0d\\x22\\x5c\\x80-\\xff]';

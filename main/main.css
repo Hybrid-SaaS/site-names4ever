@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: #ffffff;
+  background-color: white;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
   -moz-user-select: text !important;
@@ -106,7 +106,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: white;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -285,6 +285,10 @@ u {
   margin-bottom: 10px;
   margin-top: 5px;
 }
+.maincontent .topmenu .searchbox > input {
+  margin-top: 15px;
+  margin-left: 10px;
+}
 .maincontent .topmenu nav {
   background-color: #f4f4f2;
   border: 2px solid #efebe8;
@@ -321,7 +325,7 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: #ffffff;
+  background: white;
   display: inline-block;
   vertical-align: top;
   width: 190px;
@@ -376,7 +380,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -438,7 +442,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
