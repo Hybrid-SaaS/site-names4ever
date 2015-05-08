@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: white;
+  background-color: #ffffff;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
   -moz-user-select: text !important;
@@ -106,7 +106,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #ffffff;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -128,6 +128,19 @@ u {
   vertical-align: top;
   width: 210px;
   min-height: 500px;
+}
+.maincontent #columns .main-column-left .searchbox {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.maincontent #columns .main-column-left .searchbox input[type=text] {
+  width: 185px;
+  border: solid 1px #bbb;
+  height: 18px;
+}
+.maincontent #columns .main-column-left .searchbox .searchsubmit {
+  display: none;
 }
 .maincontent #columns .main-column-left .fb-like-box {
   width: 185px;
@@ -285,10 +298,6 @@ u {
   margin-bottom: 10px;
   margin-top: 5px;
 }
-.maincontent .topmenu .searchbox > input {
-  margin-top: 15px;
-  margin-left: 10px;
-}
 .maincontent .topmenu nav {
   background-color: #f4f4f2;
   border: 2px solid #efebe8;
@@ -325,7 +334,7 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: white;
+  background: #ffffff;
   display: inline-block;
   vertical-align: top;
   width: 190px;
@@ -380,7 +389,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: white;
+  background-color: #ffffff;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -442,7 +451,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: white;
+  background-color: #ffffff;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);

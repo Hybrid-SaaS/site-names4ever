@@ -655,101 +655,76 @@ $(function () {
         }
     });
     //zoekbox
-    var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input type="text" name="search">');
-    var isSearching = false;
-    $searchTextBox.keypress(function (e) {
-        var key = e.which;
-        if (key == 13) {
-            if (!isSearching) {
-                isSearching = true;
-                var $productsColumn = $('.main-column-right.defaultStyle');
-                $productsColumn.fadeOut('fast', function () {
-                    $productsColumn.find('.usercontent.below').css('display', 'none');
-                    var $container = $productsColumn.find('.container');
-                    $container.empty();
-                    var $loading = $('<div>Zoeken...</div>');
-                    $productsColumn.parent().append($loading);
+    if ($('#home').length > 0) {
+        var $column = $('<div class="searchbox"></div>');
+        var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="">');
+        var isSearching = false;
+        $searchTextBox.keypress(function (e) {
+            if (e.which == 13) {
+                if (!isSearching) {
+                    var searchValue = $searchTextBox.val();
+                    isSearching = true;
+                    var $productsColumn = $('.main-column-right.defaultStyle');
+                    //delete content
+                    $('.usercontent').remove();
+                    //find container
+                    var $parent = $('.main-column-right');
+                    $parent.empty();
+                    //set loading message
+                    var $loading = $('<div>Searching...</div>');
+                    $parent.append($loading);
                     $.ajax({
                         url: "/website/search/product",
                         method: "GET",
                         dataType: "json",
-                        data: { search: $searchTextBox.val() },
+                        data: {
+                            search: searchValue
+                        },
                         success: function (json) {
-                            isSearching = false;
-                            $loading.remove();
-                            debugger;
-                            var productsHtml = [];
+                            //done searching
+                            //re-empty, so no message
+                            $parent.empty();
+                            //create container
+                            var $container = $('<div class="container" style="display: none"><div>Results for <span id=sr></span></div></div>');
+                            $container.find('#sr').text(searchValue);
+                            //build template html
+                            var html = [];
+                            html.push('<div class="product">');
+                            html.push('<div class="imageFrame"></div>');
+                            html.push('<a href="#"><div class="title"></div></a>');
+                            html.push('<div class="number"></div>');
+                            html.push('<div class="price"></div>');
+                            html.push('</div>');
                             for (var x = 0; x < json.length; x++) {
-                                var jsonObject = json[x];
-                                productsHtml.push('<div class="product ');
-                                productsHtml.push(encodeURIComponent(jsonObject.Translation_CSS_class));
-                                productsHtml.push('" data-product-id="');
-                                productsHtml.push(jsonObject.RecordGUID.split('-').join(''));
-                                productsHtml.push('" link="');
-                                productsHtml.push(jsonObject.Translation_Url);
-                                var http = location.protocol;
-                                var slashes = http.concat("//");
-                                var host = slashes.concat(window.location.hostname);
-                                productsHtml.push('" itemscope itemtype="http://schema.org/Product"><meta itemprop="url" content="');
-                                productsHtml.push(host);
-                                productsHtml.push('/product/');
-                                productsHtml.push(jsonObject.Translation_Url);
-                                productsHtml.push('"><div class="imageFrame"><img src="');
-                                var imageUrl = '/image/product/guid/' + jsonObject.RecordGUID.split('-').join('') + '/' + encodeURIComponent(jsonObject.Translation_Description.toLowerCase().split(' ').join('-')) + '.png';
-                                productsHtml.push(imageUrl);
-                                productsHtml.push('?width=185&height=185" alt="');
-                                productsHtml.push(encodeURIComponent(jsonObject.Translation_Description));
-                                productsHtml.push('" title="');
-                                productsHtml.push(encodeURIComponent(jsonObject.Translation_Description));
-                                productsHtml.push('" itemprop="image" /></div><a href="');
-                                productsHtml.push(jsonObject.Translation_Url);
-                                productsHtml.push('"><div class="title" itemprop="name">');
-                                productsHtml.push(encodeURIComponent(jsonObject.Translation_Description));
-                                productsHtml.push('</div></a> <div class="number">');
-                                productsHtml.push(jsonObject.ProductCodeFormat);
-                                productsHtml.push(' ');
-                                productsHtml.push(jsonObject.Productcode);
-                                productsHtml.push('</div><div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><meta itemprop="priceCurrency" content="');
-                                productsHtml.push(jsonObject.Pricemodel_Currency_code);
-                                productsHtml.push('"/>');
-                                productsHtml.push(jsonObject.Pricemodel_Currency_symbol);
-                                productsHtml.push(' <span itemprop="price">');
-                                var price = jsonObject.Pricemodel_price_incl_vat;
-                                if (jsonObject.ShowDisplayPricesExVat == 1) {
-                                    price = jsonObject.Pricemodel_price_excl_vat;
-                                }
-                                var originalPrice = price;
-                                if (jsonObject.DiscountPercentage > 0) {
-                                    price -= (price / 100) * jsonObject.DiscountPercentage;
-                                }
-                                price = price.toFixed(2).replace('.', ',');
-                                var originalPriceHtml = '';
-                                if (jsonObject.ShowOriginalPrice == 1) {
-                                    if (originalPrice != price) {
-                                        originalPriceHtml += '<div class="originalPrice">';
-                                        originalPriceHtml += jsonObject.Pricemodel_Currency_symbol;
-                                        originalPriceHtml += '<span itemprop="price">';
-                                        originalPriceHtml += originalPrice;
-                                        originalPriceHtml += '</span></div>';
-                                    }
-                                }
-                                productsHtml.push(price);
-                                productsHtml.push('</span><div class="details"></div></div>');
-                                productsHtml.push(originalPriceHtml);
-                                productsHtml.push('</div>');
+                                var product = json[x];
+                                var $product = $(html.join(''));
+                                $product.data('url', product.url);
+                                $product.on('click', function (e) {
+                                    window.open($(e.delegateTarget).data('url'));
+                                });
+                                $product.attr('title', product.details);
+                                $product.find('.title').text(product.title);
+                                $product.find('.number').text('Nr. ' + product.productcode);
+                                $product.find('.price').text(product['currency-symbol'] + ' ' + product.price.toStringFormat(2));
+                                $product.find('.imageFrame').append('<img src="/image/product/guid/' + product.guid + '?width=185&height=185"/>');
+                                $container.append($product);
                             }
-                            debugger;
-                            $container.append(productsHtml.join(''));
-                            $productsColumn.fadeIn('fast');
+                            if (json.length == 0)
+                                $container.text('No results...');
+                            //show results
+                            $parent.append($container.fadeIn('fast'));
                         }
+                    }).always(function () {
+                        isSearching = false;
+                    }).fail(function () {
+                        $parent.empty().text('Please try again...');
                     });
-                });
+                }
             }
-        }
-    });
-    $column.append($searchTextBox);
-    $('.topmenu').append($column);
+        });
+        $column.append($searchTextBox);
+        $('.main-column-left').prepend($column);
+    }
     function isValidEmailAddress(emailAddress) {
         var sQtext = '[^\\x0d\\x22\\x5c\\x80-\\xff]';
         var sDtext = '[^\\x0d\\x5b-\\x5d\\x80-\\xff]';
