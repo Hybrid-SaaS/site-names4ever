@@ -62,7 +62,7 @@ $(function () {
                     to = 'Jetzt';
                     break;
                 }
-                case 'fr': {
+                case 'en': {
                     from = 'From';
                     to = 'Now';
                     break;
