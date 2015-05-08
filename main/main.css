@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: white;
+  background-color: #ffffff;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
   -moz-user-select: text !important;
@@ -106,7 +106,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #ffffff;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -321,7 +321,7 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: white;
+  background: #ffffff;
   display: inline-block;
   vertical-align: top;
   width: 190px;
@@ -376,7 +376,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: white;
+  background-color: #ffffff;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -438,7 +438,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: white;
+  background-color: #ffffff;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -758,12 +758,12 @@ u {
   background: white;
   cursor: pointer;
 }
-.extension.type-productconfig .drop-down {
-  background: #8c3292 url(https://names4ever.azurewebsites.net/images/icons/arrow-down-dropdown2.png);
-  background-size: 24px;
+.extension.type-productconfig:hover {
+  color: #8c3292;
 }
-.extension.type-productconfig .drop-down:hover {
-  background-color: #9D27A5 ;
+.extension.type-productconfig:hover .drop-down {
+  background-color: #8c3292;
+  color: white;
 }
 .extension.type-productconfig .product-config-option {
   display: none;
@@ -786,6 +786,10 @@ u {
   margin-top: -4px;
   margin-right: -4px;
   text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.75);
+  -moz-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 .productconfig-options {
   opacity: 0;

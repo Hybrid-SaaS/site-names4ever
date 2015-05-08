@@ -991,11 +991,13 @@ u{
         box-sizing: border-box;
         background: white;
         cursor: pointer;
+
+        &:hover {
+            color: @color-names4ever-paars;
+
             .drop-down {
-               background: @color-names4ever-paars url(https://names4ever.azurewebsites.net/images/icons/arrow-down-dropdown2.png);
-                background-size: 24px;
-                &:hover {            
-                    background-color: #9D27A5 ;
+                background-color: @color-names4ever-paars;
+                color: white;
             }
         }
 
@@ -1022,6 +1024,10 @@ u{
             margin-top: -4px;
             margin-right: -4px;
             text-shadow: 1px 1px 4px rgba(255,255,255,0.75);
+            -moz-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease;
         }
     }
 }
