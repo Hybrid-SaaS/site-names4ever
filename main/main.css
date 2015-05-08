@@ -129,6 +129,19 @@ u {
   width: 210px;
   min-height: 500px;
 }
+.maincontent #columns .main-column-left .searchbox {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.maincontent #columns .main-column-left .searchbox input[type=text] {
+  width: 185px;
+  border: solid 1px #bbb;
+  height: 18px;
+}
+.maincontent #columns .main-column-left .searchbox .searchsubmit {
+  display: none;
+}
 .maincontent #columns .main-column-left .fb-like-box {
   width: 185px;
   max-width: 200px;

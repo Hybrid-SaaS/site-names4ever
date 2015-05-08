@@ -204,6 +204,25 @@ u{
         display: table;
 
         .main-column-left {
+
+            .searchbox {
+                position: relative;
+                margin-left: @offset-base * 2;
+                margin-bottom: @offset-base * 2;
+
+
+                input[type=text] {
+                    width: @width-base - 15px;
+                    border: solid 1px #bbb;
+                    height: 18px;
+                    
+                }
+
+                .searchsubmit {
+                       display: none;
+                    }
+            }
+
             display: table-cell;
             vertical-align: top;
             width: @width-base + @offset-base;
@@ -268,7 +287,7 @@ u{
             .-hs-container, .container {
                 width: 4*@width-base + 4*@offset-base;
                 margin: 0;
-                float:left;
+                float: left;
 
                 .product.hover {
                     .price {
@@ -276,8 +295,6 @@ u{
                         //top: -29px;
                         font-size: 12px;
                         //right: 4px;
-                       
-
                         .details {
                         }
                     }
@@ -288,8 +305,8 @@ u{
                     background: #FFFFFF;
                     min-height: @height-product-container - 20px;
                     max-height: @height-product-container;
-                    margin-right:10px !important;
-                    float:left;
+                    margin-right: 10px !important;
+                    float: left;
                     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
                     border: 1px solid #D5D5CE;                    
 
@@ -312,8 +329,8 @@ u{
 
                     .number {
                         font-weight: 100 !important;
-                        overflow:visible !important; 
-                        white-space:normal !important;
+                        overflow: visible !important;
+                        white-space: normal !important;
                     }
 
                     .price {
@@ -323,12 +340,11 @@ u{
                         font-size: 12px;
                         margin-top: 10px;
                         height: 20px;
-					    
                     }
 
                     a {
                         font-weight: bold;
-                        font-size:10px;
+                        font-size: 10px;
 
                         &:visited {
                             color: @color-link;
@@ -337,9 +353,9 @@ u{
                         .title {
                             color: #5d5d5d;
                             height: 50px;
-                            width:182px;
+                            width: 182px;
                             font-size: 12px;
-                            min-height:50px !important;
+                            min-height: 50px !important;
                         }
                     }
 
@@ -358,7 +374,7 @@ u{
                 }
 
                 a {
-                    float:left;
+                    float: left;
                     margin-right: 15px;
                     margin-left: 0;
                 }
@@ -367,11 +383,11 @@ u{
             .usercontent.below {
                 margin-bottom: 50px;
                 padding-right: 20px;
-                float:left;
+                float: left;
             }
 
             .template-content {
-                float:left;
+                float: left;
             }
         }
     }
@@ -384,13 +400,12 @@ u{
             padding-left: 0;
         }
     }
-
-    
     //top menu
     .topmenu {
         padding: @offset-base;
         margin-bottom: 10px;
         margin-top: 5px;
+
 
         nav {
             background-color: @color-background-menu-top;
@@ -521,7 +536,6 @@ u{
 	width: @width-page;
 	margin: 20px auto 0 auto;
 	background-color: @color-background-frame;
-
     border: solid 3px @color-border;
     border-radius: @borderRadius;
     box-shadow: @box-shadow-frame;
@@ -593,11 +607,8 @@ u{
 
 #logofooter {
 	width: @width-page;
-	
     margin: 20px auto 20px auto;
-
 	background-color: @color-background-frame;
-
     border: solid 3px @color-border;
     border-radius: @borderRadius;
     box-shadow: @box-shadow-frame;
@@ -642,7 +653,6 @@ u{
 		font-size: 15px;
 		letter-spacing: 1px;
 		font-weight: bold;
-        
 	}
 	//inputs:
 	.input-text {
@@ -704,7 +714,7 @@ u{
 
 	.input-label {
 		color: darkgreen;
-        font-size:14px;
+            font-size: 14px;
         margin-bottom: 10px;
         display: inline-table;
         width: 100%;
@@ -752,7 +762,7 @@ u{
 		font-size: @defaultFontSize + 3px;
 
         .text {
-            font-size:14px;
+                font-size: 14px;
         }
 
 		input[type=checkbox] {
@@ -773,12 +783,12 @@ u{
     position: relative;
 
     .product-detail {
-        width:100%;
+            width: 100%;
     }
 
     .paymentmethods {
         width: 48%;
-        position:absolute;
+            position: absolute;
         top: 35px;
         right: 0;
     
@@ -792,17 +802,16 @@ u{
                 height: 5px !important;
 
                 img {
-                    height:40px !important;
+                        height: 40px !important;
                     width: 72px !important;
                     float: right;
                 }
-
             }       
 
             .text {
-                float:left;
-                width:60%;
-                font-size:14px;
+                    float: left;
+                    width: 60%;
+                    font-size: 14px;
             }
 
             .extra {
@@ -839,15 +848,12 @@ u{
         padding: 5px 20px;
     }
 }
-
-
 // de default buttons
-
 .buttonlink {
 	cursor: pointer;
     text-align: center;
     min-width: 150px;
-    min-height:22px;
+        min-height: 22px;
     border: outset 1px #7D7D7F;
     border-radius: 5px;
     font-size: 16px;
@@ -944,6 +950,7 @@ u{
 }
 
 
+
 .product.moederdag {
 
     &.detail {
@@ -972,11 +979,8 @@ u{
         box-shadow: 4px 2px 9px rgba(0,0,0,0.4);
         border: solid 1px gray;
         text-shadow: 1px 1px 2px rgba(244,244,244,0.4);
-
     }
 }
-
-
 //product uitbreidingen
 .extension {
     &.type-productconfig {
@@ -1031,6 +1035,7 @@ u{
         }
     }
 }
+
 .productconfig-options {
     opacity: 0;
     -moz-transition: all .25s ease-in-out;
@@ -1048,7 +1053,7 @@ u{
     box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
     overflow-y: auto;
     margin-top: -1px;
-    z-index:101;
+        z-index: 101;
 
     &.visible {
         opacity: 1;        
@@ -1061,9 +1066,8 @@ u{
             padding-left: 5px;
             color: @color-names4ever-paars;
             width: 87%;
-            float:right;
-            line-height:30px;
-
+                float: right;
+                line-height: 30px;
         }
 
         border-bottom: solid 1px gray;
@@ -1077,21 +1081,15 @@ u{
         }
 
         img {
-            width:25px;
-            margin-top:2.5px;
-            margin-left:7px;
+                width: 25px;
+                margin-top: 2.5px;
+                margin-left: 7px;
         }
-
     }
 }
-
-
-
-
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
-
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
     display: block;
 }
@@ -1140,6 +1138,7 @@ body {
     -ms-user-select: text;
     user-select: text;
 }
+
 .not-selectable {
 	-moz-user-select: none;
     -khtml-user-select: none;
@@ -1386,19 +1385,15 @@ td {
     color: black;
     padding: 0.2em 0;
 }
-
 /* =============================================================================
    Media Queries
    ========================================================================== */
-
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-
 /* =============================================================================
    Non-Semantic Helper Classes
    ========================================================================== */
-
 .ir {
     display: block;
     border: 0;
@@ -1460,11 +1455,9 @@ td {
 .clear {
 	clear: both;
 }
-
 /* =============================================================================
    Print Styles
    ========================================================================== */
-
 @media print {
     * {
         background: transparent !important;
@@ -1524,18 +1517,22 @@ td {
         page-break-after: avoid;
     }
 }
-
-
 /* =============================================================================
    General Classes
    ========================================================================== */
 .vMiddle {
     vertical-align: middle;
 }
+
 .vMiddle td {
     vertical-align: middle;
 }
-#main
-{
-	position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; 
+
+    #main {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
 }
