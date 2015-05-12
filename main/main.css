@@ -804,6 +804,22 @@ u {
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
 }
+.productconfig-options.productconfig-ketting .config-product {
+  border-bottom: solid 1px gray;
+  cursor: pointer;
+  background-color: white;
+  height: 70px;
+  width: 100%;
+}
+.productconfig-options.productconfig-ketting .config-product .description {
+  padding-left: 10px;
+  color: #8c3292;
+  width: 87%;
+  line-height: 30px;
+}
+.productconfig-options.productconfig-ketting .config-product img {
+  width: 298px;
+}
 .productconfig-options {
   opacity: 0;
   -moz-transition: all 0.25s ease-in-out;
@@ -826,22 +842,6 @@ u {
 .productconfig-options.visible {
   opacity: 1;
   display: block;
-}
-.productconfig-options .productconfig-ketting .config-product {
-  border-bottom: solid 1px gray;
-  cursor: pointer;
-  background-color: white;
-  height: 70px;
-  width: 100%;
-}
-.productconfig-options .productconfig-ketting .config-product .description {
-  padding-left: 10px;
-  color: #8c3292;
-  width: 87%;
-  line-height: 30px;
-}
-.productconfig-options .productconfig-ketting .config-product img {
-  width: 298px;
 }
 .productconfig-options .config-product {
   border-bottom: solid 1px gray;
