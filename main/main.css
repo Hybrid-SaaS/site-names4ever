@@ -14,7 +14,7 @@
   }
 }
 body {
-  background-color: #ffffff;
+  background-color: white;
   font-size: 12px;
   font-family: 'Droid Sans', sans-serif;
   -moz-user-select: text !important;
@@ -106,7 +106,7 @@ u {
   width: 1060px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: white;
   min-height: 500px;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
@@ -334,7 +334,7 @@ u {
   margin-left: 10px;
 }
 .maincontent .menucontent nav {
-  background: #ffffff;
+  background: white;
   display: inline-block;
   vertical-align: top;
   width: 190px;
@@ -389,7 +389,7 @@ u {
 #footerFrame {
   width: 1060px;
   margin: 20px auto 0 auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -451,7 +451,7 @@ u {
 #logofooter {
   width: 1060px;
   margin: 20px auto 20px auto;
-  background-color: #ffffff;
+  background-color: white;
   border: solid 3px #efebe8;
   border-radius: 0.75em;
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
@@ -827,6 +827,22 @@ u {
   opacity: 1;
   display: block;
 }
+.productconfig-options .productconfig-ketting .config-product {
+  border-bottom: solid 1px gray;
+  cursor: pointer;
+  background-color: white;
+  height: 70px;
+  width: 100%;
+}
+.productconfig-options .productconfig-ketting .config-product .description {
+  padding-left: 10px;
+  color: #8c3292;
+  width: 87%;
+  line-height: 30px;
+}
+.productconfig-options .productconfig-ketting .config-product img {
+  width: 298px;
+}
 .productconfig-options .config-product {
   border-bottom: solid 1px gray;
   cursor: pointer;
@@ -842,7 +858,7 @@ u {
   line-height: 30px;
 }
 .productconfig-options .config-product:hover {
-  background-color: steelblue;
+  background-color: #F9E5FC;
 }
 .productconfig-options .config-product img {
   width: 25px;
