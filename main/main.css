@@ -816,6 +816,7 @@ u {
   color: #8c3292;
   width: 87%;
   line-height: 30px;
+  float: none;
 }
 .productconfig-options.productconfig-ketting .config-product img {
   width: 298px;
