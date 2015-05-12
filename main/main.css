@@ -819,6 +819,8 @@ u {
 }
 .productconfig-options.productconfig-ketting .config-product img {
   width: 298px;
+  margin-top: 0;
+  margin-left: 0;
 }
 .productconfig-options {
   opacity: 0;
