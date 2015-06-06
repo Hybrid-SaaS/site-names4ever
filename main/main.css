@@ -868,6 +868,15 @@ u {
   margin-top: 2.5px;
   margin-left: 7px;
 }
+.originalPrice {
+  width: 80px;
+  display: inline;
+  color: red;
+  text-decoration: line-through;
+}
+.value.price {
+  width: 80px;
+}
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
