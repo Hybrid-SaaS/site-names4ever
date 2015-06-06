@@ -192,6 +192,8 @@ u {
 .maincontent #columns .main-column-right .usercontent.above img {
   max-width: 830px;
   border-radius: 0.75em;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 .maincontent #columns .main-column-right .-hs-container,
 .maincontent #columns .main-column-right .container {

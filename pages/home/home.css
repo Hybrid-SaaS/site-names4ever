@@ -18,9 +18,6 @@
 .center-content {
   margin-top: 20px;
 }
-.center-content .row {
-  margin-top: 10px;
-}
 #topcat {
   position: absolute;
   z-index: 10;
