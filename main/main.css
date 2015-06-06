@@ -874,8 +874,9 @@ u {
   color: red;
   text-decoration: line-through;
 }
-.value.price {
+.price {
   width: 80px;
+  display: inline-block;
 }
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
