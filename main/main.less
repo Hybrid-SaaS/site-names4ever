@@ -18,7 +18,7 @@
 @color-background: white;
 
 //achtergrond kleur van het top menu;
-@color-background-menu-top: #F4F4F2;
+@color-background-menu-top: rgba(47, 47, 47, 0.9);
 
 //standaard achtergrond van main frame
 @color-background-frame: white;
@@ -35,6 +35,12 @@
 
 
 @color-names4ever-paars: rgb(140, 50, 146);
+
+//kleur link menu
+@color-link-topmenu: #fff;
+//hover link kleur
+@color-link-hover-topmenu: @color-link-topmenu / 1.25;
+
 
 //kleur link menu
 @color-link-menu: #992296;
@@ -89,6 +95,12 @@ body {
     -webkit-user-select:text !important;
     -ms-user-select: text !important;
     user-select:text !important;
+    width: 1070px;
+    margin: auto;
+    padding-top: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 12px 0 15px -4px rgba(192, 192, 192, 0.1), -12px 0 8px -4px rgba(192, 192, 192, 0.1);
 
 }
 ::-moz-selection {
@@ -411,13 +423,12 @@ u{
 
         nav {
             background-color: @color-background-menu-top;
-            border: 2px solid @color-border;
-            border-radius: @borderRadius;
+            border: 2px solid #646464;
             padding-top: 8px;
             padding-bottom: 8px;
             font-weight: bold;
             font-size: 15px;
-            color: @color-front-dark * 2;
+           
 
             li {
                 &:first-child {
@@ -426,10 +437,10 @@ u{
                 &.hybridsaas-menu-current {
 
                     a {
-                        color: @color-link-menu;
+                        color: @color-link-topmenu;
 
                         &:hover a {
-                            color: @color-link-hover-menu !important;
+                            color: @color-link-hover-topmenu !important;
                         }
                     }
                 }
@@ -1155,8 +1166,7 @@ html, button, input, select, textarea {
     color: #222;
 }
 
-body {
-    margin: 0;
+body {    
     font-size: 1em;
     line-height: 1.4;
     cursor: default;

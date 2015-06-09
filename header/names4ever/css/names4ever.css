@@ -19,15 +19,11 @@
 }
 #header .names4ever {
   height: 50px;
-  margin-top: 20px;
   margin-bottom: 70px;
-  border-top: solid 1px #efebe8;
-  border-bottom: solid 1px #efebe8;
-  background-color: #f4f4f2;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 #header .names4ever .wrapper {
   height: 50px;
+  border-top: 1px solid #eeeeee;
 }
 #header .names4ever .wrapper .flags {
   text-align: center;
@@ -65,7 +61,7 @@
   height: 125px;
   margin-top: -17px;
   margin-left: 37.5px;
-  -webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.3));
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
