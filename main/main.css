@@ -114,9 +114,6 @@ u {
   margin-bottom: 20px;
   background-color: white;
   min-height: 500px;
-  border: solid 3px #efebe8;
-  border-radius: 0.75em;
-  box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
   padding-bottom: 30px;
 }
 .maincontent.nomenu .main-column-left {
@@ -320,13 +317,13 @@ u {
   display: inline-block;
 }
 .maincontent .topmenu nav li.hybridsaas-menu-current a {
-  color: #ffffff;
+  color: #992296;
 }
 .maincontent .topmenu nav li.hybridsaas-menu-current a:hover a {
-  color: #cccccc !important;
+  color: #7a1b78 !important;
 }
 .maincontent .topmenu nav li a {
-  color: #565656;
+  color: #ffffff;
   text-decoration: none;
   padding-left: 26px;
   padding-right: 26px;
@@ -334,7 +331,7 @@ u {
   padding-bottom: 10px;
 }
 .maincontent .topmenu nav li a:hover {
-  color: #7a1b78;
+  color: #cccccc;
 }
 .maincontent .menucontent {
   margin-left: 10px;

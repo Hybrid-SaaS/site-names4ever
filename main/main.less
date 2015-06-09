@@ -194,10 +194,7 @@ u{
     margin: auto;
     margin-bottom: 20px;
     background-color: @color-background-frame;
-    min-height: 500px;
-    border: solid 3px @color-border;
-    border-radius: @borderRadius;
-    box-shadow: @box-shadow-frame;
+    min-height: 500px;    
     padding-bottom: 30px;
 
     &.nomenu {
@@ -437,10 +434,10 @@ u{
                 &.hybridsaas-menu-current {
 
                     a {
-                        color: @color-link-topmenu;
+                        color: @color-link-menu;
 
                         &:hover a {
-                            color: @color-link-hover-topmenu !important;
+                            color: @color-link-hover-menu !important;
                         }
                     }
                 }
@@ -450,7 +447,7 @@ u{
                 display: inline-block;
                 //link in li
                 a {
-                    color: @color-front-dark;
+                    color: @color-link-topmenu;
                     text-decoration: none;
                     padding-left: 26px;
                     padding-right: 26px;
@@ -458,7 +455,7 @@ u{
                     padding-bottom: 10px;
 
                     &:hover {
-                        color: @color-link-hover-menu;
+                        color: @color-link-hover-topmenu;
                     }
                 }
             }
