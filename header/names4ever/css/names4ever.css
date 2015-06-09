@@ -77,6 +77,7 @@
   font-weight: bold;
   font-size: 15px;
   cursor: pointer;
+  margin-right: 5px;
 }
 #header .names4ever .wrapper .cart-wrap:hover {
   text-decoration: underline;
