@@ -42,13 +42,13 @@ body {
   text-shadow: none;
 }
 a {
-  color: #0066ee;
+  color: #707070;
 }
 a:hover {
   color: #ea5518 !important;
 }
 a:visited {
-  color: #1a1e86;
+  color: #a5a5a5;
 }
 u {
   text-decoration: none;
@@ -256,7 +256,7 @@ u {
 }
 .maincontent #columns .main-column-right .-hs-container .product a:visited,
 .maincontent #columns .main-column-right .container .product a:visited {
-  color: #0066ee;
+  color: #707070;
 }
 .maincontent #columns .main-column-right .-hs-container .product a .title,
 .maincontent #columns .main-column-right .container .product a .title {
@@ -399,7 +399,7 @@ u {
   box-shadow: 0 0 5px rgba(244, 244, 242, 0.75);
 }
 #footerFrame a {
-  color: #0066ee;
+  color: #707070;
   text-decoration: underline;
 }
 #footerFrame a:hover {
@@ -424,7 +424,7 @@ u {
   margin-left: 10px;
 }
 #footerFrame .info a {
-  color: #0066ee;
+  color: #707070;
   text-decoration: none;
 }
 #footerFrame .info a:hover {
@@ -435,7 +435,7 @@ u {
   display: inline-block;
   font-size: 10pt;
   font-weight: bold;
-  color: #0066ee;
+  color: #707070;
   margin-bottom: 5px;
 }
 #footerFrame .info ul {
@@ -446,7 +446,7 @@ u {
 #footerFrame .info li {
   padding-left: 1em;
   text-indent: -0.7em;
-  color: #0066ee;
+  color: #707070;
   margin-bottom: 1px;
 }
 #footerFrame .info li:before {
@@ -472,7 +472,7 @@ u {
   font-size: 8pt;
 }
 #logofooter .info a {
-  color: #0066ee;
+  color: #707070;
   text-decoration: none;
 }
 #logofooter .info a:hover {
