@@ -946,27 +946,6 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-::-moz-selection {
-  background: darkorange;
-  color: #fff;
-  -webkit-text-shadow: none;
-  text-shadow: none;
-}
-::selection {
-  background: darkorange;
-  color: #fff;
-  -webkit-text-shadow: none;
-  text-shadow: none;
-}
-a {
-  color: darkorange;
-}
-a:visited {
-  color: #551a8b;
-}
-a:hover {
-  color: #06e;
-}
 a:focus {
   outline: thin dotted;
 }
