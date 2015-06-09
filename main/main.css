@@ -314,7 +314,6 @@ u {
   list-style-type: none;
   margin: 0;
   display: inline-block;
-  border-right: 1px solid white;
 }
 .maincontent .topmenu nav li.hybridsaas-menu-current a {
   color: #992296;
@@ -333,10 +332,6 @@ u {
 .maincontent .topmenu nav li a:hover {
   color: white !important;
   background-color: #7a1b78 !important;
-  margin-left: -1px;
-}
-.maincontent .topmenu nav li:hover {
-  border-right: none;
 }
 .maincontent .menucontent {
   margin-left: 10px;
