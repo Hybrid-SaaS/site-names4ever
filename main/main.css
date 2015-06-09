@@ -331,7 +331,8 @@ u {
   padding-bottom: 10px;
 }
 .maincontent .topmenu nav li a:hover {
-  color: #cccccc;
+  color: white;
+  background-color: #7a1b78;
 }
 .maincontent .menucontent {
   margin-left: 10px;
