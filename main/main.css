@@ -333,6 +333,10 @@ u {
 .maincontent .topmenu nav li a:hover {
   color: white !important;
   background-color: #7a1b78 !important;
+  margin-left: -1px;
+}
+.maincontent .topmenu nav li:hover {
+  border-right: none;
 }
 .maincontent .menucontent {
   margin-left: 10px;
