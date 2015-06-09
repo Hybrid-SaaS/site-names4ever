@@ -310,12 +310,12 @@ u {
   padding-bottom: 8px;
   font-weight: bold;
   font-size: 15px;
-  border-right: 1px solid white;
 }
 .maincontent .topmenu nav li {
   list-style-type: none;
   margin: 0;
   display: inline-block;
+  border-right: 1px solid white;
 }
 .maincontent .topmenu nav li.hybridsaas-menu-current a {
   color: #992296;
