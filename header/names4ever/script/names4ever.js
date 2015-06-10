@@ -799,93 +799,90 @@ $(function () {
     });
 
     //zoekbox
-    var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="search">');
-    var $submitSearch = $("#searchsubmit");
-    var isSearching = false;
+    if ($('#home').length > 0) {
+        var $column = $('<div class="searchbox"></div>');
+        var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" onClick="KeyBoardHandler(event)" value="Search">');
+        var isSearching = false;
 
-    $searchTextBox.keypress(function (event) {
-        if (event.keyCode == 13) {
-            $submitSearch.trigger('click');
-        }
-    });
+        $searchTextBox.keypress(function (e) {
+            if (e.which == 13) {
+                if (!isSearching) {
+                    var searchValue = $searchTextBox.val();
 
-    $submitSearch.on("click", function () {
-        if (!isSearching) {
-            var searchValue = $searchTextBox.val();
+                    isSearching = true;
+                    var $productsColumn = $('.main-column-right.defaultStyle');
 
-            isSearching = true;
-            var $productsColumn = $('.main-column-right.defaultStyle');
+                    //delete content
+                    $('.usercontent').remove();
 
-            //delete content
-            $('.usercontent').remove();
-
-            //find container
-            var $parent = $('.main-column-right');
-            $parent.empty();
-
-            //set loading message
-            var $loading = $('<div>Searching...</div>');
-            $parent.append($loading);
-
-            $.ajax({
-                url: "/website/search/product",
-                method: "GET",
-                dataType: "json",
-                data: {
-                    search: searchValue
-                },
-                success: function (json) {
-                    //done searching
-                    //re-empty, so no message
+                    //find container
+                    var $parent = $('.main-column-right');
                     $parent.empty();
 
-                    //create container
-                    var $container = $('<div class="container" style="display: none"><div>Results for <span id=sr></span></div></div>');
-                    $container.find('#sr').text(searchValue);
+                    //set loading message
+                    var $loading = $('<div>Searching...</div>');
+                    $parent.append($loading);
 
-                    //build template html
-                    var html = [];
-                    html.push('<div class="product">');
-                    html.push('<div class="imageFrame"></div>');
-                    html.push('<a href="#"><div class="title"></div></a>');
-                    html.push('<div class="number"></div>');
-                    html.push('<div class="price"></div>');
-                    html.push('</div>');
+                    $.ajax({
+                        url: "/website/search/product",
+                        method: "GET",
+                        dataType: "json",
+                        data: {
+                            search: searchValue
+                        },
+                        success: function (json) {
+                            //done searching
+                            //re-empty, so no message
+                            $parent.empty();
 
-                    for (var x = 0; x < json.length; x++) {
-                        var product = json[x];
-                        var $product = $(html.join(''));
-                        $product.data('url', product.url);
-                        $product.on('click', function (e) {
-                            window.open($(e.delegateTarget).data('url'));
-                        });
-                        $product.attr('title', product.details);
+                            //create container
+                            var $container = $('<div class="container" style="display: none"><div>Results for <span id=sr></span></div></div>');
+                            $container.find('#sr').text(searchValue);
 
-                        $product.find('.title').text(product.title);
-                        $product.find('.number').text('Nr. ' + product.productcode);
-                        $product.find('.price').text(product['currency-symbol'] + ' ' + product.price.toStringFormat(2));
+                            //build template html
+                            var html = [];
+                            html.push('<div class="product">');
+                            html.push('<div class="imageFrame"></div>');
+                            html.push('<a href="#"><div class="title"></div></a>');
+                            html.push('<div class="number"></div>');
+                            html.push('<div class="price"></div>');
+                            html.push('</div>');
 
-                        $product.find('.imageFrame').append('<img src="/image/product/guid/' + product.guid + '?width=185&height=185"/>');
+                            for (var x = 0; x < json.length; x++) {
+                                var product = json[x];
+                                var $product = $(html.join(''));
+                                $product.data('url', product.url);
+                                $product.on('click', function (e) {
+                                    window.open($(e.delegateTarget).data('url'));
+                                });
+                                $product.attr('title', product.details);
 
-                        $container.append($product);
-                    }
-                    if (json.length == 0)
-                        $container.text('No results...');
+                                $product.find('.title').text(product.title);
+                                $product.find('.number').text('Nr. ' + product.productcode);
+                                $product.find('.price').text(product['currency-symbol'] + ' ' + product.price.toStringFormat(2));
 
-                    //show results
-                    $parent.append($container.fadeIn('fast'));
+                                $product.find('.imageFrame').append('<img src="/image/product/guid/' + product.guid + '?width=185&height=185"/>');
+
+                                $container.append($product);
+                            }
+                            if (json.length == 0)
+                                $container.text('No results...');
+
+                            //show results
+                            $parent.append($container.fadeIn('fast'));
+                        }
+                    }).always(function () {
+                        isSearching = false;
+                    }).fail(function () {
+                        $parent.empty().text('Please try again...');
+                    });
                 }
-            }).always(function () {
-                isSearching = false;
-            }).fail(function () {
-                $parent.empty().text('Please try again...');
-            });
-        }
-    });
+            }
+        });
 
-    $column.append($searchTextBox);
-    $('.search-box').prepend($column);
+        $column.append($searchTextBox);
+        $('.search-box').prepend($column);
+    }
 
     function isValidEmailAddress(emailAddress) {
         var sQtext = '[^\\x0d\\x22\\x5c\\x80-\\xff]';

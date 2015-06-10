@@ -922,19 +922,16 @@ $(function(){
 
 
     //zoekbox
-	
-    var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="search">');
-    var $submitSearch = $("#searchsubmit");
-    var isSearching = false;
+	if ($('#home').length > 0)
+	{
+		var $column = $('<div class="searchbox"></div>');
+        var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" onClick="KeyBoardHandler(event)" value="Search">');
+		var isSearching = false;
 
-    $searchTextBox.keypress(event => {
-        if (event.keyCode == 13) {
-            $submitSearch.trigger('click');
-        }
-    });
-
-    $submitSearch.on("click", () => {
+		$searchTextBox.keypress((e) =>
+		{
+			if (e.which == 13)
+			{
 				if (!isSearching)
 				{
 					var searchValue = $searchTextBox.val();
@@ -1013,12 +1010,13 @@ $(function(){
 					{
 						$parent.empty().text('Please try again...');
 					});
-				}			
+				}
+			}
 		});
 
 		$column.append($searchTextBox);
 		$('.search-box').prepend($column);
-	
+	}
 
 
 	function isValidEmailAddress(emailAddress)
