@@ -930,7 +930,7 @@ $(function(){
 
     $searchTextBox.keypress(event => {
         if (event.keyCode == 13) {
-            $submitTextBox.trigger('click');
+            $searchTextBox.trigger('click');
         }
     });
 

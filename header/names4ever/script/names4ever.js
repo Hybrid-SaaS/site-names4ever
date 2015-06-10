@@ -806,7 +806,7 @@ $(function () {
 
     $searchTextBox.keypress(function (event) {
         if (event.keyCode == 13) {
-            $submitTextBox.trigger('click');
+            $searchTextBox.trigger('click');
         }
     });
 
