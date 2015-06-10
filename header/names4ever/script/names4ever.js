@@ -23,6 +23,7 @@ var WebPage;
         Data.language;
         Data.country;
         Data.isloggedin;
+        Data.productcode;
         Data.productGuid;
         Data.productPrice;
         Data.basketGuid;
@@ -97,6 +98,9 @@ var WebPage;
 
         //set login guid
         Data.isloggedin = References.$html.data('login-id');
+
+        //set productcode
+        Data.productcode = document.getElementsByClassName('productcode')[0].innerHTML;
 
         //init basket
         Basket.init();
