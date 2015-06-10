@@ -114,6 +114,9 @@ module WebPage
         //set login guid
         Data.isloggedin = References.$html.data('login-id');
 
+        //set productcode
+        Data.productcode = References.$html.data('productcode');
+
         //init basket
         Basket.init();
 
