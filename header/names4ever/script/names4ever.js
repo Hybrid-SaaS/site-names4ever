@@ -24,7 +24,6 @@ var WebPage;
         Data.country;
         Data.isloggedin;
         Data.productGuid;
-        Data.productcode;
         Data.productPrice;
         Data.basketGuid;
     })(WebPage.Data || (WebPage.Data = {}));
@@ -98,9 +97,6 @@ var WebPage;
 
         //set login guid
         Data.isloggedin = References.$html.data('login-id');
-
-        //set productcode
-        Data.productcode = References.$('productcode');
 
         //init basket
         Basket.init();
