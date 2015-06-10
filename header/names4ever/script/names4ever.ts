@@ -30,7 +30,6 @@ module WebPage
         export var language: string;
         export var country: string;
         export var isloggedin: string;
-       
         export var productGuid: string;      
         export var productPrice: number;
         export var basketGuid: string;
@@ -113,8 +112,6 @@ module WebPage
 
         //set login guid
         Data.isloggedin = References.$html.data('login-id');
-
-
 
         //init basket
         Basket.init();
@@ -925,8 +922,7 @@ $(function(){
 
 
     //zoekbox
-	if ($('#home').length > 0)
-	{
+	
 		var $column = $('<div class="searchbox"></div>');
 		var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="">');
 		var isSearching = false;
@@ -1018,8 +1014,8 @@ $(function(){
 		});
 
 		$column.append($searchTextBox);
-		$('.main-column-left').prepend($column);
-	}
+		$('.search-box').prepend($column);
+	
 
 
 	function isValidEmailAddress(emailAddress)
