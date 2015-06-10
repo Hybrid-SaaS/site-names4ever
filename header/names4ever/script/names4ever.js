@@ -24,6 +24,7 @@ var WebPage;
         Data.country;
         Data.isloggedin;
         Data.productGuid;
+        Data.productcode;
         Data.productPrice;
         Data.basketGuid;
     })(WebPage.Data || (WebPage.Data = {}));

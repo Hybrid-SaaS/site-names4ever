@@ -31,6 +31,7 @@ module WebPage
         export var country: string;
         export var isloggedin: string;
         export var productGuid: string;
+        export var productcode: string;
         export var productPrice: number;
         export var basketGuid: string;
     }
