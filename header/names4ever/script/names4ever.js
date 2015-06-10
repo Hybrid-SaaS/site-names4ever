@@ -800,11 +800,11 @@ $(function () {
 
     //zoekbox
     var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="">');
+    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="search">');
     var $submitSearch = $("#searchsubmit");
     var isSearching = false;
 
-    $searchTextBox.keydown(function (event) {
+    $searchTextBox.keypress(function (event) {
         if (event.keyCode == 13) {
             $submitSearch.trigger('click');
         }
