@@ -100,7 +100,7 @@ var WebPage;
         Data.isloggedin = References.$html.data('login-id');
 
         //set productcode
-        Data.productcode = References.$html.data('productcode');
+        Data.productcode = References.$body.data('productcode');
 
         //init basket
         Basket.init();
