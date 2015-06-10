@@ -881,6 +881,13 @@ u {
   width: 80px;
   display: inline-block;
 }
+.searchbox {
+  position: absolute;
+  margin-top: 13px;
+}
+.searchbox .searchinput {
+  width: 265px;
+}
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */

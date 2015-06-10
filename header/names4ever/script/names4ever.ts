@@ -924,7 +924,7 @@ $(function(){
     //zoekbox
 	
     var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search">');
+    var $searchTextBox = $('<input class="searchinput" type="text" placeholder="Search Names4ever" name="search">');
     var $searchFinder = $('<input class="searchsubmit" type = "submit" id = "searchsubmit" value = "Search" > ');    
     var isSearching = false;
 
@@ -1009,14 +1009,13 @@ $(function(){
                         })
                         .fail(() => {
                             $parent.empty().text('Please try again...');
-                        });
-                
+                        });                
 			}
 		});
 
     $column.append($searchTextBox);
     $column.append($searchFinder);
-		$('.search-box').prepend($column);
+    $('.search-box').prepend($column);
 	
 
 
