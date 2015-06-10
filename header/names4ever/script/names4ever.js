@@ -886,6 +886,7 @@ $(function () {
     });
 
     $column.append($searchTextBox);
+    $column.append($searchFinder);
     $('.search-box').prepend($column);
 
     function isValidEmailAddress(emailAddress) {
