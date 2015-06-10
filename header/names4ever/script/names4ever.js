@@ -802,7 +802,6 @@ $(function () {
     var $column = $('<div class="searchbox"></div>');
     var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search">');
     var $searchFinder = $('<input class="searchsubmit" type = "submit" id = "searchsubmit" value = "Search" > ');
-    var $submitSearch = $("#searchsubmit");
     var isSearching = false;
 
     $searchTextBox.keypress(function (event) {
