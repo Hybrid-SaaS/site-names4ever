@@ -923,14 +923,18 @@ $(function(){
 
     //zoekbox
 	
-		var $column = $('<div class="searchbox"></div>');
-		var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="search">');
-		var isSearching = false;
+    var $column = $('<div class="searchbox"></div>');
+    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="">');
+    var $submitSearch = $("#searchsubmit");
+    var isSearching = false;
 
-		$searchTextBox.keypress((e) =>
-		{
-			if (e.which == 13)
-			{
+    $searchTextBox.keydown(event => {
+        if (event.keyCode == 13) {
+            $submitSearch.trigger('click');
+        }
+    });
+
+    $submitSearch.on("click", () => {
 				if (!isSearching)
 				{
 					var searchValue = $searchTextBox.val();
@@ -1009,8 +1013,7 @@ $(function(){
 					{
 						$parent.empty().text('Please try again...');
 					});
-				}
-			}
+				}			
 		});
 
 		$column.append($searchTextBox);
