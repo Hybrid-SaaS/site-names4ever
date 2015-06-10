@@ -30,7 +30,7 @@ module WebPage
         export var language: string;
         export var country: string;
         export var isloggedin: string;
-        export var productcode: string;
+       
         export var productGuid: string;      
         export var productPrice: number;
         export var basketGuid: string;
@@ -114,8 +114,7 @@ module WebPage
         //set login guid
         Data.isloggedin = References.$html.data('login-id');
 
-        //set productcode
-        Data.productcode = document.getElementsByClassName('productcode')[0].innerHTML;
+
 
         //init basket
         Basket.init();
