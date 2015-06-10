@@ -924,17 +924,18 @@ $(function(){
     //zoekbox
 	
     var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="Search">');
+    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search">');
+    var $searchFinder = $('<input class="searchsubmit" type = "submit" id = "searchsubmit" value = "Search" > ');
     var $submitSearch = $("#searchsubmit");
     var isSearching = false;
 
     $searchTextBox.keypress(event => {
         if (event.keyCode == 13) {
-            $searchTextBox.trigger('click');
+            $searchFinder.trigger('click');
         }
     });
 
-    $searchTextBox.on("click", () => 
+    $searchFinder.on("click", () => 
 
 			{
                 if (!isSearching) {

@@ -800,17 +800,18 @@ $(function () {
 
     //zoekbox
     var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="Search">');
+    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search">');
+    var $searchFinder = $('<input class="searchsubmit" type = "submit" id = "searchsubmit" value = "Search" > ');
     var $submitSearch = $("#searchsubmit");
     var isSearching = false;
 
     $searchTextBox.keypress(function (event) {
         if (event.keyCode == 13) {
-            $searchTextBox.trigger('click');
+            $searchFinder.trigger('click');
         }
     });
 
-    $searchTextBox.on("click", function () {
+    $searchFinder.on("click", function () {
         if (!isSearching) {
             var searchValue = $searchTextBox.val();
 
