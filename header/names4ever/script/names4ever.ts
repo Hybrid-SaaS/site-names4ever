@@ -924,7 +924,7 @@ $(function(){
     //zoekbox
 	
     var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" onkeypress="return calcRoute(event)" value="">');
+    var $searchTextBox = $('<input type="text" placeholder="Search Names4ever" name="search"><input class="searchsubmit" type="submit" id="searchsubmit" value="Search">');
     var $submitSearch = $("#searchsubmit");
     var isSearching = false;
 
