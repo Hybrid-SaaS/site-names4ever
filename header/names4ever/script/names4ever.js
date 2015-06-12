@@ -883,7 +883,7 @@ $(function () {
 
             $.ajax({
                 url: "/website/search/product",
-                method: "GET",
+                method: "POST",
                 dataType: "json",
                 data: {
                     search: searchValue
