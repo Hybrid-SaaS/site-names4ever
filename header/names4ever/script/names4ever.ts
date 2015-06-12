@@ -915,7 +915,7 @@ $(function () {
 
 
         if (!isSearching) {
-            var searchValue = window.location.search.slice(3);
+            var searchValue = window.location.search.slice(3).replace(/+/g, ' ');
 
             isSearching = true;
             var $productsColumn = $('.main-column-right.defaultStyle');
