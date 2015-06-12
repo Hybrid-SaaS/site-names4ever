@@ -866,7 +866,7 @@ $(function () {
 
     //zoekbox	
     var $column = $('<div class="searchbox"></div>');
-    switch (WebPage.Data.country) {
+    switch (WebPage.Data.language) {
         case 'nl':
             var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Zoeken naar..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
             var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Zoeken" > ');
@@ -875,17 +875,7 @@ $(function () {
         case 'de':
             var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
             var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');
-            break;
-
-        case 'at':
-            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
-            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');
-            break;
-
-        case 'ch':
-            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
-            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');
-            break;
+            break;         
 
         case 'es':
             var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Buscar..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
@@ -929,7 +919,7 @@ $(function () {
 
 
             //set loading message
-            switch (WebPage.Data.country) {
+            switch (WebPage.Data.language) {
                 case 'nl':
                     var $loading = $('<div>Zoeken...</div>');
                     break;
@@ -937,15 +927,7 @@ $(function () {
                 case 'de':
                     var $loading = $('<div>Suchen...</div>');
                     break;
-
-                case 'at':
-                    var $loading = $('<div>Suchen...</div>');
-                    break;
-
-                case 'ch':
-                    var $loading = $('<div>Suchen...</div>');
-                    break;
-
+                                
                 case 'es':
                     var $loading = $('<div>Búsqueda...</div>');
                     break;
@@ -969,20 +951,12 @@ $(function () {
                     $parent.empty();
 
                     //create container
-                    switch (WebPage.Data.country) {
+                    switch (WebPage.Data.language) {
                         case 'nl':
                             var $container = $('<div class="container" style="display: none"><div>Resultaten voor <span id=sr></span></div></div>');
                             break;
 
                         case 'de':
-                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
-                            break;
-
-                        case 'at':
-                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
-                            break;
-
-                        case 'ch':
                             var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
                             break;
 
@@ -1020,22 +994,14 @@ $(function () {
                         $container.append($product);
                     }
                     if (json.length == 0)
-                        switch (WebPage.Data.country) {
+                        switch (WebPage.Data.language) {
                             case 'nl':
                                 $container.text('Geen resultaten...');
                                 break;
 
                             case 'de':
                                 $container.text('Keine Ergebnisse...');
-                                break;
-
-                            case 'at':
-                                $container.text('Keine Ergebnisse...');
-                                break;
-
-                            case 'ch':
-                                $container.text('Keine Ergebnisse...');
-                                break;
+                                break;                           
 
                             case 'es':
                                 $container.text('Sin resultados...');
@@ -1055,22 +1021,14 @@ $(function () {
                     isSearching = false;
                 })
                 .fail(() => {
-                    switch (WebPage.Data.country) {
+                    switch (WebPage.Data.language) {
                         case 'nl':
                             $parent.empty().text('Probeer alstublieft nogmaals...');
                             break;
 
                         case 'de':
                             $parent.empty().text('Versuche es erneut...');
-                            break;
-
-                        case 'at':
-                            $parent.empty().text('Versuche es erneut...');
-                            break;
-
-                        case 'ch':
-                            $parent.empty().text('Versuche es erneut...');
-                            break;
+                            break;                        
 
                         case 'es':
                             $parent.empty().text('Por favor, inténtalo de nuevo...');
