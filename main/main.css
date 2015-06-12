@@ -886,7 +886,21 @@ u {
   margin-top: 13px;
 }
 .searchbox .searchinput {
-  width: 265px;
+  width: 250px;
+  height: 24px;
+  padding-left: 5px;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: #cccccc;
+}
+.searchbox .searchsubmit {
+  cursor: pointer;
+  -webkit-appearance: button;
+  min-width: 90px;
+  background-color: #933A93;
+  height: 28px;
+  border: 2px solid #A3559F;
+  color: white;
 }
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
