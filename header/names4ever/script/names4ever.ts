@@ -966,7 +966,8 @@ $(function(){
 
     $searchFinder.on("click", () => 
 
-			{
+    {
+        location.href = "/search";
                 if (!isSearching) {
                     var searchValue = $searchTextBox.val();
 
