@@ -324,7 +324,7 @@ module WebPage
 $(() => WebPage.load());
 
 //onload
-$(function(){
+$(function () {
 
 
     $.getScript("/Website/JScript/language-strings");
@@ -334,13 +334,12 @@ $(function(){
     $('#bottommenu2').children().appendTo($('#menulocation2'));
 
     //link naar shoppingcart
-	$('#shoppingCart').click(function(){
+    $('#shoppingCart').click(function () {
         document.location.href = "/Website/Pages/Basket";
     });
-    
+
     var $shopText = $('#shoppingcart_text');
-	WebPage.Basket.Events.onChange = function(data)
-    {
+    WebPage.Basket.Events.onChange = function (data) {
         if (data.count == 1)
             $shopText.hide();
         else
@@ -350,48 +349,41 @@ $(function(){
 
 	//alleen bij de checkout pagina
     var $checkout = $('.checkout');
-	if ($checkout.length == 1)
-	{
+    if ($checkout.length == 1) {
         //geen promotiecode bij inloggen partners
         var $promotiecode = $('#promotion');
-		if (WebPage.Data.isloggedin)
-		{
+        if (WebPage.Data.isloggedin) {
             $promotiecode.parent().parent().html(' ');
         }
 
 
-		//zoek alle payment methods
-		var $payments = $('.paymentmethods');
-		var $paymentmethods = $('.paymentmethod');
-		 $paymentmethods.hide();
+        //zoek alle payment methods
+        var $payments = $('.paymentmethods');
+        var $paymentmethods = $('.paymentmethod');
+        $paymentmethods.hide();
 
-		if (WebPage.Data.country == 'nl')
-		{
+        if (WebPage.Data.country == 'nl') {
             $paymentmethods.filter('.account').show();
             $paymentmethods.filter('.manual').show();
-        }     
-        
+        }
+
         var p = $paymentmethods.first();
-		if (WebPage.Data.isloggedin)
-		{
+        if (WebPage.Data.isloggedin) {
             p.before($paymentmethods.filter('.account').show());
             p.before($paymentmethods.filter('.ideal').show());
             p.before($paymentmethods.filter('.mastercard').show());
             p.before($paymentmethods.filter('.paypal').show());
             p.before($paymentmethods.filter('.visa').show());
             p.before($paymentmethods.filter('.americanexpress').show());
-            if (WebPage.Data.country == 'de')
-                {
+            if (WebPage.Data.country == 'de') {
                 p.before($paymentmethods.filter('.manual').show());
             }
         }
-		else
-		{
-			switch (WebPage.Data.country)
-			{
+        else {
+            switch (WebPage.Data.country) {
                 case 'nl':
                     p.before($paymentmethods.filter('.ideal').show());
-				    p.before($paymentmethods.filter('.mastercard').show());
+                    p.before($paymentmethods.filter('.mastercard').show());
                     p.before($paymentmethods.filter('.paypal').show());
                     p.before($paymentmethods.filter('.visa').show());
                     p.before($paymentmethods.filter('.maestro').show());
@@ -459,13 +451,10 @@ $(function(){
             }
         }
         var labelMore = '';
-		if (WebPage.Data.isloggedin)
-		{
+        if (WebPage.Data.isloggedin) {
         }
-		else
-		{
-			switch (WebPage.Data.country)
-			{
+        else {
+            switch (WebPage.Data.country) {
                 case 'nl':
                     labelMore = 'Toon meer betaalmethodes';
                     break;
@@ -488,69 +477,62 @@ $(function(){
             }
 
 
-			var $newElement = $('<span class="morepaymentmethods" style="cursor: pointer; display: block; margin-top: 20px"></span>').text(labelMore).click(function(){
+            var $newElement = $('<span class="morepaymentmethods" style="cursor: pointer; display: block; margin-top: 20px"></span>').text(labelMore).click(function () {
 
                 $paymentmethods.fadeIn(1000);
                 $(this).remove();
 
             });
         }
-        
-	    $('#placeorder').before($newElement);
-		if (WebPage.Data.country == 'de')
-		{
-		    var avcontent = '<input id="tc" type="checkbox" name="tc"></input>Ich habe die <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/agb.pdf">AGB</a> und mein <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/widerrufsrecht.pdf">Widerrufsrecht</a> gelesen und akzeptiere diese';
-		    $('.input-row .input-label #tc').parent().html(avcontent);
-        }
-		if (WebPage.Data.country == 'at')
-		{
+
+        $('#placeorder').before($newElement);
+        if (WebPage.Data.country == 'de') {
             var avcontent = '<input id="tc" type="checkbox" name="tc"></input>Ich habe die <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/agb.pdf">AGB</a> und mein <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/widerrufsrecht.pdf">Widerrufsrecht</a> gelesen und akzeptiere diese';
             $('.input-row .input-label #tc').parent().html(avcontent);
         }
-		if (WebPage.Data.country == 'ch')
-		{
+        if (WebPage.Data.country == 'at') {
             var avcontent = '<input id="tc" type="checkbox" name="tc"></input>Ich habe die <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/agb.pdf">AGB</a> und mein <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/widerrufsrecht.pdf">Widerrufsrecht</a> gelesen und akzeptiere diese';
             $('.input-row .input-label #tc').parent().html(avcontent);
         }
-	    //paymentmethods.append()
+        if (WebPage.Data.country == 'ch') {
+            var avcontent = '<input id="tc" type="checkbox" name="tc"></input>Ich habe die <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/agb.pdf">AGB</a> und mein <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/widerrufsrecht.pdf">Widerrufsrecht</a> gelesen und akzeptiere diese';
+            $('.input-row .input-label #tc').parent().html(avcontent);
+        }
+        //paymentmethods.append()
     }
 
     var $flags = $('.flag');
 
     //verberg vlag voor huidige taal
-	for (var x = 0; x < $flags.length; x++)
-	{
+    for (var x = 0; x < $flags.length; x++) {
         var $flag = $flags.eq(x);
         if ($flag.data('flag') == WebPage.Data.country)
-			$flag.hide();
+            $flag.hide();
 
-		if ($flag.data('flag') == 'en' && WebPage.Data.country == 'gb')
-			$flag.hide();
+        if ($flag.data('flag') == 'en' && WebPage.Data.country == 'gb')
+            $flag.hide();
     }
 
     var webData = <any>WebPage.Data;
-	$('.flag').on('click', (event: JQueryEventObject) =>
-	{
+    $('.flag').on('click', (event: JQueryEventObject) => {
         var $flag = $(event.target);
-		if (webData.productGuid)
-		{
-			switch ($flag.data('flag'))
-			{
+        if (webData.productGuid) {
+            switch ($flag.data('flag')) {
                 case 'nl':
                     location.href = 'https://www.names4ever.nl/product/' + webData.productGuid;
-					return;
-				case 'be':
-					location.href = 'https://www.names4ever.be/product/' + webData.productGuid;
-					return;
+                    return;
+                case 'be':
+                    location.href = 'https://www.names4ever.be/product/' + webData.productGuid;
+                    return;
                 case 'de':
                     location.href = 'https://www.namesforever.de/product/' + webData.productGuid;
-					return;
-				case 'at':
-					location.href = 'https://www.names4ever.at/product/' + webData.productGuid;
-					return;
-				case 'ch':
-					location.href = 'https://www.names4ever.ch/product/' + webData.productGuid;
-					return;
+                    return;
+                case 'at':
+                    location.href = 'https://www.names4ever.at/product/' + webData.productGuid;
+                    return;
+                case 'ch':
+                    location.href = 'https://www.names4ever.ch/product/' + webData.productGuid;
+                    return;
                 case 'en':
                     location.href = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
                     return;
@@ -561,35 +543,33 @@ $(function(){
         }
 
 
-		switch ($flag.data('flag'))
-		{
-			case 'nl':
-				location.href = 'https://www.names4ever.nl/';
-				return;
-			case 'be':
-				location.href = 'https://www.names4ever.be/';
-				return;
-			case 'de':
-				location.href = 'https://www.namesforever.de/';
-				return;
-			case 'at':
-				location.href = 'https://www.names4ever.at/';
-				return;
-			case 'ch':
-				location.href = 'https://www.names4ever.ch/';
-				return;
-			case 'en':
-				location.href = 'https://www.names4ever.co.uk/';
+        switch ($flag.data('flag')) {
+            case 'nl':
+                location.href = 'https://www.names4ever.nl/';
+                return;
+            case 'be':
+                location.href = 'https://www.names4ever.be/';
+                return;
+            case 'de':
+                location.href = 'https://www.namesforever.de/';
+                return;
+            case 'at':
+                location.href = 'https://www.names4ever.at/';
+                return;
+            case 'ch':
+                location.href = 'https://www.names4ever.ch/';
+                return;
+            case 'en':
+                location.href = 'https://www.names4ever.co.uk/';
                 return;
             case 'es':
                 location.href = 'http://www.names4ever.es/';
                 return;
-		}
-	});
+        }
+    });
 
 
-    if (WebPage.Data.productGuid)
-	{
+    if (WebPage.Data.productGuid) {
         // de standaard prijs
         var defaultPrice = 0;
 
@@ -599,326 +579,289 @@ $(function(){
         var $productConfig = $('.extension.type-productconfig').append($more);
 
 
-		for (var y = 0; y < $productConfig.length; y++)
-		{
-			var $productConfigItem = $productConfig.eq(y);
+        for (var y = 0; y < $productConfig.length; y++) {
+            var $productConfigItem = $productConfig.eq(y);
 
-			switch (WebPage.Data.country)
-			{
-				case 'nl':
-					var $content = $("<div class='content'>Maak hier uw keuze</div>");
-					break;
+            switch (WebPage.Data.country) {
+                case 'nl':
+                    var $content = $("<div class='content'>Maak hier uw keuze</div>");
+                    break;
 
-				case 'de':
-					var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
-					break;
+                case 'de':
+                    var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
+                    break;
 
-				case 'at':
-					var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
-					break;
+                case 'at':
+                    var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
+                    break;
 
-				case 'ch':
-					var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
-					break;
+                case 'ch':
+                    var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
+                    break;
 
-				default:
-					var $content = $("<div class='content'>Please make your choice</div>");
-					break;
-			}
-            $productConfigItem.prepend($content);            
+                default:
+                    var $content = $("<div class='content'>Please make your choice</div>");
+                    break;
+            }
+            $productConfigItem.prepend($content);
 
-            var $container = $("<div class='productconfig-options'></div>");                
+            var $container = $("<div class='productconfig-options'></div>");
             var id = $productConfigItem.attr('id');
-			if (id)
-			{
-				$container.addClass('productconfig-' + id.toLowerCase());
+            if (id) {
+                $container.addClass('productconfig-' + id.toLowerCase());
             }
 
-			var $options = $productConfigItem.find('.productconfig-option');
-			for (var x = 0; x < $options.length; x++)
-			{
-				//teken de pulldown items
-				var $option = $options.eq(x);
+            var $options = $productConfigItem.find('.productconfig-option');
+            for (var x = 0; x < $options.length; x++) {
+                //teken de pulldown items
+                var $option = $options.eq(x);
 
-				var $imgContainer = $('<div class="config-product"><div class="description"></div></div>')
+                var $imgContainer = $('<div class="config-product"><div class="description"></div></div>')
 				$imgContainer.data('price', $option.data('price'));
-				$imgContainer.data('related-element', $productConfigItem.attr('id'));
-				$imgContainer.find('.description').text($option.data('description'));
-				$imgContainer.data('recordguid', $option.data('recordguid'));
+                $imgContainer.data('related-element', $productConfigItem.attr('id'));
+                $imgContainer.find('.description').text($option.data('description'));
+                $imgContainer.data('recordguid', $option.data('recordguid'));
 
-				var $img = $('<img />');
-				$img.attr('src', '/image/product/guid/' + $option.data('recordguid') + '?width=400&height=100');
-				$imgContainer.append($img);
+                var $img = $('<img />');
+                $img.attr('src', '/image/product/guid/' + $option.data('recordguid') + '?width=400&height=100');
+                $imgContainer.append($img);
 
-				$container.append($imgContainer)
+                $container.append($imgContainer)
 
 				//zet de default tekst, prijs en value
-				if ($option.data('default'))
-				{
-					$content.text($option.data('description'));
-					defaultPrice = parseFloat($option.data('price'));
+				if ($option.data('default')) {
+                    $content.text($option.data('description'));
+                    defaultPrice = parseFloat($option.data('price'));
 
-					$productConfigItem.data('value', $option.data('recordguid'));
-				}
-			}
+                    $productConfigItem.data('value', $option.data('recordguid'));
+                }
+            }
 
-			$('.config-product', $container).on('click', (event) =>
-			{
-				var $this = $(event.delegateTarget);
+            $('.config-product', $container).on('click', (event) => {
+                var $this = $(event.delegateTarget);
 
-				var $content = $this.parents('.productconfig-options').prev().find('.content');
-				$content.text($this.find('.description').text());
+                var $content = $this.parents('.productconfig-options').prev().find('.content');
+                $content.text($this.find('.description').text());
 
 
-				var newPrice = (WebPage.Data.productPrice - defaultPrice + parseFloat($this.data('price'))).toDecimal();
-				$('.price-value').text(newPrice.toStringFormat(2));
+                var newPrice = (WebPage.Data.productPrice - defaultPrice + parseFloat($this.data('price'))).toDecimal();
+                $('.price-value').text(newPrice.toStringFormat(2));
 
-				//zet value op parent item (voor submit zometeen)
-				var $related = $('#' + $this.data('related-element'));
-				$related.data('value', $this.data('recordguid'));
-			});
-
-
-			//voeg de pulldownitems toe aan de container
-			//showen en hiden van pulldown
-			$productConfigItem
-				.after($container)
-				.on('click', (event) =>
-			{
-                var $this = $(event.delegateTarget).next();
-
-                if ($this.hasClass('visible'))
-                    $this.removeClass('visible');
-                else
-                    $this.addClass('visible');
-
-                event.stopImmediatePropagation();
-
-					$(document.body).one('click', () =>
-				{
-                    $this.removeClass('visible');
-                })
+                //zet value op parent item (voor submit zometeen)
+                var $related = $('#' + $this.data('related-element'));
+                $related.data('value', $this.data('recordguid'));
             });
-		}
 
 
-		//onclick op pulldown items
-        
+            //voeg de pulldownitems toe aan de container
+            //showen en hiden van pulldown
+            $productConfigItem
+                .after($container)
+                .on('click', (event) => {
+                    var $this = $(event.delegateTarget).next();
+
+                    if ($this.hasClass('visible'))
+                        $this.removeClass('visible');
+                    else
+                        $this.addClass('visible');
+
+                    event.stopImmediatePropagation();
+
+                    $(document.body).one('click', () => {
+                        $this.removeClass('visible');
+                    })
+            });
+        }
+
+
+        //onclick op pulldown items
+
 
         //dropdown bij productconfig
-       
 
-		$('#submit').click((event) =>
-		{
-	            event.preventDefault();
-	            var data = {
-		            basketId: WebPage.Data.basketGuid,
-		            product: WebPage.Data.productGuid,
-		            remark: $('#remark').val(),
-		            amount: 1
-	            };
 
-			var fileList = [];
+        $('#submit').click((event) => {
+            event.preventDefault();
+            var data = {
+                basketId: WebPage.Data.basketGuid,
+                product: WebPage.Data.productGuid,
+                remark: $('#remark').val(),
+                amount: 1
+            };
 
-	            var $extension = $('.extension');
-			if ($extension.length > 0)
-			{
-		            var $set = null;
-				for (var x = 0; x < $extension.length; x++)
-				{
-			            var $element = $extension.eq(x);
+            var fileList = [];
 
-					if ($element.attr('id') != 'remark')
-					{
-						switch ($element.data('input-type'))
-						{
-				            case 'productconfig':
-				            {
-					            data["extension:" + $element.attr('id')] = $element.data('value');
-					            break;
-				            }
-							case 'uploadattachment':
-							{
-								//upload file, check input
-								if ($element.hasClass('inputrequired'))
-								{
-									if ($element.val().length == 0)
-									{
-										if (!$set)
-											$set = $element;
+            var $extension = $('.extension');
+            if ($extension.length > 0) {
+                var $set = null;
+                for (var x = 0; x < $extension.length; x++) {
+                    var $element = $extension.eq(x);
 
-										$element.addClass('missing');
+                    if ($element.attr('id') != 'remark') {
+                        switch ($element.data('input-type')) {
+                            case 'productconfig':
+                                {
+                                    data["extension:" + $element.attr('id')] = $element.data('value');
+                                    break;
+                                }
+                            case 'uploadattachment':
+                                {
+                                    //upload file, check input
+                                    if ($element.hasClass('inputrequired')) {
+                                        if ($element.val().length == 0) {
+                                            if (!$set)
+                                                $set = $element;
+
+                                            $element.addClass('missing');
+                                        }
+                                        else {
+                                            $element.removeClass('missing');
+                                            fileList.push($element)
 									}
-									else
-									{
-										$element.removeClass('missing');
-										fileList.push($element)
-									}
+                                    }
+                                    else {
+                                        if ($element.val().length > 0)
+                                            fileList.push($element)
 								}
-								else
-								{
-									if ($element.val().length > 0)
-										fileList.push($element)
-								}
-								break;
-							}
-				            default:
-				            {
-								if ($element.hasClass('inputrequired'))
-								{
-									if ($element.val().length == 0)
-									{
-										if (!$set)
-										{
-								            $set = $element;
-							            }
-							            $element.addClass('missing');
-									}
-									else
-									{
-							            $element.removeClass('missing');
-						            }
-					            }
+                                    break;
+                                }
+                            default:
+                                {
+                                    if ($element.hasClass('inputrequired')) {
+                                        if ($element.val().length == 0) {
+                                            if (!$set) {
+                                                $set = $element;
+                                            }
+                                            $element.addClass('missing');
+                                        }
+                                        else {
+                                            $element.removeClass('missing');
+                                        }
+                                    }
 
-					            data["extension:" + $element.attr('id')] = $element.val();
-					            break;
-				            }
-				            }
-			            }
-		            }
-	            }
-			if ($set)
-			{
-                    //not complete, abort
-                    var msg = new WebPage.Message.Settings();
-                    msg.type = WebPage.Message.MessageType.Error;
-                    msg.body = WebPage.resourceString('BasketNotAllRequiredFieldsFilled');
-                    msg.header = WebPage.resourceString('Basket');
-				WebPage.Message.show(msg, () =>
-				{
-                        $set.focus();
-                    });
-
-                    return;
+                                    data["extension:" + $element.attr('id')] = $element.val();
+                                    break;
+                                }
+                        }
+                    }
                 }
+            }
+            if ($set) {
+                //not complete, abort
+                var msg = new WebPage.Message.Settings();
+                msg.type = WebPage.Message.MessageType.Error;
+                msg.body = WebPage.resourceString('BasketNotAllRequiredFieldsFilled');
+                msg.header = WebPage.resourceString('Basket');
+                WebPage.Message.show(msg, () => {
+                    $set.focus();
+                });
+
+                return;
+            }
 
 
-			var ajaxSettings = <any>{
-                    type: 'POST',
-                    url: '/Website/Basket/Add',
-				cache: false
-			};
+            var ajaxSettings = <any>{
+                type: 'POST',
+                url: '/Website/Basket/Add',
+                cache: false
+            };
 
 			debugger
 			//files to upload?
-			if (typeof FormData != 'undefined' && fileList.length > 0)
-			{
-				//transform data
-				var formData = new FormData();
-				for (var key in data)
-				{
-					formData.append(key, data[key]);
-				}
-				for (var x = 0; x < fileList.length; x++)
-				{
-					$element = fileList[x];
-					formData.append("extension:" + $element.attr('id'), (<any>$element[0]).files[0]);
-				}
+			if (typeof FormData != 'undefined' && fileList.length > 0) {
+                //transform data
+                var formData = new FormData();
+                for (var key in data) {
+                    formData.append(key, data[key]);
+                }
+                for (var x = 0; x < fileList.length; x++) {
+                    $element = fileList[x];
+                    formData.append("extension:" + $element.attr('id'), (<any>$element[0]).files[0]);
+                }
 
-				ajaxSettings.data = formData;
-				ajaxSettings.processData = false;
-				ajaxSettings.contentType = false;
-				ajaxSettings.xhr = function()
-				{ // Custom XMLHttpRequest
-					var myXhr = $.ajaxSettings.xhr();
-					if (myXhr.upload)
-					{ // Check if upload property exists
-						myXhr.upload.addEventListener('progress',() =>
-						{
- 
-						}, false); // For handling the progress of the upload
-					}
-					return myXhr;
-				}
+                ajaxSettings.data = formData;
+                ajaxSettings.processData = false;
+                ajaxSettings.contentType = false;
+                ajaxSettings.xhr = function () { // Custom XMLHttpRequest
+                    var myXhr = $.ajaxSettings.xhr();
+                    if (myXhr.upload) { // Check if upload property exists
+                        myXhr.upload.addEventListener('progress', () => {
+
+                        }, false); // For handling the progress of the upload
+                    }
+                    return myXhr;
+                }
 			}
-			else
-			{
-				ajaxSettings.data = data;
-			}
+            else {
+                ajaxSettings.data = data;
+            }
 
 
 
 
-			$.ajax(ajaxSettings)
-				.done(() =>
-				{
-                        WebPage.Basket.updateClient();
-                        location.href = "/Website/Pages/Basket";
-                    })
-				.fail(() =>
-				{
-                        msg = new WebPage.Message.Settings();
-                        msg.type = WebPage.Message.MessageType.Error;
-                        msg.body = WebPage.resourceString('BasketAddError');
-                        msg.header = WebPage.resourceString('Basket');
+            $.ajax(ajaxSettings)
+                .done(() => {
+                    WebPage.Basket.updateClient();
+                    location.href = "/Website/Pages/Basket";
+                })
+                .fail(() => {
+                    msg = new WebPage.Message.Settings();
+                    msg.type = WebPage.Message.MessageType.Error;
+                    msg.body = WebPage.resourceString('BasketAddError');
+                    msg.header = WebPage.resourceString('Basket');
 
-                        WebPage.Message.show(msg);
-                    })
-				.always(() => {});
-            });
-	};
+                    WebPage.Message.show(msg);
+                })
+                .always(() => { });
+        });
+    };
 
-	$('#newsletter').append('<input class="ph" type="text" value="e-mail" id="newsletter_input" style="display: inline; width: 140px; font-size: 14px; font-style: italic; color: #888;"></input><input type="button" id="mailBtn" value="Ok" style="display: inline; height: 22px; margin-left: 5px; top: -1px; position: relative; font-size: 12px;"></input><span id="doneMsg" style="float: left; color: red; font-size: 12px;"></span>')
-		.on('focusin', "#newsletter_input", function(){
-			var styles = {
-				fontStyle: "normal",
-				color: "black"
-			};
-			if ($(this).hasClass('ph'))
-			{
-				$(this).val('').css(styles);
-			}
-		})
-		.on('focusout', "#newsletter_input", function(){
-			if (!$(this).val())
-			{
-				var styles = {
-					fontStyle: "italic",
-					color: "#888"
-				};
-				$(this).addClass('ph');
-				$(this).val('e-mail').css(styles);
-			}
-			else
-			{
-				$(this).removeClass('ph');
-			}
-		})
-		.on('click', "#mailBtn", function(){
-			var mail = $('#newsletter_input').val();
-			if (isValidEmailAddress(mail))
-			{
-				$.ajax({
-					type: "POST",
-					url: "/system/newsletter/subscribe",
+    $('#newsletter').append('<input class="ph" type="text" value="e-mail" id="newsletter_input" style="display: inline; width: 140px; font-size: 14px; font-style: italic; color: #888;"></input><input type="button" id="mailBtn" value="Ok" style="display: inline; height: 22px; margin-left: 5px; top: -1px; position: relative; font-size: 12px;"></input><span id="doneMsg" style="float: left; color: red; font-size: 12px;"></span>')
+        .on('focusin', "#newsletter_input", function () {
+            var styles = {
+                fontStyle: "normal",
+                color: "black"
+            };
+            if ($(this).hasClass('ph')) {
+                $(this).val('').css(styles);
+            }
+        })
+        .on('focusout', "#newsletter_input", function () {
+            if (!$(this).val()) {
+                var styles = {
+                    fontStyle: "italic",
+                    color: "#888"
+                };
+                $(this).addClass('ph');
+                $(this).val('e-mail').css(styles);
+            }
+            else {
+                $(this).removeClass('ph');
+            }
+        })
+        .on('click', "#mailBtn", function () {
+            var mail = $('#newsletter_input').val();
+            if (isValidEmailAddress(mail)) {
+                $.ajax({
+                    type: "POST",
+                    url: "/system/newsletter/subscribe",
                     data: {
                         source: 'Website',
-						email: $('#newsletter_input').val()
-					}
-				}).done(function(){
-					$('#doneMsg').text('');
-					$('#doneMsg').text('Ingeschreven voor de nieuwsbrief');
-				}).fail(function(){
-					$('#doneMsg').text('');
-					$('#doneMsg').text('Fout bij het inschrijven');
-				});
-			}
-			else
-			{
-				$('#doneMsg').text('');
-				$('#doneMsg').text('Fout bij het inschrijven');
-			}
-	});
+                        email: $('#newsletter_input').val()
+                    }
+                }).done(function () {
+                        $('#doneMsg').text('');
+                        $('#doneMsg').text('Ingeschreven voor de nieuwsbrief');
+                    }).fail(function () {
+                        $('#doneMsg').text('');
+                        $('#doneMsg').text('Fout bij het inschrijven');
+                    });
+            }
+            else {
+                $('#doneMsg').text('');
+                $('#doneMsg').text('Fout bij het inschrijven');
+            }
+        });
 
 
     //zoekbox	
@@ -926,12 +869,12 @@ $(function(){
     switch (WebPage.Data.country) {
         case 'nl':
             var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Zoeken naar..." name="search">');
-            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Zoeken" > ');    
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Zoeken" > ');
             break;
 
         case 'de':
             var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search">');
-            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');    
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');
             break;
 
         case 'at':
@@ -955,7 +898,7 @@ $(function(){
             break;
     }
 
-    
+
     var isSearching = false;
 
     $searchTextBox.keypress(event => {
@@ -964,183 +907,15 @@ $(function(){
         }
     });
 
-    $searchFinder.on("click", () => 
+    $searchFinder.on("click", () => {
+        location.href = "/search?q=" + $searchTextBox.val().replace(/ /g, '+');   
+    });
 
-    {
-        location.href = "/search?q=" + $searchTextBox.val().replace(/ /g, '+');
-                if (!isSearching) {
-                    var searchValue = $searchTextBox.val();
-
-                    isSearching = true;
-                    var $productsColumn = $('.main-column-right.defaultStyle');
-
-                    //delete content
-                    $('.usercontent').remove();
-
-                    //find container
-                    var $parent = $('.main-column-right');
-                    $parent.empty();
-
-
-                    //set loading message
-                    switch (WebPage.Data.country) {
-                        case 'nl':
-                            var $loading = $('<div>Zoeken...</div>');
-                            break;
-
-                        case 'de':
-                            var $loading = $('<div>Suchen...</div>');
-                            break;
-
-                        case 'at':
-                            var $loading = $('<div>Suchen...</div>');
-                            break;
-
-                        case 'ch':
-                            var $loading = $('<div>Suchen...</div>');
-                            break;
-
-                        case 'es':
-                            var $loading = $('<div>Búsqueda...</div>');
-                            break;
-
-                        default:
-                            var $loading = $('<div>Searching...</div>');
-                            break;
-                    }
-                    $parent.append($loading);
-
-                    $.ajax({
-                        url: "/website/search/product",
-                        method: "POST",
-                        dataType: "json",
-                        data: {
-                            search: searchValue
-                        },
-                        success: (json) => {
-                            //done searching
-                            //re-empty, so no message
-                            $parent.empty();
-
-                            //create container
-                            switch (WebPage.Data.country) {
-                                case 'nl':
-                                    var $container = $('<div class="container" style="display: none"><div>Resultaten voor <span id=sr></span></div></div>');
-                                    break;
-
-                                case 'de':
-                                    var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
-                                    break;
-
-                                case 'at':
-                                    var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
-                                    break;
-
-                                case 'ch':
-                                    var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
-                                    break;
-
-                                case 'es':
-                                    var $container = $('<div class="container" style="display: none"><div>Resultados para <span id=sr></span></div></div>');
-                                    break;
-
-                                default:
-                                    var $container = $('<div class="container" style="display: none"><div>Results for <span id=sr></span></div></div>')
-                                    break;
-                            }
-							$container.find('#sr').text(searchValue);
-                            //build template html
-
-                            var html = [];
-                            html.push('<div class="product">');
-                            html.push('<div class="imageFrame"></div>');
-                            html.push('<a href="#"><div class="title"></div></a>');
-                            html.push('<div class="number"></div>');
-                            html.push('<div class="price"></div>');
-                            html.push('</div>');
-
-                            for (var x = 0; x < json.length; x++) {
-                                var product = json[x];
-                                var $product = $(html.join(''));
-                                $product.data('url', product.url);
-                                $product.on('click', function (e) {
-                                    window.open($(e.delegateTarget).data('url'));
-                                });
-                                $product.attr('title', product.title);
-                                $product.find('.title').text(product.title);
-                                $product.find('.number').text('Nr. ' + product.productcode);
-                                $product.find('.price').text(product['currency-symbol'] + ' ' + product.price.toStringFormat(2));
-                                $product.find('.imageFrame').append('<img src="/image/product/guid/' + product.guid + '?width=185&height=185"/>');
-                                $container.append($product);
-                            }
-                            if (json.length == 0)
-                                switch (WebPage.Data.country) {
-                                    case 'nl':
-                                        $container.text('Geen resultaten...');
-                                    break;
-
-                                    case 'de':
-                                        $container.text('Keine Ergebnisse...');
-                                    break;
-
-                                    case 'at':
-                                        $container.text('Keine Ergebnisse...');
-                                    break;
-
-                                    case 'ch':
-                                        $container.text('Keine Ergebnisse...');
-                                    break;
-
-                                    case 'es':
-                                        $container.text('Sin resultados...');
-                                    break;
-
-                                    default:
-                                        $container.text('No results...');
-                                    break;
-                                }
-                               
-
-                            //show results
-                            $parent.append($container.fadeIn('fast'));
-                        }
-                    })
-                        .always(() => {
-                            isSearching = false;
-                        })
-                        .fail(() => {
-                            switch (WebPage.Data.country) {
-                                case 'nl':
-                                    $parent.empty().text('Probeer alstublieft nogmaals...');
-                                    break;
-
-                                case 'de':
-                                    $parent.empty().text('Versuche es erneut...');
-                                    break;
-
-                                case 'at':
-                                    $parent.empty().text('Versuche es erneut...');
-                                    break;
-
-                                case 'ch':
-                                    $parent.empty().text('Versuche es erneut...');
-                                    break;
-
-                                case 'es':
-                                    $parent.empty().text('Por favor, inténtalo de nuevo...');
-                                    break;
-
-                                default:
-                                    $parent.empty().text('Please try again...');
-                                    break;
-                            }                            
-                        });                
-			}
-		});
-
-    $column.append($searchTextBox);
-    $column.append($searchFinder);
-    $('.search-box').prepend($column);
+    if (window.location.href.indexOf("search?q=") > -1) {
+        alert("dit is een zoekpagina");
+    }    
+            
+        
 	
 
 
