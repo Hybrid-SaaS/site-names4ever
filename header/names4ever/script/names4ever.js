@@ -846,7 +846,7 @@ $(function () {
 
     if (window.location.href.indexOf("search?q=") > -1) {
         if (!isSearching) {
-            var searchValue = window.location.search.slice(1);
+            var searchValue = "hart";
 
             isSearching = true;
             var $productsColumn = $('.main-column-right.defaultStyle');
