@@ -924,8 +924,34 @@ $(function(){
     //zoekbox
 	
     var $column = $('<div class="searchbox"></div>');
-    var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Search Names4ever" name="search">');
-    var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Search" > ');    
+    switch (WebPage.Data.country) {
+        case 'nl':
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Zoek naar..." name="search">');
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Zoek" > ');    
+            break;
+
+        case 'de':
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search">');
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');    
+            break;
+
+        case 'at':
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search">');
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');
+            break;
+
+        case 'ch':
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search">');
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');
+            break;
+
+        default:
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Search for..." name="search">');
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Search" > ');
+            break;
+    }
+
+    
     var isSearching = false;
 
     $searchTextBox.keypress(event => {
