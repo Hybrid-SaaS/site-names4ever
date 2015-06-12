@@ -841,7 +841,7 @@ $(function () {
     });
 
     $searchFinder.on("click", function () {
-        location.href = "/search?q=" + $searchTextBox.val().replace(/\s/g, '+');
+        location.href = "/search?q=" + $searchTextBox.val().replace(/ /g, '+');
         if (!isSearching) {
             var searchValue = $searchTextBox.val();
 
