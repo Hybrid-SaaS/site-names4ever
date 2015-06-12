@@ -58,6 +58,7 @@
   font-weight: bold;
   margin-top: 10px;
   text-align: left;
+  min-height: 50px;
 }
 #topcat #deal .price {
   color: #63248f;

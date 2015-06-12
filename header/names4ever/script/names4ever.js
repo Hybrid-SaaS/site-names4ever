@@ -802,8 +802,8 @@ $(function () {
     var $column = $('<div class="searchbox"></div>');
     switch (WebPage.Data.country) {
         case 'nl':
-            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Zoek naar..." name="search">');
-            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Zoek" > ');
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Zoeken naar..." name="search">');
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Zoeken" > ');
             break;
 
         case 'de':
@@ -819,6 +819,11 @@ $(function () {
         case 'ch':
             var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search">');
             var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');
+            break;
+
+        case 'es':
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Buscar..." name="search">');
+            var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Búsqueda" > ');
             break;
 
         default:
@@ -849,8 +854,31 @@ $(function () {
             var $parent = $('.main-column-right');
             $parent.empty();
 
-            //set loading message
-            var $loading = $('<div>Searching...</div>');
+            switch (WebPage.Data.country) {
+                case 'nl':
+                    var $loading = $('<div>Zoeken...</div>');
+                    break;
+
+                case 'de':
+                    var $loading = $('<div>Suchen...</div>');
+                    break;
+
+                case 'at':
+                    var $loading = $('<div>Suchen...</div>');
+                    break;
+
+                case 'ch':
+                    var $loading = $('<div>Suchen...</div>');
+                    break;
+
+                case 'es':
+                    var $loading = $('<div>Búsqueda...</div>');
+                    break;
+
+                default:
+                    var $loading = $('<div>Searching...</div>');
+                    break;
+            }
             $parent.append($loading);
 
             $.ajax({
@@ -865,8 +893,31 @@ $(function () {
                     //re-empty, so no message
                     $parent.empty();
 
-                    //create container
-                    var $container = $('<div class="container" style="display: none"><div>Results for <span id=sr></span></div></div>');
+                    switch (WebPage.Data.country) {
+                        case 'nl':
+                            var $container = $('<div class="container" style="display: none"><div>Resultaten voor <span id=sr></span></div></div>');
+                            break;
+
+                        case 'de':
+                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
+                            break;
+
+                        case 'at':
+                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
+                            break;
+
+                        case 'ch':
+                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
+                            break;
+
+                        case 'es':
+                            var $container = $('<div class="container" style="display: none"><div>Resultados para <span id=sr></span></div></div>');
+                            break;
+
+                        default:
+                            var $container = $('<div class="container" style="display: none"><div>Results for <span id=sr></span></div></div>');
+                            break;
+                    }
                     $container.find('#sr').text(searchValue);
 
                     //build template html
@@ -885,18 +936,39 @@ $(function () {
                         $product.on('click', function (e) {
                             window.open($(e.delegateTarget).data('url'));
                         });
-                        $product.attr('title', product.details);
-
+                        $product.attr('title', product.title);
                         $product.find('.title').text(product.title);
                         $product.find('.number').text('Nr. ' + product.productcode);
                         $product.find('.price').text(product['currency-symbol'] + ' ' + product.price.toStringFormat(2));
-
                         $product.find('.imageFrame').append('<img src="/image/product/guid/' + product.guid + '?width=185&height=185"/>');
-
                         $container.append($product);
                     }
                     if (json.length == 0)
-                        $container.text('No results...');
+                        switch (WebPage.Data.country) {
+                            case 'nl':
+                                $container.text('Geen resultaten...');
+                                break;
+
+                            case 'de':
+                                $container.text('Keine Ergebnisse...');
+                                break;
+
+                            case 'at':
+                                $container.text('Keine Ergebnisse...');
+                                break;
+
+                            case 'ch':
+                                $container.text('Keine Ergebnisse...');
+                                break;
+
+                            case 'es':
+                                $container.text('Sin resultados...');
+                                break;
+
+                            default:
+                                $container.text('No results...');
+                                break;
+                        }
 
                     //show results
                     $parent.append($container.fadeIn('fast'));
@@ -904,7 +976,31 @@ $(function () {
             }).always(function () {
                 isSearching = false;
             }).fail(function () {
-                $parent.empty().text('Please try again...');
+                switch (WebPage.Data.country) {
+                    case 'nl':
+                        $parent.empty().text('Probeer alstublieft nogmaals...');
+                        break;
+
+                    case 'de':
+                        $parent.empty().text('Versuche es erneut...');
+                        break;
+
+                    case 'at':
+                        $parent.empty().text('Versuche es erneut...');
+                        break;
+
+                    case 'ch':
+                        $parent.empty().text('Versuche es erneut...');
+                        break;
+
+                    case 'es':
+                        $parent.empty().text('Por favor, inténtalo de nuevo...');
+                        break;
+
+                    default:
+                        $parent.empty().text('Please try again...');
+                        break;
+                }
             });
         }
     });
