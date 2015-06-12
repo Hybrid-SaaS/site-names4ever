@@ -845,8 +845,173 @@ $(function () {
     });
 
     if (window.location.href.indexOf("search?q=") > -1) {
-        alert("dit is een zoekpagina");
+        if (!isSearching) {
+            var searchValue = $searchTextBox.val();
+
+            isSearching = true;
+            var $productsColumn = $('.main-column-right.defaultStyle');
+
+            //delete content
+            $('.usercontent').remove();
+
+            //find container
+            var $parent = $('.main-column-right');
+            $parent.empty();
+
+            switch (WebPage.Data.country) {
+                case 'nl':
+                    var $loading = $('<div>Zoeken...</div>');
+                    break;
+
+                case 'de':
+                    var $loading = $('<div>Suchen...</div>');
+                    break;
+
+                case 'at':
+                    var $loading = $('<div>Suchen...</div>');
+                    break;
+
+                case 'ch':
+                    var $loading = $('<div>Suchen...</div>');
+                    break;
+
+                case 'es':
+                    var $loading = $('<div>Búsqueda...</div>');
+                    break;
+
+                default:
+                    var $loading = $('<div>Searching...</div>');
+                    break;
+            }
+            $parent.append($loading);
+
+            $.ajax({
+                url: "/website/search/product",
+                method: "POST",
+                dataType: "json",
+                data: {
+                    search: searchValue
+                },
+                success: function (json) {
+                    //done searching
+                    //re-empty, so no message
+                    $parent.empty();
+
+                    switch (WebPage.Data.country) {
+                        case 'nl':
+                            var $container = $('<div class="container" style="display: none"><div>Resultaten voor <span id=sr></span></div></div>');
+                            break;
+
+                        case 'de':
+                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
+                            break;
+
+                        case 'at':
+                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
+                            break;
+
+                        case 'ch':
+                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
+                            break;
+
+                        case 'es':
+                            var $container = $('<div class="container" style="display: none"><div>Resultados para <span id=sr></span></div></div>');
+                            break;
+
+                        default:
+                            var $container = $('<div class="container" style="display: none"><div>Results for <span id=sr></span></div></div>');
+                            break;
+                    }
+                    $container.find('#sr').text(searchValue);
+
+                    //build template html
+                    var html = [];
+                    html.push('<div class="product">');
+                    html.push('<div class="imageFrame"></div>');
+                    html.push('<a href="#"><div class="title"></div></a>');
+                    html.push('<div class="number"></div>');
+                    html.push('<div class="price"></div>');
+                    html.push('</div>');
+
+                    for (var x = 0; x < json.length; x++) {
+                        var product = json[x];
+                        var $product = $(html.join(''));
+                        $product.data('url', product.url);
+                        $product.on('click', function (e) {
+                            window.open($(e.delegateTarget).data('url'));
+                        });
+                        $product.attr('title', product.title);
+                        $product.find('.title').text(product.title);
+                        $product.find('.number').text('Nr. ' + product.productcode);
+                        $product.find('.price').text(product['currency-symbol'] + ' ' + product.price.toStringFormat(2));
+                        $product.find('.imageFrame').append('<img src="/image/product/guid/' + product.guid + '?width=185&height=185"/>');
+                        $container.append($product);
+                    }
+                    if (json.length == 0)
+                        switch (WebPage.Data.country) {
+                            case 'nl':
+                                $container.text('Geen resultaten...');
+                                break;
+
+                            case 'de':
+                                $container.text('Keine Ergebnisse...');
+                                break;
+
+                            case 'at':
+                                $container.text('Keine Ergebnisse...');
+                                break;
+
+                            case 'ch':
+                                $container.text('Keine Ergebnisse...');
+                                break;
+
+                            case 'es':
+                                $container.text('Sin resultados...');
+                                break;
+
+                            default:
+                                $container.text('No results...');
+                                break;
+                        }
+
+                    //show results
+                    $parent.append($container.fadeIn('fast'));
+                }
+            }).always(function () {
+                isSearching = false;
+            }).fail(function () {
+                switch (WebPage.Data.country) {
+                    case 'nl':
+                        $parent.empty().text('Probeer alstublieft nogmaals...');
+                        break;
+
+                    case 'de':
+                        $parent.empty().text('Versuche es erneut...');
+                        break;
+
+                    case 'at':
+                        $parent.empty().text('Versuche es erneut...');
+                        break;
+
+                    case 'ch':
+                        $parent.empty().text('Versuche es erneut...');
+                        break;
+
+                    case 'es':
+                        $parent.empty().text('Por favor, inténtalo de nuevo...');
+                        break;
+
+                    default:
+                        $parent.empty().text('Please try again...');
+                        break;
+                }
+            });
+        }
     }
+
+    $column.append($searchTextBox);
+    $column.append($searchFinder);
+    $('.search-box').prepend($column);
 
     function isValidEmailAddress(emailAddress) {
         var sQtext = '[^\\x0d\\x22\\x5c\\x80-\\xff]';
