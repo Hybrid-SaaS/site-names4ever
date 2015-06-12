@@ -915,7 +915,7 @@ $(function () {
 
 
         if (!isSearching) {
-            var searchValue = $searchTextBox.val();
+            var searchValue = window.location.search.slice(1);
 
             isSearching = true;
             var $productsColumn = $('.main-column-right.defaultStyle');
