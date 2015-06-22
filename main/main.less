@@ -1050,24 +1050,55 @@ u{
     .config-product {
         .description {
             padding-left: 10px;
-            color: @color-names4ever-paars;
-            width: 87%;
+            color: #8c3292;
+            max-width: 100px;
             line-height: 30px;
-            float:none;
+            float: left;
+            height: 30px;
         }
 
         border-bottom: solid 1px gray;
         cursor: pointer;
         background-color: white;
-        height: 70px;
+        height: 30px;
         width: 100%;
                 
         img {
-                width: 298px;
-                margin-top: 0;
-                margin-left: 0;                        
+            width: 165px;
+            position: relative;
+            top: 8px;
+            margin-right: 15px;
+            float: right;                      
         }
     }
+    .config-product.nr0 {
+        img {
+            display:none;
+        }
+    }
+    .config-product.nr1, 
+    .config-product.nr2 {
+        .description {
+            text-overflow: clip;
+            -ms-text-overflow: clip;
+            -o-text-overflow: clip;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 19%;
+        }
+    }
+    .config-product.nr3, 
+    .config-product.nr4 {
+        .description {
+            text-overflow: clip;
+            -ms-text-overflow: clip;
+            -o-text-overflow: clip;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 31%;
+        }
+    }
+
 }
 
 .productconfig-options {
