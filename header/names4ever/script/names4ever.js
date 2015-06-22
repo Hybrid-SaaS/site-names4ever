@@ -801,7 +801,7 @@ $(function () {
     //zoekbox
     var $column = $('<div class="searchbox"></div>');
     if (window.location.href.indexOf("search?q=") > -1) {
-        var $searchValue = $(window.location.search.slice(3).replace(/\+/g, ' '));
+        var $searchValue = window.location.search.slice(3).replace(/\+/g, ' ');
     }
     switch (WebPage.Data.language) {
         case 'nl':
