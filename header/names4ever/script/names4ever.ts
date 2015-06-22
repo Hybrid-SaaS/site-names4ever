@@ -953,19 +953,19 @@ $(function () {
                     //create container
                     switch (WebPage.Data.language) {
                         case 'nl':
-                            var $container = $('<div class="container" style="display: none"><div>Resultaten voor <span id=sr></span></div></div>');
+                            var $container = $('<div class="searchresults container" style="display: none"><div>Resultaten voor <span id=sr></span></div></div>');
                             break;
 
                         case 'de':
-                            var $container = $('<div class="container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
+                            var $container = $('<div class="searchresults container" style="display: none"><div>Ergebnisse für <span id=sr></span></div></div>');
                             break;
 
                         case 'es':
-                            var $container = $('<div class="container" style="display: none"><div>Resultados para <span id=sr></span></div></div>');
+                            var $container = $('<div class="searchresults container" style="display: none"><div>Resultados para <span id=sr></span></div></div>');
                             break;
 
                         default:
-                            var $container = $('<div class="container" style="display: none"><div>Results for <span id=sr></span></div></div>')
+                            var $container = $('<div class="searchresults container" style="display: none"><div>Results for <span id=sr></span></div></div>')
                                     break;
                     }
                     $container.find('#sr').text(searchValue);
