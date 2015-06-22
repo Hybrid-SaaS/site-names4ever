@@ -869,6 +869,9 @@ $(function () {
     if (window.location.href.indexOf("search?q=") > -1) {
         var $searchValue = window.location.search.slice(3).replace(/\+/g, ' ');
     }
+    else {
+        var $searchValue = '';
+    }
     switch (WebPage.Data.language) {
         case 'nl':
             var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Zoeken naar..." name="search" value="' + $searchValue  + '">');
