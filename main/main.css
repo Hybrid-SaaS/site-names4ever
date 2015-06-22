@@ -807,6 +807,25 @@ u {
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
 }
+.productconfig-options.productconfig-ketting-naamketting .config-product {
+  border-bottom: solid 1px gray;
+  cursor: pointer;
+  background-color: white;
+  height: 70px;
+  width: 100%;
+}
+.productconfig-options.productconfig-ketting-naamketting .config-product .description {
+  padding-left: 10px;
+  color: #8c3292;
+  width: 87%;
+  line-height: 30px;
+  float: none;
+}
+.productconfig-options.productconfig-ketting-naamketting .config-product img {
+  width: 298px;
+  margin-top: 0;
+  margin-left: 0;
+}
 .productconfig-options.productconfig-ketting .config-product {
   border-bottom: solid 1px gray;
   cursor: pointer;
