@@ -866,24 +866,27 @@ $(function () {
 
     //zoekbox	
     var $column = $('<div class="searchbox"></div>');
+    if (window.location.href.indexOf("search?q=") > -1) {
+        var $searchValue = $(window.location.search.slice(3).replace(/\+/g, ' '));
+    }
     switch (WebPage.Data.language) {
         case 'nl':
-            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Zoeken naar..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Zoeken naar..." name="search" value="' + $searchValue  + '">');
             var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Zoeken" > ');
             break;
 
         case 'de':
-            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Suche nach..." name="search" value="' + $searchValue + '">');
             var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Suche" > ');
             break;         
 
         case 'es':
-            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Buscar..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Buscar..." name="search" value="' + $searchValue + '">');
             var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Búsqueda" > ');
             break;
 
         default:
-            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Search for..." name="search" value="' + window.location.search.slice(3).replace(/\+/g, ' ') + '">');
+            var $searchTextBox = $('<input class="searchinput" exclude="true" type="text" placeholder="Search for..." name="search" value="' + $searchValue + '">');
             var $searchFinder = $('<input class="searchsubmit" exclude="true" type="submit" id="searchsubmit" value="Search" > ');
             break;
     }
