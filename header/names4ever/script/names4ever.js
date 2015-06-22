@@ -577,7 +577,7 @@ $(function () {
                 //teken de pulldown items
                 var $option = $options.eq(x);
 
-                var $imgContainer = $('<div class="config-product ' + x + '"><div class="description"></div></div>');
+                var $imgContainer = $('<div class="config-product nr' + x + '"><div class="description"></div></div>');
                 $imgContainer.data('price', $option.data('price'));
                 $imgContainer.data('related-element', $productConfigItem.attr('id'));
                 $imgContainer.find('.description').text($option.data('description'));
