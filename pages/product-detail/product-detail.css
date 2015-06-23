@@ -202,7 +202,6 @@
   opacity: 0.7;
 }
 .product-detail {
-  margin-top: 20px;
   font-size: 12px;
   display: inline-block;
   vertical-align: top;
@@ -248,10 +247,17 @@
   font-weight: normal;
 }
 .sheet {
-  margin-top: 10px;
-  color: gray;
+  color: white;
   font-size: 10px;
   cursor: pointer;
+  background-color: #8F328E;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  left: 250px;
+  top: 75px;
 }
 .input-extension {
   margin-top: 10px;
