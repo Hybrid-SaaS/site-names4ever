@@ -247,17 +247,18 @@
   font-weight: normal;
 }
 .sheet {
-  color: white;
-  font-size: 10px;
+  color: #fff;
+  font-size: 12px;
   cursor: pointer;
-  background-color: #8F328E;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background-color: #8f328e;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   position: relative;
-  left: 250px;
+  left: 388px;
   top: 75px;
+  text-decoration: none;
 }
 .input-extension {
   margin-top: 10px;
