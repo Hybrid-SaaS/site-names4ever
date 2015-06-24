@@ -47,7 +47,7 @@ $(() => {
 
                     if (typeof products != 'undefined') {
 
-                        var $color = $('<div class="related color"><div class="imageFrame"><div class="label">' + title + '</div><div class="images"></div></div></div>');
+                        var $color = $('<div class="related "'+ title +'><div class="imageFrame"><div class="label">' + title + '</div><div class="images"></div></div></div>');
 
                         $color.on('click', (event: JQueryEventObject) => {
                             event.stopPropagation();
