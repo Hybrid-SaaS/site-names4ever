@@ -354,7 +354,7 @@ textarea.input {
   position: relative;
   z-index: 1;
 }
-.related-container .related .matching {
+.related-container .related .Matching {
   display: none;
 }
 .related-container .related.open {
