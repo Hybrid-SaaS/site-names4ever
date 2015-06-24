@@ -38,7 +38,7 @@ $(function () {
                         event.stopPropagation();
 
                         //andere dicht
-                        $('.related').toggleClass('open');
+                        $color.toggleClass('open');
 
                         WebPage.References.$html.one('click', function () {
                             $color.removeClass('open');
