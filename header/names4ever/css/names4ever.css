@@ -236,7 +236,8 @@
 }
 .language-nl .product-right .product-options .header:after,
 .language-de .product-right .product-options .header:after,
-.country-gb .product-right .product-options .header:after {
+.language-en .product-right .product-options .header:after,
+.language-es .product-right .product-options .header:after {
   background-image: url('personaliseer.png');
   background-repeat: no-repeat;
   color: white;
@@ -251,7 +252,8 @@
 }
 .language-nl .product-right .product-options .footer:after,
 .language-de .product-right .product-options .footer:after,
-.country-gb .product-right .product-options .footer:after {
+.language-en .product-right .product-options .footer:after,
+.language-es .product-right .product-options .footer:after {
   background-image: url('personaliseer-onder.png');
   background-repeat: no-repeat;
   color: white;
@@ -283,7 +285,7 @@
   content: 'Always Free Shipping!';
 }
 .language-es .product-right .product-options .header:after {
-  content: 'Personalice Su Joyer�a';
+  content: 'Personalice Su Joyeria';
 }
 .language-es .product-right .product-options .footer:after {
   content: 'Env�o Siempre Gratis!';
