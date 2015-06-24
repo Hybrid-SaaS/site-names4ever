@@ -276,11 +276,17 @@
 .language-de .product-right .product-options .footer:after {
   content: 'Versandkostenfreie Lieferung!';
 }
-.country-gb .product-right .product-options .header:after {
+.language-en .product-right .product-options .header:after {
   content: 'Personalise Your Jewellery';
 }
-.country-gb .product-right .product-options .footer:after {
+.language-en .product-right .product-options .footer:after {
   content: 'Always Free Shipping!';
+}
+.language-es .product-right .product-options .header:after {
+  content: 'Personalice Su Joyer�a';
+}
+.language-es .product-right .product-options .footer:after {
+  content: 'Env�o Siempre Gratis!';
 }
 .-hs-content-websitepath a {
   display: inline-block;
