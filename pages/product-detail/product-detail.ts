@@ -53,7 +53,7 @@ $(() => {
                             event.stopPropagation();
 
                             //andere dicht  
-                            $('.related').removeClass('open');
+                            $('.related').toggleClass('open');
                             $color.toggleClass('open');
                         
                             WebPage.References.$body.one('click', () => {
