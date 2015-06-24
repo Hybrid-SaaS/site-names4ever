@@ -244,6 +244,9 @@
 .value.price .symbol {
   font-weight: normal;
 }
+info {
+  position: relative;
+}
 .sheet {
   color: #fff;
   font-size: 12px;
@@ -253,9 +256,9 @@
   padding-right: 25px;
   padding-top: 8px;
   padding-bottom: 8px;
-  position: relative;
-  left: 165px;
-  top: 108px;
+  position: absolute;
+  left: 362px;
+  top: 0;
   text-decoration: none;
   text-align: center;
   display: inline-block;

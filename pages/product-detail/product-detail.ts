@@ -7,7 +7,7 @@ $(() => {
 
     if ($('.sheet')) {
         $('.sheet').html("");
-        $('.sheet').insertBefore('.product-detail');
+        $('.sheet').insertBefore('.details');
     }
     
     //small to big
