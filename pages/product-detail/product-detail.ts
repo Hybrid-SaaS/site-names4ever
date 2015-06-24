@@ -7,7 +7,7 @@ $(() => {
 
     if ($('.sheet')) {
 
-        $('.sheet').html("test");
+        $('.sheet').html("");
     }
     //small to big
 
