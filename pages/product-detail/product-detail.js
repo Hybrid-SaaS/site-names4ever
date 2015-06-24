@@ -3,6 +3,7 @@
 $(function () {
     if ($('.sheet')) {
         $('.sheet').html("");
+        $('.sheet').insertBefore('.product-detail');
     }
 
     //small to big
