@@ -37,12 +37,14 @@ $(function () {
                     $color.on('click', function (event) {
                         event.stopPropagation();
 
-                        // Alle dropdowns dicht en deze open
                         if (!$('.related').hasClass('open')) {
+                            // Alle dropdowns dicht en deze open
                             $color.toggleClass('open');
                         } else if ($color.hasClass('open')) {
+                            // Zelfde dropdown weer dicht
                             $color.removeClass('open');
                         } else {
+                            // Andere dropdown dicht en deze open
                             $('.related').removeClass('open');
                             $color.addClass('open');
                         }
