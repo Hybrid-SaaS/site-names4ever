@@ -3,7 +3,7 @@
 
 if ($('.sheet')) {
     
-    $('.sheet').text('');
+    $('a.sheet').text('');
 }
 
 $(() => {
