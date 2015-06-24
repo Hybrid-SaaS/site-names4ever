@@ -52,8 +52,9 @@ $(() => {
                             $color.on('click', (event: JQueryEventObject) => {
                             event.stopPropagation();
 
-                            //andere dicht  
-                            $color.toggleClass('open');
+                            //andere dicht
+                            $color.toggleClass('open');  
+                            $('.related').removeClass('open');
                             
                         
                             WebPage.References.$html.one('click', () => {
