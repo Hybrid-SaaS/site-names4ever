@@ -255,9 +255,12 @@
   padding-top: 8px;
   padding-bottom: 8px;
   position: relative;
-  left: 388px;
+  left: 380px;
   top: 75px;
   text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  width: 150px;
 }
 .input-extension {
   margin-top: 10px;
@@ -438,7 +441,7 @@ textarea.input {
   content: 'Versandkostenfreie Lieferung!';
 }
 .language-de .sheet:after {
-  content: 'Productsheet Downloaden';
+  content: 'Download Produktblatt';
 }
 .language-en .product-right .product-options .header:after {
   content: 'Personalise Your Jewellery';
@@ -447,7 +450,7 @@ textarea.input {
   content: 'Always Free Shipping!';
 }
 .language-en .sheet:after {
-  content: 'Productsheet Downloaden';
+  content: 'Download Proudctsheet';
 }
 .language-es .product-right .product-options .header:after {
   content: 'Personalice Su Joyer\00ed a';
@@ -456,6 +459,6 @@ textarea.input {
   content: 'Env\00edo Siempre Gratis!';
 }
 .language-es .sheet:after {
-  content: 'Productsheet Downloaden';
+  content: 'Download Hoja de Producto';
 }
 /*# sourceMappingURL=product-detail.css.map */
