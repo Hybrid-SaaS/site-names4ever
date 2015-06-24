@@ -288,7 +288,7 @@
   content: 'Personalice Su Joyeria';
 }
 .language-es .product-right .product-options .footer:after {
-  content: 'Env�o Siempre Gratis!';
+  content: 'Env\00edo Siempre Gratis!';
 }
 .-hs-content-websitepath a {
   display: inline-block;
