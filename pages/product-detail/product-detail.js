@@ -39,9 +39,8 @@ $(function () {
 
                         //andere dicht
                         $('.related').toggleClass('open');
-                        $color.toggleClass('open');
 
-                        WebPage.References.$body.one('click', function () {
+                        WebPage.References.$html.one('click', function () {
                             $color.removeClass('open');
                         });
                     });

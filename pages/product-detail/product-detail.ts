@@ -54,9 +54,9 @@ $(() => {
 
                             //andere dicht  
                             $('.related').toggleClass('open');
-                            $color.toggleClass('open');
+                            
                         
-                            WebPage.References.$body.one('click', () => {
+                            WebPage.References.$html.one('click', () => {
                                 $color.removeClass('open');
                             });
                         });
