@@ -331,21 +331,27 @@ textarea.input {
   width: 400px;
   margin-top: 20px;
 }
+.related-container {
+  height: 55px;
+  position: relative;
+}
 .related-container .related {
   border: solid 1px #D2CFCD;
   background-color: #EFEBE8;
   width: 187px;
-  height: 45px;
-  -moz-transition: height 0.25s;
-  -o-transition: height 0.25s;
-  -webkit-transition: height 0.25s;
-  transition: height 0.25s;
+  position: absolute
+        height: 45px;
+  -moz-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s;
   margin-left: 6px;
   float: left;
   border-radius: 0.75em;
   margin-bottom: 10px;
   box-shadow: 0 0 4px rgba(122, 122, 122, 0.5);
   cursor: pointer;
+  z-index: 1;
 }
 .related-container .related.open {
   cursor: default;
