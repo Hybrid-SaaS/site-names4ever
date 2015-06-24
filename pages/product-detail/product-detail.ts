@@ -53,8 +53,10 @@ $(() => {
                             event.stopPropagation();
 
                             //andere dicht
-                            $color.toggleClass('open');  
                             $('.related').removeClass('open');
+
+                            //deze open of dicht
+                            $color.toggleClass('open');
                             
                         
                             WebPage.References.$html.one('click', () => {
