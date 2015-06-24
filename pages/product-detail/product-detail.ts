@@ -2,8 +2,9 @@
 /// <reference path="../../../../../Hybrid SaaS/Hybrid SaaS Software (Aspekto)/Hybrid SaaS Software/Website/Core/Website/Script/Product-detail.ts" />
 
 if ($('.sheet')) {
-   
-};
+    
+    $('.sheet').text('');
+}
 
 $(() => {
 
