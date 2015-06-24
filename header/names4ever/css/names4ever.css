@@ -272,11 +272,17 @@
 .language-nl .product-right .product-options .footer:after {
   content: 'Altijd gratis verzending!';
 }
+.language-nl .sheet:after {
+  content: 'Productsheet Downloaden';
+}
 .language-de .product-right .product-options .header:after {
   content: 'Personalisieren Sie Ihren Schmuck';
 }
 .language-de .product-right .product-options .footer:after {
   content: 'Versandkostenfreie Lieferung!';
+}
+.language-de .sheet:after {
+  content: 'Productsheet Downloaden';
 }
 .language-en .product-right .product-options .header:after {
   content: 'Personalise Your Jewellery';
@@ -284,11 +290,17 @@
 .language-en .product-right .product-options .footer:after {
   content: 'Always Free Shipping!';
 }
+.language-en .sheet:after {
+  content: 'Productsheet Downloaden';
+}
 .language-es .product-right .product-options .header:after {
   content: 'Personalice Su Joyer\00ed a';
 }
 .language-es .product-right .product-options .footer:after {
   content: 'Env\00edo Siempre Gratis!';
+}
+.language-es .sheet:after {
+  content: 'Productsheet Downloaden';
 }
 .-hs-content-websitepath a {
   display: inline-block;
