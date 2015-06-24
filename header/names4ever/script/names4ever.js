@@ -479,58 +479,39 @@ $(function () {
     }
 
     var webData = WebPage.Data;
-    $('.flag').on('click', function (event) {
-        var $flag = $(event.target);
-        if (webData.productGuid) {
-            switch ($flag.data('flag')) {
-                case 'nl':
-                    location.href = 'https://www.names4ever.nl/product/' + webData.productGuid;
-                    return;
-                case 'be':
-                    location.href = 'https://www.names4ever.be/product/' + webData.productGuid;
-                    return;
-                case 'de':
-                    location.href = 'https://www.namesforever.de/product/' + webData.productGuid;
-                    return;
-                case 'at':
-                    location.href = 'https://www.names4ever.at/product/' + webData.productGuid;
-                    return;
-                case 'ch':
-                    location.href = 'https://www.names4ever.ch/product/' + webData.productGuid;
-                    return;
-                case 'en':
-                    location.href = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
-                    return;
-                case 'es':
-                    location.href = 'http://www.names4ever.es/product/' + webData.productGuid;
-                    return;
-            }
-        }
 
+    if (webData.productGuid) {
         switch ($flag.data('flag')) {
             case 'nl':
-                location.href = 'https://www.names4ever.nl/';
+                var $flagurl = 'https://www.names4ever.nl/product/' + webData.productGuid;
+                $('span.flag.nl').replaceWith('<a href="' + $flagurl + '"><span class="flag nl" data-flag="nl"></span></a>');
                 return;
             case 'be':
-                location.href = 'https://www.names4ever.be/';
+                var $flagurl = 'https://www.names4ever.be/product/' + webData.productGuid;
+                $('span.flag.be').replaceWith('<a href="' + $flagurl + '"><span class="flag be" data-flag="be"></span></a>');
                 return;
             case 'de':
-                location.href = 'https://www.namesforever.de/';
+                var $flagurl = 'https://www.namesforever.de/product/' + webData.productGuid;
+                $('span.flag.de').replaceWith('<a href="' + $flagurl + '"><span class="flag de" data-flag="de"></span></a>');
                 return;
             case 'at':
-                location.href = 'https://www.names4ever.at/';
+                var $flagurl = 'https://www.names4ever.at/product/' + webData.productGuid;
+                $('span.flag.at').replaceWith('<a href="' + $flagurl + '"><span class="flag at" data-flag="at"></span></a>');
                 return;
             case 'ch':
-                location.href = 'https://www.names4ever.ch/';
+                var $flagurl = 'https://www.names4ever.ch/product/' + webData.productGuid;
+                $('span.flag.ch').replaceWith('<a href="' + $flagurl + '"><span class="flag ch" data-flag="ch"></span></a>');
                 return;
             case 'en':
-                location.href = 'https://www.names4ever.co.uk/';
+                var $flagurl = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
+                $('span.flag.en').replaceWith('<a href="' + $flagurl + '"><span class="flag en" data-flag="en"></span></a>');
                 return;
             case 'es':
-                location.href = 'http://www.names4ever.es/';
+                var $flagurl = 'http://www.names4ever.es/product/' + webData.productGuid;
+                $('span.flag.es').replaceWith('<a href="' + $flagurl + '"><span class="flag es" data-flag="es"></span></a>');
                 return;
         }
-    });
+    }
 
     if (WebPage.Data.productGuid) {
         // de standaard prijs
