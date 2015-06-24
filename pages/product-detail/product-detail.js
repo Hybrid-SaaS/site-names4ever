@@ -27,7 +27,7 @@ $(function () {
         if (data.related) {
             //append to options boxs
             var $related = $('<div class="related-container"></div>');
-            $('.product-image-rest').append($related);
+            $('.product-image-rest').insertAfter($related);
 
             var handler = function (products, title) {
                 if (typeof products != 'undefined') {
