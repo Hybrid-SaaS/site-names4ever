@@ -37,11 +37,15 @@ $(function () {
                     $color.on('click', function (event) {
                         event.stopPropagation();
 
-                        //andere dicht
-                        $('.related').removeClass('open');
-
-                        //deze open of dicht
-                        $color.toggleClass('open');
+                        // Alle dropdowns dicht en deze open
+                        if (!$('.related').hasClass('open')) {
+                            $color.toggleClass('open');
+                        } else if ($color.hasClass('open')) {
+                            $color.removeClass('open');
+                        } else {
+                            $('.related').removeClass('open');
+                            $color.addClass('open');
+                        }
 
                         WebPage.References.$html.one('click', function () {
                             $color.removeClass('open');

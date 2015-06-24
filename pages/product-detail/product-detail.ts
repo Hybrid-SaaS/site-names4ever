@@ -52,12 +52,20 @@ $(() => {
                             $color.on('click', (event: JQueryEventObject) => {
                             event.stopPropagation();
 
-                            //andere dicht
-                            $('.related').removeClass('open');
-
-                            //deze open of dicht
-                            $color.toggleClass('open');
-                            
+                                // Alle dropdowns dicht en deze open
+                                if (!$('.related').hasClass('open')) {
+                                    $color.toggleClass('open');
+                                }
+                                // Zelfde dropdown weer dicht
+                                else
+                                    if ($color.hasClass('open')) {
+                                        $color.removeClass('open');
+                                    }
+                                // Andere dropdown dicht en deze open
+                                else {
+                                        $('.related').removeClass('open');
+                                        $color.addClass('open');
+                                    }                            
                         
                             WebPage.References.$html.one('click', () => {
                                 $color.removeClass('open');
