@@ -1,14 +1,14 @@
 /// <reference path="../../definition/jquery.d.ts" />
 /// <reference path="../../../../../Hybrid SaaS/Hybrid SaaS Software (Aspekto)/Hybrid SaaS Software/Website/Core/Website/Script/Product-detail.ts" />
 
-if ($('.sheet')) {
-   
-    $('.sheet').html("test");
-}
+
 
 $(() => {
 
+    if ($('.sheet')) {
 
+        $('.sheet').html("test");
+    }
     //small to big
 
     var $smallImages = $('.smallimage');
