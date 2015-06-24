@@ -523,13 +523,13 @@ $(function () {
             var $flagurlch = 'https://www.names4ever.ch/product/' + webData.productGuid;
             var $flagurluk = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
             var $flagurles = 'http://www.names4ever.es/product/' + webData.productGuid;
-            $('.link-flag-nl').attr("href", $flagurlnl);
-            $('.link-flag-be').attr("href", $flagurlbe);
-            $('.link-flag-de').attr("href", $flagurlde);
-            $('.link-flag-at').attr("href", $flagurlat);
-            $('.link-flag-ch').attr("href", $flagurlch);
-            $('.link-flag-uk').attr("href", $flagurluk);
-            $('.link-flag-es').attr("href", $flagurles);
+            $('.link-flag-nl').prop("href", $flagurlnl);
+            $('.link-flag-be').prop("href", $flagurlbe);
+            $('.link-flag-de').prop("href", $flagurlde);
+            $('.link-flag-at').prop("href", $flagurlat);
+            $('.link-flag-ch').prop("href", $flagurlch);
+            $('.link-flag-uk').prop("href", $flagurluk);
+            $('.link-flag-es').prop("href", $flagurles);
              
         }
 
