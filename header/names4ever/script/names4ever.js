@@ -488,13 +488,13 @@ $(function () {
         var $flagurlch = 'https://www.names4ever.ch/product/' + webData.productGuid;
         var $flagurluk = 'https://www.names4ever.co.uk/product/' + webData.productGuid;
         var $flagurles = 'http://www.names4ever.es/product/' + webData.productGuid;
-        $('.flag.nl').replaceWith('<a href="' + $flagurlnl + '"><span class="flag nl" data-flag="nl"></span></a>');
-        $('.flag.be').replaceWith('<a href="' + $flagurlbe + '"><span class="flag be" data-flag="be"></span></a>');
-        $('.flag.de').replaceWith('<a href="' + $flagurlde + '"><span class="flag de" data-flag="de"></span></a>');
-        $('.flag.at').replaceWith('<a href="' + $flagurlat + '"><span class="flag at" data-flag="at"></span></a>');
-        $('.flag.ch').replaceWith('<a href="' + $flagurlch + '"><span class="flag ch" data-flag="ch"></span></a>');
-        $('.flag.en').replaceWith('<a href="' + $flagurluk + '"><span class="flag en" data-flag="en"></span></a>');
-        $('.flag.es').replaceWith('<a href="' + $flagurles + '"><span class="flag es" data-flag="es"></span></a>');
+        $('.link-flag-nl').attr("href", $flagurlnl);
+        $('.link-flag-be').attr("href", $flagurlbe);
+        $('.link-flag-de').attr("href", $flagurlde);
+        $('.link-flag-at').attr("href", $flagurlat);
+        $('.link-flag-ch').attr("href", $flagurlch);
+        $('.link-flag-uk').attr("href", $flagurluk);
+        $('.link-flag-es').attr("href", $flagurles);
     }
 
     if (WebPage.Data.productGuid) {
