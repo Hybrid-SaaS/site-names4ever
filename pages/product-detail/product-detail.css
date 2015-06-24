@@ -354,6 +354,9 @@ textarea.input {
   position: relative;
   z-index: 1;
 }
+.related-container .related .matching {
+  display: none;
+}
 .related-container .related.open {
   cursor: default;
   height: 160px;
