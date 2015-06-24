@@ -339,8 +339,8 @@ textarea.input {
   border: solid 1px #D2CFCD;
   background-color: #EFEBE8;
   width: 187px;
-  position: absolute
-        height: 45px;
+  position: absolute;
+  height: 45px;
   -moz-transition: height 0.2s;
   -o-transition: height 0.2s;
   -webkit-transition: height 0.2s;
