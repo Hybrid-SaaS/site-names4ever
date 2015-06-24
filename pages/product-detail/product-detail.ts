@@ -39,7 +39,7 @@ $(() => {
 
                 //append to options boxs
                 var $related = $('<div class="related-container"></div>');
-                $('.product-image-rest').insertAfter($related);
+                $($related).insertAfter('.product-image-rest');
 
 
                 var handler = function(products, title) {
