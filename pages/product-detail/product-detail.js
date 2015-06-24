@@ -4,7 +4,6 @@ $(function () {
     if ($('.sheet')) {
         $('.sheet').html("");
     }
-    $('.related-container').append($('.product-image-rest'));
 
     //small to big
     var $smallImages = $('.smallimage');
@@ -28,7 +27,7 @@ $(function () {
         if (data.related) {
             //append to options boxs
             var $related = $('<div class="related-container"></div>');
-            $('.product-options').append($related);
+            $('.product-image-rest').append($related);
 
             var handler = function (products, title) {
                 if (typeof products != 'undefined') {
