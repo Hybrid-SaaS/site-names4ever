@@ -4,6 +4,7 @@ $(function () {
     if ($('.sheet')) {
         $('.sheet').html("");
     }
+    $('.related-container').append('.product-image-rest');
 
     //small to big
     var $smallImages = $('.smallimage');
