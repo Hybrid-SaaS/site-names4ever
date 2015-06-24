@@ -48,7 +48,15 @@ $(() => {
                     if (typeof products != 'undefined') {
 
                         var $color = $('<div class="related '+ title +'"><div class="imageFrame"><div class="label">' + title + '</div><div class="images"></div></div></div>');
-                            
+
+                            $color.on('click', (event: JQueryEventObject) => {
+                            event.stopPropagation();
+
+                            //andere dicht  
+                            $('.related').removeClass('open');
+                            $color.addClass('open');
+                        
+
                             $color.on('click', function () {
                                 $('.related').not($(this).next()).removeClass('open')
                                 $(this).next().toggleClass('open');
@@ -58,7 +66,7 @@ $(() => {
                             WebPage.References.$body.one('click', () => {
                                 $color.removeClass('open');
                             });
-                        
+                        });
 
                         var $container = $color.find('.images');
 
