@@ -452,6 +452,9 @@ textarea.input {
 .language-nl .sheet:after {
   content: 'Productsheet Downloaden';
 }
+.language-nl .handschrift .sheet:after {
+  content: 'Handschrift Stappenplan PDF';
+}
 .language-de .product-right .product-options .header:after {
   content: 'Personalisieren Sie Ihren Schmuck';
 }
@@ -460,6 +463,9 @@ textarea.input {
 }
 .language-de .sheet:after {
   content: 'Download Produktblatt';
+}
+.language-de .handschrift .sheet:after {
+  content: 'Productsheet Downloaden';
 }
 .language-en .product-right .product-options .header:after {
   content: 'Personalise Your Jewellery';
@@ -470,6 +476,9 @@ textarea.input {
 .language-en .sheet:after {
   content: 'Download Proudctsheet';
 }
+.language-en .handschrift .sheet:after {
+  content: 'Productsheet Downloaden';
+}
 .language-es .product-right .product-options .header:after {
   content: 'Personalice Su Joyer\00ed a';
 }
@@ -478,5 +487,8 @@ textarea.input {
 }
 .language-es .sheet:after {
   content: 'Download Hoja de Producto';
+}
+.language-es .handschrift .sheet:after {
+  content: 'Productsheet Downloaden';
 }
 /*# sourceMappingURL=product-detail.css.map */
