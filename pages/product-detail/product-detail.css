@@ -444,7 +444,7 @@ textarea.input {
   position: absolute;
 }
 .language-nl .product-right .product-options .header:after {
-  content: 'Personaliseer je sierraad';
+  content: 'Personaliseer je sieraad';
 }
 .language-nl .product-right .product-options .footer:after {
   content: 'Altijd gratis verzending!';
@@ -455,8 +455,8 @@ textarea.input {
 .language-nl .handschrift .sheet:after {
   content: 'Handschrift Stappenplan PDF';
 }
-.language-nl .details {
-  background: url(http://www.animatedimages.org/data/media/111/animated-arrow-image-0039.gif) no-repeat right 244px top 8px;
+.language-nl .handschrift .details {
+  background: url(https://names4ever.azurewebsites.net/images/product-list/animated-arrow.gif) no-repeat right 244px top 8px;
   padding-top: 60px;
   margin-top: -40px;
 }
@@ -472,8 +472,8 @@ textarea.input {
 .language-de .handschrift .sheet:after {
   content: 'Productsheet Downloaden';
 }
-.language-de .details {
-  background: url(http://www.animatedimages.org/data/media/111/animated-arrow-image-0039.gif) no-repeat right 244px top 8px;
+.language-de .handschrift .details {
+  background: url(https://names4ever.azurewebsites.net/images/product-list/animated-arrow.gif) no-repeat right 244px top 8px;
   padding-top: 60px;
   margin-top: -40px;
 }
@@ -489,8 +489,8 @@ textarea.input {
 .language-en .handschrift .sheet:after {
   content: 'Productsheet Downloaden';
 }
-.language-en .details {
-  background: url(http://www.animatedimages.org/data/media/111/animated-arrow-image-0039.gif) no-repeat right 244px top 8px;
+.language-en .handschrift .details {
+  background: url(https://names4ever.azurewebsites.net/images/product-list/animated-arrow.gif) no-repeat right 244px top 8px;
   padding-top: 60px;
   margin-top: -40px;
 }
@@ -506,8 +506,8 @@ textarea.input {
 .language-es .handschrift .sheet:after {
   content: 'Productsheet Downloaden';
 }
-.language-es .details {
-  background: url(http://www.animatedimages.org/data/media/111/animated-arrow-image-0039.gif) no-repeat right 244px top 8px;
+.language-es .handschrift .details {
+  background: url(https://names4ever.azurewebsites.net/images/product-list/animated-arrow.gif) no-repeat right 244px top 8px;
   padding-top: 60px;
   margin-top: -40px;
 }
