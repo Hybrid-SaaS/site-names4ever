@@ -354,7 +354,9 @@ textarea.input {
   position: relative;
   z-index: 1;
 }
-.related-container .related.Matching {
+.related-container .related.Matching,
+.related-container .related.Bijpassend,
+.related-container .related.Passender {
   display: none;
 }
 .related-container .related.open {
