@@ -1,7 +1,7 @@
 /// <reference path="../../definition/jquery.d.ts" />
 /// <reference path="../../../../../Hybrid SaaS/Hybrid SaaS Software (Aspekto)/Hybrid SaaS Software/Website/Core/Website/Script/Product-detail.ts" />
 $(function () {
-    if ($('.handschrift')) {
+    if (document.getElementsByClassName('handschrift')) {
         $('.sheet').html("");
         $('.sheet').insertAfter('.intro.item');
     } else {

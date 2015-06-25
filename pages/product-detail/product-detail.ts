@@ -5,7 +5,7 @@
 
 $(() => {
 
-    if ($('.handschrift')) {
+    if (document.getElementsByClassName('handschrift')) {
         $('.sheet').html("");
         $('.sheet').insertAfter('.intro.item');
     } else {
