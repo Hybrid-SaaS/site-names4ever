@@ -262,7 +262,7 @@
   top: 0;
   text-decoration: none;
   text-align: center;
-  display: inline-block;
+  display: none;
   width: 170px;
 }
 .sheet:hover {
@@ -448,6 +448,7 @@ textarea.input {
   left: 0;
   top: 0;
   margin-left: 50px;
+  display: block;
 }
 .language-nl .product-right .product-options .header:after {
   content: 'Personaliseer je sieraad';
