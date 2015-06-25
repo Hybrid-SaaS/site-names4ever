@@ -214,6 +214,9 @@
   text-align: right;
   font-size: 14px;
 }
+#footer .names4ever #menulocation2 ul {
+  margin-right: 15px;
+}
 #footer .names4ever #menulocation2 li {
   display: inline-block;
   margin-left: 40px;
