@@ -443,6 +443,12 @@ textarea.input {
   padding-top: 8px;
   position: absolute;
 }
+.handschrift .sheet {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-left: 50px;
+}
 .language-nl .product-right .product-options .header:after {
   content: 'Personaliseer je sieraad';
 }
@@ -453,12 +459,7 @@ textarea.input {
   content: 'Productsheet Downloaden';
 }
 .language-nl .handschrift .sheet:after {
-  content: 'Handschrift Stappenplan PDF';
-}
-.language-nl .handschrift .details {
-  background: url(https://names4ever.azurewebsites.net/images/product-list/animated-arrow.gif) no-repeat right 244px top 8px;
-  padding-top: 60px;
-  margin-top: -40px;
+  content: 'Download Stappenplan PDF';
 }
 .language-de .product-right .product-options .header:after {
   content: 'Personalisieren Sie Ihren Schmuck';
@@ -472,11 +473,6 @@ textarea.input {
 .language-de .handschrift .sheet:after {
   content: 'Productsheet Downloaden';
 }
-.language-de .handschrift .details {
-  background: url(https://names4ever.azurewebsites.net/images/product-list/animated-arrow.gif) no-repeat right 244px top 8px;
-  padding-top: 60px;
-  margin-top: -40px;
-}
 .language-en .product-right .product-options .header:after {
   content: 'Personalise Your Jewellery';
 }
@@ -489,11 +485,6 @@ textarea.input {
 .language-en .handschrift .sheet:after {
   content: 'Productsheet Downloaden';
 }
-.language-en .handschrift .details {
-  background: url(https://names4ever.azurewebsites.net/images/product-list/animated-arrow.gif) no-repeat right 244px top 8px;
-  padding-top: 60px;
-  margin-top: -40px;
-}
 .language-es .product-right .product-options .header:after {
   content: 'Personalice Su Joyer\00ed a';
 }
@@ -505,10 +496,5 @@ textarea.input {
 }
 .language-es .handschrift .sheet:after {
   content: 'Productsheet Downloaden';
-}
-.language-es .handschrift .details {
-  background: url(https://names4ever.azurewebsites.net/images/product-list/animated-arrow.gif) no-repeat right 244px top 8px;
-  padding-top: 60px;
-  margin-top: -40px;
 }
 /*# sourceMappingURL=product-detail.css.map */

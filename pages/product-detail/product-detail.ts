@@ -5,7 +5,10 @@
 
 $(() => {
 
-    if ($('.sheet')) {
+    if ($('.handschrift')) {
+        $('.sheet').html("");
+        $('.sheet').insertAfter('.intro.item');
+    } else {
         $('.sheet').html("");
         $('.sheet').insertBefore('.details');
     }
