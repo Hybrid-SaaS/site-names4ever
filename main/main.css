@@ -215,13 +215,15 @@ u {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #D5D5CE;
 }
+.maincontent #columns .main-column-right .-hs-container .product:hover,
+.maincontent #columns .main-column-right .container .product:hover {
+  border: 1px solid #707070;
+  box-shadow: 2px 2px 6px rgba(66, 66, 66, 0.4);
+}
 .maincontent #columns .main-column-right .-hs-container .product .imageFrame,
 .maincontent #columns .main-column-right .container .product .imageFrame {
   min-height: 140px;
   margin-bottom: 0 !important;
-  -webkit-filter: drop-shadow(2px 3px 1px rgba(0, 0, 0, 0.2));
-  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 .maincontent #columns .main-column-right .-hs-container .product .imageFrame img,
 .maincontent #columns .main-column-right .container .product .imageFrame img {
