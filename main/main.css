@@ -208,8 +208,8 @@ u {
 .maincontent #columns .main-column-right .container .product {
   background: none !important;
   background: #FFFFFF;
-  min-height: 255px;
-  max-height: 275px;
+  min-height: 199px !important;
+  height: 255px !important;
   margin-right: 10px !important;
   float: left;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
