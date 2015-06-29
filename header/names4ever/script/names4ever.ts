@@ -502,7 +502,6 @@ $(function () {
     }
 
     var $flags = $('.flag');
-
     //verberg vlag voor huidige taal
     for (var x = 0; x < $flags.length; x++) {
         var $flag = $flags.eq(x);
@@ -531,10 +530,7 @@ $(function () {
             $('.link-flag-uk').prop("href", $flagurluk);
             $('.link-flag-es').prop("href", $flagurles);
              
-        }
-
-
-      
+        }    
    
 
 
@@ -873,7 +869,7 @@ $(function () {
     });
 
     $searchFinder.on("click", () => {
-        location.href = "/search?q=" + $searchTextBox.val().replace(/ /g, '+');   
+        location.href = ("/search?q=" + $searchTextBox.val().replace(/ /g, '+')).toLowerCase();           
     });
 
     if (window.location.href.indexOf("search?q=") > -1) {

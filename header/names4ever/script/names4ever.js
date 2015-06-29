@@ -801,7 +801,7 @@ $(function () {
     });
 
     $searchFinder.on("click", function () {
-        location.href = "/search?q=" + $searchTextBox.val().replace(/ /g, '+');
+        location.href = ("/search?q=" + $searchTextBox.val().replace(/ /g, '+')).toLowerCase();
     });
 
     if (window.location.href.indexOf("search?q=") > -1) {
