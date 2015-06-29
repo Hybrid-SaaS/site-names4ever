@@ -869,7 +869,7 @@ $(function () {
     });
 
     $searchFinder.on("click", () => {
-        location.href = ("/search?q=" + $searchTextBox.val().replace(/ /g, '+')).toLowerCase();           
+        location.href = ("/search?q=" + $searchTextBox.val().replace(/ /g, '+'));           
     });
 
     if (window.location.href.indexOf("search?q=") > -1) {
