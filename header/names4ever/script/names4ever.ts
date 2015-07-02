@@ -356,8 +356,8 @@ $(function () {
             $promotiecode.parent().parent().html(' ');                          
         }
         //Freshdesk chat geen required fields om te kunnen afrekenen
-        $('.missing').prop('exclude', true);
-        $('.missing').prop('exclude', true);
+        $('#fc_chat_name').prop('exclude', true);
+        $('#fc_chat_email').prop('exclude', true);
         
 
 
