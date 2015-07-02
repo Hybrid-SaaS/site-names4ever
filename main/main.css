@@ -608,6 +608,7 @@ u {
 }
 .checkout .product-detail {
   width: 100%;
+  margin-top: 0;
 }
 .checkout .paymentmethods {
   width: 48%;
