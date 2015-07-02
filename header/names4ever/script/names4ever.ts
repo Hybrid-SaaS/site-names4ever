@@ -325,7 +325,9 @@ $(() => WebPage.load());
 
 //onload
 $(function () {
-
+    //Freshdesk chat geen required fields om te kunnen afrekenen
+    $('.morepaymentmethods').prop('exclude', true);
+    $('#fc_chat_email').prop('exclude', true);
 
     $.getScript("/Website/JScript/language-strings");
 
@@ -355,12 +357,7 @@ $(function () {
         if (WebPage.Data.isloggedin) {
             $promotiecode.parent().parent().html(' ');                          
         }
-        //Freshdesk chat geen required fields om te kunnen afrekenen
-        $('#fc_chat_name').prop('exclude', true);
-        $('#fc_chat_email').prop('exclude', true);
         
-
-
         //zoek alle payment methods
         var $payments = $('.paymentmethods');
         var $paymentmethods = $('.paymentmethod');
