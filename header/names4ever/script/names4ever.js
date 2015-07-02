@@ -329,8 +329,8 @@ $(function () {
         }
 
         //Freshdesk chat geen required fields om te kunnen afrekenen
-        $('input#fc_chat_name.missing').attr('exclude', true);
-        $('input#fc_chat_email.missing').attr('exclude', true);
+        $('.missing').prop('exclude', true);
+        $('.missing').prop('exclude', true);
 
         //zoek alle payment methods
         var $payments = $('.paymentmethods');
