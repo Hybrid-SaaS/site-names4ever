@@ -598,6 +598,14 @@ u {
   min-height: 700px;
   position: relative;
 }
+.checkout .gender .text {
+  position: relative !important;
+  margin-top: 0 !important;
+  margin-left: 10px !important;
+  padding: 0 !important;
+  display: inline-block;
+  vertical-align: bottom;
+}
 .checkout .product-detail {
   width: 100%;
 }
@@ -1186,6 +1194,7 @@ input[type="radio"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
+  vertical-align: middle;
   *width: 13px;
   *height: 13px;
 }
