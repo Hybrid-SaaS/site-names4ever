@@ -301,8 +301,8 @@ $(function () {
 //onload
 $(function () {
     //Freshdesk chat geen required fields om te kunnen afrekenen
-    $('.morepaymentmethods').attr('exclude', true);
-    $('#fc_chat_email').prop('exclude', true);
+    $('#fc_chat_name').attr('exclude', 'true');
+    $('#fc_chat_email').attr('exclude', 'true');
 
     $.getScript("/Website/JScript/language-strings");
 
