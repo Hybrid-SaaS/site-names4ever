@@ -328,6 +328,10 @@ $(function () {
             $promotiecode.parent().parent().html(' ');
         }
 
+        //Freshdesk chat geen required fields om te kunnen afrekenen
+        $('input#fc_chat_name.missing').attr('exclude', true);
+        $('input#fc_chat_email.missing').attr('exclude', true);
+
         //zoek alle payment methods
         var $payments = $('.paymentmethods');
         var $paymentmethods = $('.paymentmethod');

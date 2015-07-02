@@ -353,8 +353,12 @@ $(function () {
         //geen promotiecode bij inloggen partners
         var $promotiecode = $('#promotion');
         if (WebPage.Data.isloggedin) {
-            $promotiecode.parent().parent().html(' ');
+            $promotiecode.parent().parent().html(' ');                          
         }
+        
+        //Freshdesk chat geen required fields om te kunnen afrekenen
+        $('input#fc_chat_name.missing').attr('exclude', true);
+        $('input#fc_chat_email.missing').attr('exclude', true); 
 
 
         //zoek alle payment methods
@@ -827,6 +831,8 @@ $(function () {
                 $('#doneMsg').text('Fout bij het inschrijven');
             }
         });
+
+
 
 
     //zoekbox	
