@@ -827,6 +827,9 @@ u {
   height: 25px;
   width: initial;
 }
+.productconfig-options.productconfig-lettertype .config-product:hover:after {
+  background-color: rgba(221, 1, 254, 0.09);
+}
 .productconfig-options.productconfig-ketting-naamketting .config-product {
   border-bottom: solid 1px gray;
   cursor: pointer;
