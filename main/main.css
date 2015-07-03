@@ -818,6 +818,15 @@ u {
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
 }
+.productconfig-options.productconfig-lettertype .config-product .description {
+  padding-left: 10px;
+  width: 50%;
+  float: left;
+}
+.productconfig-options.productconfig-lettertype .config-product img {
+  height: 25px;
+  width: initial;
+}
 .productconfig-options.productconfig-ketting-naamketting .config-product {
   border-bottom: solid 1px gray;
   cursor: pointer;
