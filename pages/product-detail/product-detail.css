@@ -492,7 +492,7 @@ textarea.input {
   content: 'Download Produktblatt';
 }
 .language-de .handschrift .sheet:after {
-  content: 'Productsheet Downloaden';
+  content: 'Download Stufen-Plan PDF';
 }
 .language-en .product-right .product-options .header:after {
   content: 'Personalise Your Jewellery';
@@ -504,7 +504,7 @@ textarea.input {
   content: 'Download Proudctsheet';
 }
 .language-en .handschrift .sheet:after {
-  content: 'Productsheet Downloaden';
+  content: 'Download Step Plan PDF';
 }
 .language-es .product-right .product-options .header:after {
   content: 'Personalice Su Joyer\00ed a';
@@ -516,6 +516,6 @@ textarea.input {
   content: 'Download Hoja de Producto';
 }
 .language-es .handschrift .sheet:after {
-  content: 'Productsheet Downloaden';
+  content: 'Descarga Plan de paso PDF';
 }
 /*# sourceMappingURL=product-detail.css.map */
