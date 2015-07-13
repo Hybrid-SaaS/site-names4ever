@@ -417,8 +417,9 @@ $(function () {
                 case 'es':
                     p.before($paymentmethods.filter('.paypal').show());
                     p.before($paymentmethods.filter('.mastercard').show());
-                    p.before($paymentmethods.filter('.visa').show());
                     p.before($paymentmethods.filter('.americanexpress').show());
+                    p.before($paymentmethods.filter('.visa').show());
+                    p.before($paymentmethods.filter('.maestro').show());
                     p.before($paymentmethods.filter('.manual').show());
                     p.before($paymentmethods.filter('.giropay').show());
                     break;
@@ -427,7 +428,7 @@ $(function () {
         var labelMore = '';
         if (WebPage.Data.isloggedin) {
         } else {
-            switch (WebPage.Data.country) {
+            switch (WebPage.Data.language) {
                 case 'nl':
                     labelMore = 'Toon meer betaalmethodes';
                     break;
@@ -436,12 +437,8 @@ $(function () {
                     labelMore = 'Zeige mehr Zahlungsmethoden';
                     break;
 
-                case 'at':
-                    labelMore = 'Zeige mehr Zahlungsmethoden';
-                    break;
-
-                case 'ch':
-                    labelMore = 'Zeige mehr Zahlungsmethoden';
+                case 'es':
+                    labelMore = 'Mostrar más métodos de pagon';
                     break;
 
                 default:
@@ -468,7 +465,10 @@ $(function () {
             var avcontent = '<input id="tc" type="checkbox" name="tc"></input>Ich habe die <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/agb.pdf">AGB</a> und mein <a target="_blank" href="//names4ever.azurewebsites.net/documents/algemene-voorwaarden/de/widerrufsrecht.pdf">Widerrufsrecht</a> gelesen und akzeptiere diese';
             $('.input-row .input-label #tc').parent().html(avcontent);
         }
+
         //paymentmethods.append()
+        //Auto check newsletter subscription
+        $('#newsletter').prop('checked', true);
     }
 
     var $flags = $('.flag');
@@ -527,6 +527,10 @@ $(function () {
 
                 case 'ch':
                     var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
+                    break;
+
+                case 'es':
+                    var $content = $("<div class='content'>Hacer su elección</div>");
                     break;
 
                 default:

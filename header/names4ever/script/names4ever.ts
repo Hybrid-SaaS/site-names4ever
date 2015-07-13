@@ -444,8 +444,9 @@ $(function () {
                 case 'es':
                     p.before($paymentmethods.filter('.paypal').show());
                     p.before($paymentmethods.filter('.mastercard').show());
-                    p.before($paymentmethods.filter('.visa').show());
                     p.before($paymentmethods.filter('.americanexpress').show());
+                    p.before($paymentmethods.filter('.visa').show());
+                    p.before($paymentmethods.filter('.maestro').show());
                     p.before($paymentmethods.filter('.manual').show());
                     p.before($paymentmethods.filter('.giropay').show());
                     break;
@@ -455,7 +456,7 @@ $(function () {
         if (WebPage.Data.isloggedin) {
         }
         else {
-            switch (WebPage.Data.country) {
+            switch (WebPage.Data.language) {
                 case 'nl':
                     labelMore = 'Toon meer betaalmethodes';
                     break;
@@ -464,14 +465,10 @@ $(function () {
                     labelMore = 'Zeige mehr Zahlungsmethoden';
                     break;
 
-                case 'at':
-                    labelMore = 'Zeige mehr Zahlungsmethoden';
+                case 'es':
+                    labelMore = 'Mostrar más métodos de pagon';
                     break;
-
-                case 'ch':
-                    labelMore = 'Zeige mehr Zahlungsmethoden';
-                    break;
-
+                                
                 default:
                     labelMore = 'Show more paymentmethods';
                     break;
@@ -500,6 +497,9 @@ $(function () {
             $('.input-row .input-label #tc').parent().html(avcontent);
         }
         //paymentmethods.append()
+
+        //Auto check newsletter subscription
+        $('#newsletter').prop('checked', true);
     }
 
     var $flags = $('.flag');
@@ -563,6 +563,10 @@ $(function () {
 
                 case 'ch':
                     var $content = $("<div class='content'>Treffen Sie Ihre Wahl</div>");
+                    break;
+
+                case 'es':
+                    var $content = $("<div class='content'>Hacer su elección</div>");
                     break;
 
                 default:
