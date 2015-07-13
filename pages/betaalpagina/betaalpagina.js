@@ -70,12 +70,5 @@ $.getJSON('/data/order/' + getParameterByName('order') + '/' + getParameterByNam
                 s.parentNode.insertBefore(ba, s);
             })();
             break;
-        case 'gb':
-            // become UK
-            var pg_pangora_merchant_id = '107147';
-            var pg_order_id = data.orderNumber;
-            var pg_cart_value = data.totalIncludingVat;
-            var pg_currency = 'GBP';
-            break;
     }
 });
