@@ -477,6 +477,9 @@ textarea.input {
 .language-nl .handschrift .sheet:after {
   content: 'Download Stappenplan PDF';
 }
+.language-nl .catalogus .sheet:after {
+  content: 'Catalogus Downloaden';
+}
 .language-de .product-right .product-options .header:after {
   content: 'Personalisieren Sie Ihren Schmuck';
 }
