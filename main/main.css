@@ -13,6 +13,12 @@
     src: url('../fonts/DroidSans/DroidSans-webfont.svg#svgFontName') format('svg');
   }
 }
+html.signed-in .prijsswitch {
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  width: 180px;
+}
 body {
   background-color: white;
   font-size: 12px;
