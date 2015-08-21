@@ -85,12 +85,23 @@
 
 html {
     &.signed-in {
-        .prijsswitch {
+        .logged-in{
+            position:relative;
+            padding: 10px;
+	        border: solid 1px #ffacac;
+	        background-color: #ffeded;
+	        margin-bottom: 10px;
+	        text-align: center;
+	        font-weight: bold;
+	        font-size: 12px;
+	        color: red;
+            .prijsswitch {
                 position: absolute;
                 right: 20px;
                 top: 8px;
                 width:180px;
-        }
+            }
+        }        
     }
 }
 body {
@@ -183,16 +194,6 @@ u{
 	}
 }
 
-.logged-in{
-	padding: 10px;
-	border: solid 1px #ffacac;
-	background-color: #ffeded;
-	margin-bottom: 10px;
-	text-align: center;
-	font-weight: bold;
-	font-size: 12px;
-	color: red;
-}
 
 
 .maincontent {

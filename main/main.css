@@ -13,7 +13,18 @@
     src: url('../fonts/DroidSans/DroidSans-webfont.svg#svgFontName') format('svg');
   }
 }
-html.signed-in .prijsswitch {
+html.signed-in .logged-in {
+  position: relative;
+  padding: 10px;
+  border: solid 1px #ffacac;
+  background-color: #ffeded;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: red;
+}
+html.signed-in .logged-in .prijsswitch {
   position: absolute;
   right: 20px;
   top: 8px;
@@ -102,16 +113,6 @@ u {
 }
 .flags .flag:hover {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-}
-.logged-in {
-  padding: 10px;
-  border: solid 1px #ffacac;
-  background-color: #ffeded;
-  margin-bottom: 10px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 12px;
-  color: red;
 }
 .maincontent {
   font-size: 10pt;
