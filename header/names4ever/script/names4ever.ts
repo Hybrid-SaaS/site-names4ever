@@ -325,6 +325,18 @@ $(() => WebPage.load());
 
 //onload
 $(function () {
+    
+    
+    //Toon button voor verkoopprijzen
+    if (WebPage.Data.isloggedin) {
+        var newbutton = '<button class="prijsswitch" style="display:none">Toon verkoopprijzen</button>';
+        $('.logged-in').append(newbutton);
+    }
+    
+    //Switch Verkoopprijzen & Inkoopprijzen
+    
+    
+    
     //Freshdesk chat geen required fields om te kunnen afrekenen
     $('.morepaymentmethods').attr('exclude','true');
     $('#fc_chat_email').attr('exclude','true');
