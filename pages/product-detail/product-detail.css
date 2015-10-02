@@ -438,13 +438,15 @@ textarea.input {
   padding-top: 8px;
   position: absolute;
 }
-.handschrift .sheet {
+.handschrift .sheet,
+.zelfontwerpen .sheet {
   position: relative;
   left: 0;
   top: 0;
   margin-left: 50px;
 }
-.handschrift .sheet:before {
+.handschrift .sheet:before,
+.zelfontwerpen .sheet:before {
   position: absolute;
   margin-top: -10px;
   display: inline-block;
