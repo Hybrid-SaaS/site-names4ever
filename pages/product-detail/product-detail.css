@@ -480,6 +480,9 @@ textarea.input {
 .language-nl .catalogus .sheet:after {
   content: 'Catalogus Downloaden';
 }
+.language-nl .zelfontwerpen .sheet:after {
+  content: 'Download AI template';
+}
 .language-de .product-right .product-options .header:after {
   content: 'Personalisieren Sie Ihren Schmuck';
 }
