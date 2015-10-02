@@ -5,14 +5,14 @@
 
 $(() => {
 
-    if (document.getElementsByClassName('handschrift').length) {
+    if (document.getElementsByClassName('handschrift').length || document.getElementsByClassName('zelfontwerpen').length) {
         $('.sheet').html("");
         $('.sheet').insertAfter('.intro.item');
     } else {
         $('.sheet').html("");
         $('.sheet').insertBefore('.details');
     }
-    
+        
     //small to big
 
     var $smallImages = $('.smallimage');
