@@ -82,6 +82,7 @@ $(function () {
             var colorString = 'Color variations';
             var materialString = 'Material variations';
             var alternativeString = 'Alternatives';
+            var sizeString = 'Other Sizes';
 
             var $html = $('html');
 
@@ -91,6 +92,7 @@ $(function () {
                     colorString = 'Kleur variaties';
                     materialString = 'Materiaal variaties';
                     alternativeString = 'Alternatieven';
+                    sizeString = 'Andere afmetingen';
                     break;
 
                 case 'de':
@@ -98,6 +100,15 @@ $(function () {
                     colorString = 'Farbvarianten';
                     materialString = 'Materialvarianten';
                     alternativeString = 'Alternativen';
+                    sizeString = 'verschiedene Größen';
+                    break;
+
+                case 'es':
+                    matchingString = 'Joyas a juego';
+                    colorString = 'Colores disponibles';
+                    materialString = 'Variaciones de materiales';
+                    alternativeString = 'Alternativas';
+                    sizeString = 'Otras dimensiones';
                     break;
             }
 
@@ -105,6 +116,7 @@ $(function () {
             handler(data.related["Color"], colorString);
             handler(data.related["Material"], materialString);
             handler(data.related["Alternative"], alternativeString);
+            handler(data.related["Size"], alternativeString);
         }
     });
 });
