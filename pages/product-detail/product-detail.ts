@@ -118,7 +118,7 @@ $(() => {
                     case 'de':
                         matchingString = 'Passender Schmuck';
                         colorString = 'Farbvarianten';
-                        materialString = 'Matrialvarianten';
+                        materialString = 'Materialvarianten';
                         alternativeString = 'Alternativen';
                         break;
                 }
