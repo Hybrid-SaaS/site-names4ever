@@ -116,7 +116,7 @@ $(function () {
             handler(data.related["Color"], colorString);
             handler(data.related["Material"], materialString);
             handler(data.related["Alternative"], alternativeString);
-            handler(data.related["Size"], alternativeString);
+            handler(data.related["Size"], sizeString);
         }
     });
 });
