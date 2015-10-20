@@ -439,14 +439,16 @@ textarea.input {
   position: absolute;
 }
 .handschrift .sheet,
-.zelfontwerpen .sheet {
+.zelfontwerpen .sheet,
+.vingerafdruk .sheet {
   position: relative;
   left: 0;
   top: 0;
   margin-left: 50px;
 }
 .handschrift .sheet:before,
-.zelfontwerpen .sheet:before {
+.zelfontwerpen .sheet:before,
+.vingerafdruk .sheet:before {
   position: absolute;
   margin-top: -10px;
   display: inline-block;
@@ -476,7 +478,8 @@ textarea.input {
 .language-nl .sheet:after {
   content: 'Productsheet Downloaden';
 }
-.language-nl .handschrift .sheet:after {
+.language-nl .handschrift .sheet:after,
+.language-nl .vingerafdruk .sheet:after {
   content: 'Download Stappenplan PDF';
 }
 .language-nl .catalogus .sheet:after {
@@ -494,8 +497,9 @@ textarea.input {
 .language-de .sheet:after {
   content: 'Download Produktblatt';
 }
-.language-de .handschrift .sheet:after {
-  content: 'Download Stufen-Plan PDF';
+.language-de .handschrift .sheet:after,
+.language-de .vingerafdruk .sheet:after {
+  content: 'Download Anweisungen PDF';
 }
 .language-en .product-right .product-options .header:after {
   content: 'Personalise Your Jewellery';
@@ -506,7 +510,8 @@ textarea.input {
 .language-en .sheet:after {
   content: 'Download Proudctsheet';
 }
-.language-en .handschrift .sheet:after {
+.language-en .handschrift .sheet:after,
+.language-en .vingerafdruk .sheet:after {
   content: 'Download Step Plan PDF';
 }
 .language-es .product-right .product-options .header:after {
@@ -518,7 +523,8 @@ textarea.input {
 .language-es .sheet:after {
   content: 'Download Hoja de Producto';
 }
-.language-es .handschrift .sheet:after {
+.language-es .handschrift .sheet:after,
+.language-es .vingerafdruk .sheet:after {
   content: 'Descarga Plan de paso PDF';
 }
 /*# sourceMappingURL=product-detail.css.map */
