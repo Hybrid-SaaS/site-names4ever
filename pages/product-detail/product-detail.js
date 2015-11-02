@@ -1,7 +1,7 @@
 /// <reference path="../../definition/jquery.d.ts" />
 /// <reference path="../../../../../Hybrid SaaS/Hybrid SaaS Software (Aspekto)/Hybrid SaaS Software/Website/Core/Website/Script/Product-detail.ts" />
 $(function () {
-    if (document.getElementsByClassName('handschrift').length || document.getElementsByClassName('zelfontwerpen').length) {
+    if (document.getElementsByClassName('handschrift').length || document.getElementsByClassName('zelfontwerpen').length || document.getElementsByClassName('vingerafdruk').length) {
         $('.sheet').html("");
         $('.sheet').insertAfter('.intro.item');
     } else {
