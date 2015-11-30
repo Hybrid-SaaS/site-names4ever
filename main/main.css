@@ -786,10 +786,10 @@ u {
   content: "\20AC  10,00 gaat naar Pink Ribbon";
 }
 .product.pink-ribbon.bedel-goud:before {
-  content: "\20AC  36,65 gaat naar Pink Ribbon";
+  content: "\20AC  35,00 gaat naar Pink Ribbon";
 }
 .product.pink-ribbon.hanger-goud:before {
-  content: "\20AC  41,65 gaat naar Pink Ribbon";
+  content: "\20AC  40,00 gaat naar Pink Ribbon";
 }
 .product.pink-ribbon.detail:before {
   margin-top: 50px !important;
