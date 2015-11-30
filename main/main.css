@@ -782,13 +782,13 @@ u {
 .product.pink-ribbon.bedel-zilver {
   content: "\20AC  8,35 gaat naar Pink Ribbon";
 }
-.product.pink-ribbon.detail:before {
+.product.pink-ribbon.bedel-zilver.detail:before {
   margin-top: 50px !important;
   margin-left: -10px !important;
   background: #ed2b8e;
   color: white;
 }
-.product.pink-ribbon:before {
+.product.pink-ribbon.bedel-zilver:before {
   position: absolute;
   font-size: 10px;
   padding: 6px;
