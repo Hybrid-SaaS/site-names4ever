@@ -780,7 +780,10 @@ u {
   text-shadow: 1px 1px 2px rgba(244, 244, 244, 0.4);
 }
 .product.pink-ribbon-bedel-zilver.detail:before {
-  margin-top: 35px !important;
+  margin-top: 50px !important;
+  margin-left: -10px !important;
+  background: #ed2b8e;
+  color: white;
 }
 .product.pink-ribbon-bedel-zilver:before {
   position: absolute;
