@@ -782,6 +782,15 @@ u {
 .product.pink-ribbon.bedel-zilver:before {
   content: "\20AC  8,35 gaat naar Pink Ribbon";
 }
+.product.pink-ribbon.hanger-zilver:before {
+  content: "\20AC  10,00 gaat naar Pink Ribbon";
+}
+.product.pink-ribbon.bedel-goud:before {
+  content: "\20AC  36,65 gaat naar Pink Ribbon";
+}
+.product.pink-ribbon.hanger-goud:before {
+  content: "\20AC  41,65 gaat naar Pink Ribbon";
+}
 .product.pink-ribbon.detail:before {
   margin-top: 50px !important;
   margin-left: -10px !important;
