@@ -30,6 +30,9 @@ html.signed-in .logged-in .prijsswitch {
   top: 8px;
   width: 180px;
 }
+html.signed-in .partner-not-visible {
+  display: none;
+}
 body {
   background-color: white;
   font-size: 12px;
