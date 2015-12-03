@@ -31,7 +31,7 @@ html.signed-in .logged-in .prijsswitch {
   width: 180px;
 }
 html.signed-in .partner-not-visible {
-  display: none;
+  display: none !important;
 }
 body {
   background-color: white;
