@@ -338,6 +338,11 @@ u {
   color: white !important;
   background-color: #7a1b78 !important;
 }
+.maincontent .topmenu nav li.active a,
+.maincontent .topmenu nav li.active span {
+  color: white !important;
+  background-color: #7a1b78 !important;
+}
 .maincontent .menucontent {
   margin-left: 10px;
 }
