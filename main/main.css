@@ -338,8 +338,8 @@ u {
   color: white !important;
   background-color: #7a1b78 !important;
 }
-.maincontent .topmenu nav li.active a,
-.maincontent .topmenu nav li.active span {
+.maincontent .topmenu nav li.active > a,
+.maincontent .topmenu nav li span {
   color: white !important;
   background-color: #7a1b78 !important;
 }
