@@ -343,6 +343,11 @@ u {
   color: white !important;
   background-color: #7a1b78 !important;
 }
+.maincontent .topmenu nav li.active ul {
+  background: url(//names4ever.azurewebsites.net/images/menu-texture.png) white;
+  background-size: 230px 230px;
+  background-repeat: repeat;
+}
 .maincontent .menucontent {
   margin-left: 10px;
 }
