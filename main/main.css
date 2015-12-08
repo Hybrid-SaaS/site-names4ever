@@ -387,14 +387,24 @@ u {
   height: 100%;
   width: 100%;
 }
-.maincontent .topmenu nav > ul > li.active > ul > li > ul .has-children {
+.maincontent .topmenu nav > ul > li.active > ul > li > ul .has-children > span,
+.maincontent .topmenu nav > ul > li.active > ul > li > ul .has-children > a {
   border-bottom: solid 2px #8041AD;
+  display: block;
 }
 .maincontent .topmenu nav > ul > li.active > ul > li > ul #een-col {
   float: left;
   width: 170px;
   margin-right: 30px;
   margin-top: 60px;
+}
+.maincontent .topmenu nav > ul > li.active > ul > li > ul #een-col ul {
+  margin-top: 15px;
+}
+.maincontent .topmenu nav > ul > li.active > ul > li > ul #een-col ul a {
+  font-size: 14px;
+  color: #505050;
+  font-weight: normal;
 }
 .maincontent .topmenu nav > ul > li.active > ul > li > ul #twee-col {
   float: left;
