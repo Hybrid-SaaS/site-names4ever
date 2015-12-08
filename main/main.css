@@ -363,7 +363,7 @@ u {
   background-size: 210px 210px;
   background-repeat: repeat;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 .maincontent .topmenu nav > ul > li.active > ul > li {
   position: relative;
@@ -380,7 +380,7 @@ u {
   padding-right: 49px;
   top: 15px;
   font-size: 20px;
-  z-index: 100;
+  z-index: 10;
 }
 .maincontent .topmenu nav > ul > li.active > ul > li > ul {
   position: absolute;
