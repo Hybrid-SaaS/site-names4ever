@@ -364,6 +364,11 @@ u {
   background-repeat: repeat;
   width: 100%;
 }
+.maincontent .topmenu nav > ul > li.active > ul > li {
+  position: relative;
+  width: 970px;
+  margin-left: 33px;
+}
 .maincontent .topmenu nav > ul > li.active > ul > li > a {
   border-bottom: solid 3px #8041AD;
   color: black;
@@ -371,7 +376,6 @@ u {
   padding-right: 49px;
   top: 15px;
   font-size: 20px;
-  left: 35px;
 }
 .maincontent .topmenu nav > ul > li.active > a,
 .maincontent .topmenu nav > ul > li.active > span {
