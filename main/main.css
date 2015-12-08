@@ -368,14 +368,39 @@ u {
   position: relative;
   width: 970px;
   margin-left: 33px;
+  margin-right: 33px;
 }
 .maincontent .topmenu nav > ul > li.active > ul > li > a {
   border-bottom: solid 3px #8041AD;
   color: black;
-  position: absolute;
+  position: relative;
   padding-right: 49px;
   top: 15px;
   font-size: 20px;
+  z-index: 1;
+}
+.maincontent .topmenu nav > ul > li.active > ul > li > ul {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.maincontent .topmenu nav > ul > li.active > ul > li > ul .has-children {
+  border-bottom: solid 2px #8041AD;
+}
+.maincontent .topmenu nav > ul > li.active > ul > li > ul #een-col {
+  float: left;
+  width: 170px;
+  margin-right: 30px;
+  margin-top: 60px;
+}
+.maincontent .topmenu nav > ul > li.active > ul > li > ul #twee-col {
+  float: left;
+  width: 370px;
+  margin-right: 30px;
+  margin-top: 60px;
+}
+.maincontent .topmenu nav > ul > li.active > ul > li > ul #last {
+  margin-right: 0px;
 }
 .maincontent .topmenu nav > ul > li.active > a,
 .maincontent .topmenu nav > ul > li.active > span {
