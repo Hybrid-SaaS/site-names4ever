@@ -313,22 +313,22 @@ u {
   font-weight: bold;
   font-size: 15px;
 }
-.maincontent .topmenu nav ul {
+.maincontent .topmenu nav > ul {
   position: relative;
 }
-.maincontent .topmenu nav li {
+.maincontent .topmenu nav > ul > li {
   list-style-type: none;
   margin: 0;
   display: inline-block;
 }
-.maincontent .topmenu nav li.hybridsaas-menu-current a {
+.maincontent .topmenu nav > ul > li.hybridsaas-menu-current a {
   color: #992296;
 }
-.maincontent .topmenu nav li.hybridsaas-menu-current a:hover a {
+.maincontent .topmenu nav > ul > li.hybridsaas-menu-current a:hover a {
   color: #7a1b78 !important;
 }
-.maincontent .topmenu nav li > a,
-.maincontent .topmenu nav li > span {
+.maincontent .topmenu nav > ul > li > a,
+.maincontent .topmenu nav > ul > li > span {
   color: #ffffff;
   text-decoration: none;
   padding-left: 26px;
@@ -336,12 +336,12 @@ u {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.maincontent .topmenu nav li > a:hover,
-.maincontent .topmenu nav li > span:hover {
+.maincontent .topmenu nav > ul > li > a:hover,
+.maincontent .topmenu nav > ul > li > span:hover {
   color: white !important;
   background-color: #7a1b78 !important;
 }
-.maincontent .topmenu nav li > ul {
+.maincontent .topmenu nav > ul > li > ul {
   display: none;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -355,16 +355,15 @@ u {
   border: 2px solid #C5C5C5;
   border-top: 4px solid #c5c5c5;
   margin-top: 8px;
-  background-color: lightgray;
 }
-.maincontent .topmenu nav li.active > ul {
+.maincontent .topmenu nav > ul > li.active > ul {
   background: url(//names4ever.azurewebsites.net/images/menu-texture.png) white;
   background-size: 230px 230px;
   background-repeat: repeat;
   width: 100%;
 }
-.maincontent .topmenu nav li.active > a,
-.maincontent .topmenu nav li.active > span {
+.maincontent .topmenu nav > ul > li.active > a,
+.maincontent .topmenu nav > ul > li.active > span {
   color: white !important;
   background-color: #7a1b78 !important;
 }

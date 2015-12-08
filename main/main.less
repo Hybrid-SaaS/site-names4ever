@@ -424,75 +424,74 @@ u{
             font-weight: bold;
             font-size: 15px;
 
-            ul {position:relative;
+            > ul {
+                position:relative;
 
-                }
-            
-            li {
-                &:first-child {
-                }
+                > li {
+                    &:first-child {
+                    }
 
-                &.hybridsaas-menu-current {
+                    &.hybridsaas-menu-current {
 
-                    a {
-                        color: @color-link-menu;
+                        a {
+                            color: @color-link-menu;
 
-                        &:hover a {
-                            color: @color-link-hover-menu !important;
+                            &:hover a {
+                                color: @color-link-hover-menu !important;
+                            }
                         }
                     }
-                }
 
-                list-style-type: none;
-                margin: 0;
-                display: inline-block;
+                    list-style-type: none;
+                    margin: 0;
+                    display: inline-block;
 
-                //link in li
-                 > a, > span {
-                    color: @color-link-topmenu;
-                    text-decoration: none;
-                    padding-left: 26px;
-                    padding-right: 26px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    //link in li
+                     > a, > span {
+                        color: @color-link-topmenu;
+                        text-decoration: none;
+                        padding-left: 26px;
+                        padding-right: 26px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
 
-                    &:hover {
-                        color: @color-background-frame !important;
-                        background-color:@color-link-hover-menu !important;
+                        &:hover {
+                            color: @color-background-frame !important;
+                            background-color:@color-link-hover-menu !important;
                        
+                        }
                     }
-                }
                
-                > ul {
-                    display:none;
-                    box-sizing: border-box;
-                    -moz-box-sizing: border-box;                     
-                    -webkit-box-sizing: border-box;
-                    position: absolute !important;
-                    left: 0 !important;
-                    width: 100%;
-                    border-bottom-left-radius: 0.75rem;
-                    border-bottom-right-radius: 0.75rem;
-                    height: 250px;
-                    border: 2px solid #C5C5C5;
-                    border-top: 4px solid #c5c5c5;
-                    margin-top: 8px;
-                    background-color: lightgray;
-                }
-
-                &.active{
-                   > ul {
-                        background: url(//names4ever.azurewebsites.net/images/menu-texture.png) white;
-                        background-size: 230px 230px;
-                        background-repeat: repeat;
+                    > ul {
+                        display:none;
+                        box-sizing: border-box;
+                        -moz-box-sizing: border-box;                     
+                        -webkit-box-sizing: border-box;
+                        position: absolute !important;
+                        left: 0 !important;
                         width: 100%;
+                        border-bottom-left-radius: 0.75rem;
+                        border-bottom-right-radius: 0.75rem;
+                        height: 250px;
+                        border: 2px solid #C5C5C5;
+                        border-top: 4px solid #c5c5c5;
+                        margin-top: 8px;                    
                     }
-                   > a, > span {
-                        color: @color-background-frame !important;
-                        background-color:@color-link-hover-menu !important;
-                   }
-                }
+
+                    &.active{
+                       > ul {
+                            background: url(//names4ever.azurewebsites.net/images/menu-texture.png) white;
+                            background-size: 230px 230px;
+                            background-repeat: repeat;
+                            width: 100%;
+                        }
+                       > a, > span {
+                            color: @color-background-frame !important;
+                            background-color:@color-link-hover-menu !important;
+                       }
+                    }
                 
+                }
             }
         }
     }
