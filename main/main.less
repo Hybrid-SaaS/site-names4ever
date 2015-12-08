@@ -423,7 +423,10 @@ u{
             padding-bottom: 8px;
             font-weight: bold;
             font-size: 15px;
-
+            
+            a {
+                text-decoration: none;
+            }
             > ul {
                 position:relative;
 
@@ -448,8 +451,7 @@ u{
 
                     //link in li
                      > a, > span {
-                        color: @color-link-topmenu;
-                        text-decoration: none;
+                        color: @color-link-topmenu;                        
                         padding-left: 26px;
                         padding-right: 26px;
                         padding-top: 10px;
@@ -484,6 +486,18 @@ u{
                             background-size: 230px 230px;
                             background-repeat: repeat;
                             width: 100%;
+                            
+                            > li {
+                                > a{
+                                    border-bottom: solid 3px #8041AD;
+                                    color: black;
+                                    position: absolute;
+                                    padding-right: 49px;
+                                    top: 15px;
+                                    font-size: 20px;
+                                    left: 35px;
+                                }
+                            }
                         }
                        > a, > span {
                             color: @color-background-frame !important;

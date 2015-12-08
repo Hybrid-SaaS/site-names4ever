@@ -313,6 +313,9 @@ u {
   font-weight: bold;
   font-size: 15px;
 }
+.maincontent .topmenu nav a {
+  text-decoration: none;
+}
 .maincontent .topmenu nav > ul {
   position: relative;
 }
@@ -330,7 +333,6 @@ u {
 .maincontent .topmenu nav > ul > li > a,
 .maincontent .topmenu nav > ul > li > span {
   color: #ffffff;
-  text-decoration: none;
   padding-left: 26px;
   padding-right: 26px;
   padding-top: 10px;
@@ -361,6 +363,15 @@ u {
   background-size: 230px 230px;
   background-repeat: repeat;
   width: 100%;
+}
+.maincontent .topmenu nav > ul > li.active > ul > li > a {
+  border-bottom: solid 3px #8041AD;
+  color: black;
+  position: absolute;
+  padding-right: 49px;
+  top: 15px;
+  font-size: 20px;
+  left: 35px;
 }
 .maincontent .topmenu nav > ul > li.active > a,
 .maincontent .topmenu nav > ul > li.active > span {
