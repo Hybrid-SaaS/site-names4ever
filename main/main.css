@@ -401,8 +401,8 @@ u {
   margin-right: 30px;
   margin-top: 60px;
 }
-.maincontent .topmenu nav > ul > li.active > ul > li > ul #last {
-  margin-right: 0px;
+.maincontent .topmenu nav > ul > li.active > ul > li > ul .last {
+  margin-right: 0px !important;
 }
 .maincontent .topmenu nav > ul > li.active > a,
 .maincontent .topmenu nav > ul > li.active > span {
