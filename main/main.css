@@ -206,7 +206,24 @@ u {
   max-width: 830px;
   border-radius: 0.75em;
   margin-right: 10px;
+  margin-bottom: 5px;
+}
+.maincontent #columns .main-column-right .usercontent.above .breadcrumbs {
+  font-size: 11px;
   margin-bottom: 10px;
+}
+.maincontent #columns .main-column-right .usercontent.above .filters a {
+  font-size: 10px;
+  float: left;
+  color: #AA41B5;
+  padding: 5px 10px;
+  letter-spacing: 1.25px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  border: 2px solid #8A3E9D;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-right: 15px;
 }
 .maincontent #columns .main-column-right .-hs-container,
 .maincontent #columns .main-column-right .container {
