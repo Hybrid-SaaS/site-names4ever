@@ -38,7 +38,8 @@
   float: left;
   font-size: 17px;
 }
-#header .names4ever .wrapper.second .column.usp a::before {
+#header .names4ever .wrapper.second .column.usp a::before,
+#header .names4ever .wrapper.second .column.usp span::before {
   display: inline-block;
   content: "";
   background-image: url(//names4ever.azurewebsites.net/images/checkbox.png);
