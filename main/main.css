@@ -389,13 +389,13 @@ u {
   background-repeat: repeat;
   width: 100%;
   z-index: 100;
+  padding-right: 33px;
+  padding-left: 33px;
 }
 .maincontent .topmenu nav > ul > li.active > ul > li {
   position: relative;
-  width: 970px;
+  float: left;
   height: 100%;
-  margin-left: 33px;
-  margin-right: 33px;
 }
 .maincontent .topmenu nav > ul > li.active > ul > li > a {
   border-bottom: solid 3px #8041AD;
