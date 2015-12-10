@@ -39,7 +39,13 @@
   font-size: 17px;
 }
 #header .names4ever .wrapper.second .column.usp a {
-  content: url(//names4ever.azurewebsites.net/images/checkbox.png);
+  display: block;
+  content: "";
+  background-image: url(//names4ever.azurewebsites.net/images/checkbox.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
 }
 #header .names4ever .wrapper.second .column.trust {
   padding-top: 15px;

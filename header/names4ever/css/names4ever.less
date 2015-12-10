@@ -84,7 +84,15 @@
                     font-size:17px;
 
                     &.usp {
-                        a{content:url(//names4ever.azurewebsites.net/images/checkbox.png)}
+                        a{
+                            display: block;
+                            content: "";
+                            background-image: url(//names4ever.azurewebsites.net/images/checkbox.png);
+                            background-size: contain;
+                            background-repeat: no-repeat;    
+                            width: 25px;
+                            height: 25px;
+                        }
                     }
 
                     &.trust {
