@@ -42,6 +42,9 @@
   color: #545454;
   text-decoration: none;
 }
+#header .names4ever .wrapper.second .column.usp a:hover {
+  color: #aa41b5;
+}
 #header .names4ever .wrapper.second .column.usp a::before,
 #header .names4ever .wrapper.second .column.usp span::before {
   display: inline-block;
