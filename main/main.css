@@ -1176,7 +1176,7 @@ html {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: none;
+  -webkit-text-size-adjust: 92%;
 }
 html,
 button,
