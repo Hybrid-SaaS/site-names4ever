@@ -146,6 +146,7 @@ u {
   position: relative;
   margin-left: 20px;
   margin-bottom: 20px;
+  font-size: 1.6rem;
 }
 .maincontent #columns .main-column-left .searchbox input[type=text] {
   width: 185px;
@@ -335,8 +336,7 @@ u {
   background-color: rgba(47, 47, 47, 0.9);
   padding-top: 8px;
   padding-bottom: 8px;
-  font-weight: bold;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .maincontent .topmenu nav a {
   text-decoration: none;
@@ -1170,8 +1170,11 @@ audio:not([controls]) {
   display: none;
 }
 html {
+  font: 62.5%/1.5rem 'dinpro-medium', arial, helvetica, sans-serif;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 html,
 button,

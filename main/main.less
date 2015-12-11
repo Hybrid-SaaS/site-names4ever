@@ -230,6 +230,7 @@ u{
                 position: relative;
                 margin-left: @offset-base * 2;
                 margin-bottom: @offset-base * 2;
+                font-size:1.6rem;
 
 
                 input[type=text] {
@@ -448,9 +449,8 @@ u{
         nav {
             background-color: @color-background-menu-top;
             padding-top: 8px;
-            padding-bottom: 8px;
-            font-weight: bold;
-            font-size: 15px;
+            padding-bottom: 8px;            
+            font-size: 1.5rem;
             
             a {
                 text-decoration: none;
@@ -1474,8 +1474,11 @@ audio, canvas, video {
 }
 
 html {    
+    font: 62.5%/1.5rem 'dinpro-medium',arial,helvetica,sans-serif;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
 }
 
 html, button, input, select, textarea {
