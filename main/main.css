@@ -1100,6 +1100,7 @@ u {
 .searchbox {
   position: absolute;
   margin-top: 12px;
+  font-size: 1.6rem;
 }
 .searchbox .searchinput {
   width: 250px;
