@@ -234,6 +234,9 @@ u {
   color: #AA41B5;
   border: 2px solid #8A3E9D;
 }
+.maincontent #columns .main-column-right .usercontent.above .filters a.last {
+  margin-right: 0;
+}
 .maincontent #columns .main-column-right .-hs-container,
 .maincontent #columns .main-column-right .container {
   width: 840px;
