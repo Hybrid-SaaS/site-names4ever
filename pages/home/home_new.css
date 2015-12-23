@@ -77,7 +77,7 @@
   color: white;
   border-radius: 0.25em;
 }
-#deal .usps-content {
+.usps-content {
   margin-top: 20px;
   width: 830px;
   height: 35px;
@@ -85,7 +85,7 @@
   border-radius: 1.2rem;
   position: relative;
 }
-#deal .usps-content .usp {
+.usps-content .usp {
   color: white;
   width: 150px;
   float: left;
@@ -95,21 +95,21 @@
   display: inline-block;
   line-height: 35px;
 }
-#deal .usps-content .usp .nr1,
-#deal .usps-content .usp .nr4 {
+.usps-content .usp .nr1,
+.usps-content .usp .nr4 {
   width: 145px;
 }
-#deal .usps-content .usp .nr2 {
+.usps-content .usp .nr2 {
   width: 135px;
 }
-#deal .usps-content .usp .nr3 {
+.usps-content .usp .nr3 {
   width: 155px;
 }
-#deal .usps-content .usp .nr5 {
+.usps-content .usp .nr5 {
   width: 160px;
   padding-left: 0;
 }
-#deal .usps-content .usp::before {
+.usps-content .usp::before {
   display: inline-block;
   content: "";
   background-image: url(http://names4ever.azurewebsites.net/images/vinkje.svg);
@@ -121,7 +121,7 @@
   top: 6px;
   left: -5px;
 }
-#deal #topcategory {
+#topcategory {
   font-size: 15px;
   display: block;
   position: absolute;
@@ -140,38 +140,38 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   vertical-align: top;
 }
-#deal #topcategory a {
+#topcategory a {
   color: black;
 }
-#deal #topcategory ul {
+#topcategory ul {
   margin: 0;
   padding: 0;
 }
-#deal #topcategory ul li {
+#topcategory ul li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-#deal #topcategory ul li a {
+#topcategory ul li a {
   text-decoration: none;
 }
-#deal #topcategory ul li a:hover {
+#topcategory ul li a:hover {
   text-decoration: none;
 }
-#deal #topcategory > ul {
+#topcategory > ul {
   font-size: 14px;
 }
-#deal #topcategory > ul > li > a {
+#topcategory > ul > li > a {
   font-weight: bold;
   font-size: 16px;
   display: block;
   padding-bottom: 1px;
   border-bottom: solid 2px #63248f;
 }
-#deal #topcategory > ul > li ul {
+#topcategory > ul > li ul {
   margin-bottom: 20px;
 }
-#deal #topcategory > ul > li ul li {
+#topcategory > ul > li ul li {
   margin-top: 4px;
   text-decoration: none;
 }
