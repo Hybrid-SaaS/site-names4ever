@@ -23,6 +23,7 @@
   width: 220px;
   background-color: white;
   height: 300px;
+  float: right;
   padding: 10px;
   border: solid 1px #888888;
   border-radius: 5px;
