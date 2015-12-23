@@ -1,0 +1,209 @@
+@banner-height: 415px;
+@banner-width: 830px;
+@topcategory-offset: 20px;
+@topcategory-width: 190px;
+@topcategory-border-color: #888;
+@topcategory-border-radius: 5px;
+// streep onder menu items in linker menu
+@color-border-menu-head: #63248F;
+
+
+#homeslide, #topcategory {
+    display: none;
+}
+
+//slide images on the homepage
+.slide {
+    position: absolute;
+    border-radius: 0.75rem;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+    }
+}
+
+
+
+#homeslidewrapper {
+    width: 830px;
+    height: 415px;
+}
+
+.center-content {
+    margin-top: @topcategory-offset;
+
+    .row {
+        
+    }
+}
+
+
+#topcat {
+    position: absolute;
+    //width: 830px;
+    //height: 415px;
+    z-index: 10;
+
+
+    #deal {
+        display: none;
+        position: absolute;
+        left: @banner-width - @topcategory-width - @topcategory-offset;
+        top: @topcategory-offset;
+        width: @topcategory-width;
+        background-color: white;
+        height: (@banner-height - @topcategory-offset*2)*0.75;
+        padding: @topcategory-offset / 2;
+        opacity: 0.9;
+        border: solid 1px @topcategory-border-color;
+        border-radius: @topcategory-border-radius;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        cursor: pointer;
+
+        .head {
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+            padding-bottom: 1px;
+            border-bottom: solid 2px #63248f;
+            color: black;
+        }
+
+        img {
+            margin: auto;
+        }
+
+        .title {
+            color: #5d5d5d;
+            height: 50px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: left;
+            min-height:50px;
+        }
+
+        .price {
+            color: #63248f;
+            text-align: right;
+            font-weight: bold;
+            font-size: 22px;
+            height: 30px;
+            padding-right: 5px;
+            width:100%;
+        }
+
+        .price-original {
+            font-size: 10px;
+            margin-top: 5px;
+            height: 20px;
+            color: #63248f;
+        }
+
+        &:hover {
+            border: 1px solid #707070;
+            box-shadow: 2px 2px 6px rgba(66, 66, 66, 0.4);
+
+            .price {
+                background-color:#63248f ;
+                color: white;
+                border-radius: 0.25em;
+            }
+        }
+    }
+
+
+    #topcategory {
+        a {
+            color: black;
+        }
+
+        font-size: 15px;
+        display: block;
+        position: absolute;
+        left: @topcategory-offset;
+        top: @topcategory-offset;
+        width: @topcategory-width;
+        background-color: white;
+        height: @banner-height - @topcategory-offset*2;
+        padding: @topcategory-offset / 2;
+        opacity: 0.8;
+        border: solid 1px @topcategory-border-color;
+        border-radius: @topcategory-border-radius;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        //nav {
+        //background: @color-background-frame;
+        //display: inline-block;
+        vertical-align: top;
+        //width: @width-base;
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                //huidige url
+                &.hybridsaas-menu-current {
+                    a {
+                        // color: @color-link-current;
+                    }
+                    //Indien de bovenhuidige de huidige url (.hybridsaas-menu-current) is, de childs niet linkcolor highlighten
+                    ul a {
+                        //color: @textcolorlight;
+                        &:hover {
+                            //  color: @color-link-hover;
+                        }
+                    }
+                }
+
+                a {
+                    //color: @textcolorlight;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: none;
+                        //  color: @color-link-hover;
+                    }
+                }
+            }
+        }
+
+
+
+        > ul {
+            //margin-left: @offset-base;
+            font-size: 14px;
+
+
+            > li {
+                > a {
+                    font-weight: bold;
+                    font-size: 16px;
+                    display: block;
+                    padding-bottom: 1px;
+                    border-bottom: solid 2px @color-border-menu-head;
+                }
+
+                ul {
+                    margin-bottom: 20px;
+
+                    li {
+                        margin-top: 4px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        //}
+    }
+}
