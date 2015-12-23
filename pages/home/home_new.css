@@ -77,6 +77,50 @@
   color: white;
   border-radius: 0.25em;
 }
+#deal .usps-content {
+  margin-top: 20px;
+  width: 830px;
+  height: 35px;
+  background-color: #A116A1;
+  border-radius: 1.2rem;
+  position: relative;
+}
+#deal .usps-content .usp {
+  color: white;
+  width: 150px;
+  float: left;
+  position: relative;
+  padding-left: 20px;
+  height: 35px;
+  display: inline-block;
+  line-height: 35px;
+}
+#deal .usps-content .usp .nr1,
+#deal .usps-content .usp .nr4 {
+  width: 145px;
+}
+#deal .usps-content .usp .nr2 {
+  width: 135px;
+}
+#deal .usps-content .usp .nr3 {
+  width: 155px;
+}
+#deal .usps-content .usp .nr5 {
+  width: 160px;
+  padding-left: 0;
+}
+#deal .usps-content .usp::before {
+  display: inline-block;
+  content: "";
+  background-image: url(http://names4ever.azurewebsites.net/images/vinkje.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: 6px;
+  left: -5px;
+}
 #deal #topcategory {
   font-size: 15px;
   display: block;
