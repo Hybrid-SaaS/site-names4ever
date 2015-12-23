@@ -87,7 +87,6 @@
 }
 .usps-content .usp {
   color: white;
-  width: 150px;
   float: left;
   position: relative;
   padding-left: 20px;
@@ -95,17 +94,17 @@
   display: inline-block;
   line-height: 35px;
 }
-.usps-content .usp .nr1,
-.usps-content .usp .nr4 {
+.usps-content .usp.nr1,
+.usps-content .usp.nr4 {
   width: 145px;
 }
-.usps-content .usp .nr2 {
+.usps-content .usp.nr2 {
   width: 135px;
 }
-.usps-content .usp .nr3 {
+.usps-content .usp.nr3 {
   width: 155px;
 }
-.usps-content .usp .nr5 {
+.usps-content .usp.nr5 {
   width: 160px;
   padding-left: 0;
 }
