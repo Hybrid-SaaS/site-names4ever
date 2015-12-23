@@ -18,20 +18,12 @@
 .center-content {
   margin-top: 20px;
 }
-#topcat {
-  position: absolute;
-  z-index: 10;
-}
-#topcat #deal {
+#deal {
   display: none;
-  position: absolute;
-  left: 620px;
-  top: 20px;
-  width: 190px;
+  width: 220px;
   background-color: white;
-  height: 281.25px;
+  height: 300px;
   padding: 10px;
-  opacity: 0.9;
   border: solid 1px #888888;
   border-radius: 5px;
   -moz-box-sizing: border-box;
@@ -40,7 +32,7 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
-#topcat #deal .head {
+#deal .head {
   font-weight: bold;
   font-size: 16px;
   display: block;
@@ -48,10 +40,10 @@
   border-bottom: solid 2px #63248f;
   color: black;
 }
-#topcat #deal img {
+#deal img {
   margin: auto;
 }
-#topcat #deal .title {
+#deal .title {
   color: #5d5d5d;
   height: 50px;
   font-size: 13px;
@@ -60,7 +52,7 @@
   text-align: left;
   min-height: 50px;
 }
-#topcat #deal .price {
+#deal .price {
   color: #63248f;
   text-align: right;
   font-weight: bold;
@@ -69,22 +61,22 @@
   padding-right: 5px;
   width: 100%;
 }
-#topcat #deal .price-original {
+#deal .price-original {
   font-size: 10px;
   margin-top: 5px;
   height: 20px;
   color: #63248f;
 }
-#topcat #deal:hover {
+#deal:hover {
   border: 1px solid #707070;
   box-shadow: 2px 2px 6px rgba(66, 66, 66, 0.4);
 }
-#topcat #deal:hover .price {
+#deal:hover .price {
   background-color: #63248f ;
   color: white;
   border-radius: 0.25em;
 }
-#topcat #topcategory {
+#deal #topcategory {
   font-size: 15px;
   display: block;
   position: absolute;
@@ -103,38 +95,38 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   vertical-align: top;
 }
-#topcat #topcategory a {
+#deal #topcategory a {
   color: black;
 }
-#topcat #topcategory ul {
+#deal #topcategory ul {
   margin: 0;
   padding: 0;
 }
-#topcat #topcategory ul li {
+#deal #topcategory ul li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-#topcat #topcategory ul li a {
+#deal #topcategory ul li a {
   text-decoration: none;
 }
-#topcat #topcategory ul li a:hover {
+#deal #topcategory ul li a:hover {
   text-decoration: none;
 }
-#topcat #topcategory > ul {
+#deal #topcategory > ul {
   font-size: 14px;
 }
-#topcat #topcategory > ul > li > a {
+#deal #topcategory > ul > li > a {
   font-weight: bold;
   font-size: 16px;
   display: block;
   padding-bottom: 1px;
   border-bottom: solid 2px #63248f;
 }
-#topcat #topcategory > ul > li ul {
+#deal #topcategory > ul > li ul {
   margin-bottom: 20px;
 }
-#topcat #topcategory > ul > li ul li {
+#deal #topcategory > ul > li ul li {
   margin-top: 4px;
   text-decoration: none;
 }
