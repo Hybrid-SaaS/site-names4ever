@@ -79,53 +79,49 @@ $(function () {
 
     // Populaire producten Home
     $.getJSON('/data/product/POPULAIRHOME/related-products').done(function (data) {
-        var $deal = $('#populair');
-        $('#populair').append('<div class="head">Populair Home</div>');
+        var title = '';
+        switch (WebPage.Data.language) {
+            case 'nl':
+                title = 'Populaire producten';
+                break;
+            case 'de':
+                title = 'Beliebte Produkte';
+                break;
+            case 'en':
+                title = 'Popular products';
+                break;
+            case 'es':
+                title = 'Productos populares';
+                break;
+        }
+        $('#populair').append('<div class="head">'+title+'</div>');
 
         if (data.related && data.related["Populair"]) {
-            var product = data.related["Populair"][0];
+
+            for (var x = 0; x < data.related["Populair"].length; x++) {
+            var product = data.related["Populair"][x];
             var $img = $('<img src="/image/product/guid/' + encodeURIComponent(product.guid) + '?width=175&height=175" />');
+           
             $img.attr({ 'title': product.productcode + '\n' + product.description });
-            $deal.data('url', product.url);
+            $populair.data('url', product.url);
 
-            $deal.append($img);
+            $populair.append($img);
 
-            $deal.append($('<div class="title"></div>').text(product.description));
-
-            var from = '';
-            var to = '';
-            switch (WebPage.Data.language) {
-                case 'nl': {
-                    from = 'Van';
-                    to = 'Voor';
-                    break;
-                }
-                case 'de': {
-                    from = 'Bisher';
-                    to = 'Jetzt';
-                    break;
-                }
-                case 'en': {
-                    from = 'From';
-                    to = 'Now';
-                    break;
-                }
-            }
+            $populair.append($('<div class="title"></div>').text(product.description));
 
             if (WebPage.Data.country == 'gb') {
-                $deal.append($('<div class="price-original"></div>').text(from + ' £ ' + product['price-original'].toFixed(2).replace('.', ',')));
-                $deal.append($('<div class="price"></div>').text(to + ' £ ' + product.price.toFixed(2).replace('.', ',')));
-            } else {
-                $deal.append($('<div class="price-original"></div>').text(from + ' € ' + product['price-original'].toFixed(2).replace('.', ',')));
-                $deal.append($('<div class="price"></div>').text(to + ' € ' + product.price.toFixed(2).replace('.', ',')));
+                $populair.append($('<div class="price"></div>').text(' £ ' + product.price.toFixed(2).replace('.', ',')));
+            } else {                
+                $populair.append($('<div class="price"></div>').text(' € ' + product.price.toFixed(2).replace('.', ',')));
             }
-            $deal.attr({ 'title': product.productcode + '\n' + product.description });
+            $populair.attr({ 'title': product.productcode + '\n' + product.description });
 
-            $deal.click(function () {
-                location.href = $deal.data('url');
+            $populair.click(function () {
+                location.href = $populair.data('url');
             });
 
-            $deal.fadeIn(750);
+            $populair.fadeIn(750);
+            }
         }
     });
 });
