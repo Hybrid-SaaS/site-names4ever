@@ -80,22 +80,22 @@ $(function () {
     // Populaire producten Home
     $.getJSON('/data/product/POPULAIRHOME/related-products').done(function (data) {
         var $populair = $('#populair');
-        var title = '';
+        var titleblock = '';
         switch (WebPage.Data.language) {
             case 'nl':
-                title = 'Populaire producten';
+                titleblock = 'Populaire producten';
                 break;
             case 'de':
-                title = 'Beliebte Produkte';
+                titleblock = 'Beliebte Produkte';
                 break;
             case 'en':
-                title = 'Popular products';
+                titleblock = 'Popular products';
                 break;
             case 'es':
-                title = 'Productos populares';
+                titleblock = 'Productos populares';
                 break;
         }
-        $('#populair').append('<div class="head">'+title+'</div>');
+        $('#populair').append('<div class="head">'+titleblock+'</div>');
         if (data.related && data.related["Populair"]) {
 
             var $related = $('<div class="related-container"></div>');
