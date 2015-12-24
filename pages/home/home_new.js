@@ -96,12 +96,36 @@ $(function () {
                 break;
         }
         $('#populair').append('<div class="head">'+title+'</div>');
-
         if (data.related && data.related["Populair"]) {
 
-            
+            var $related = $('<div class="related-container"></div>');
+            var handler = function (products, title) {
+                if (typeof products != 'undefined') {
+                    var $populair = $('<div class="related ' + title + '"><div class="imageFrame"><div class="label">' + title + '</div><div class="images"></div></div></div>');
 
-            var product = data.related["Populair"][1];
+                    var $container = $populair.find('.images');
+
+                    for (var x = 0; x < products.length; x++) {
+                        var product = products[x];
+                        var $img = $('<img src="/image/product/guid/' + encodeURIComponent(product.guid) + '?width=135&height=94" />');
+                        $img.attr({ 'title': product.productcode + '\n' + product.description });
+                        $img.data('url', product.url);
+                        $container.append($img);
+                    }
+
+                    $container.find('img').on('click', function (event) {
+                        var $this = $(event.target);
+                        if ($this.closest('.related.open').length) {
+                            location.href = $this.data('url');
+                        }
+                    });
+
+                    $related.append($populair);
+                }
+            };
+
+
+            var product = data.related["Populair"][0];
             var $img = $('<img src="/image/product/guid/' + encodeURIComponent(product.guid) + '?width=175&height=175" />');
            
             $img.attr({ 'title': product.productcode + '\n' + product.description });
