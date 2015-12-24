@@ -96,8 +96,9 @@ $(function () {
                 break;
         }
         $('#populair').append('<div class="head">'+titleblock+'</div>');
-        if (data.related && data.related["Populair"]) {
 
+        if (data.related && data.related["Populair"]) {
+            console.log(data.related["Populair"]);
             var $related = $('<div class="related-container"></div>');
             var handler = function (products, title) {
                 if (typeof products != 'undefined') {
