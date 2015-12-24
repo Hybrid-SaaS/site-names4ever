@@ -99,8 +99,9 @@ $(function () {
 
         if (data.related && data.related["Populair"]) {
 
-            for (var x = 0; x < data.related["Populair"].length; x++) {
-            var product = data.related["Populair"][x];
+            
+
+            var product = data.related["Populair"][1];
             var $img = $('<img src="/image/product/guid/' + encodeURIComponent(product.guid) + '?width=175&height=175" />');
            
             $img.attr({ 'title': product.productcode + '\n' + product.description });
@@ -122,7 +123,7 @@ $(function () {
             });
 
             $populair.fadeIn(750);
-            }
+            
         }
     });
 });
