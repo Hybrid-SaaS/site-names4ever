@@ -102,7 +102,9 @@ $(function () {
             
             for (var x = 0; x < data.related["Populair"].length; x++) {
                 var product = data.related["Populair"][x];
-                var $productcontainer = $('<div class="product" data-product-id="'+product.guid+'" link="'+product.url+'" itemtype="http://schema.org/Product"><meta itemprop="url" content="'+window.location.hostname+'/'+product.url+'"><div class="imageFrame"><a href="'+product.url+'"><img src="/image/product/guid/'+product.guid+'/'+product.url+'.jpg?width=175&height=175" alt="'+product.description+'" title="'+product.description+'" itemprop="image"></a></div><a href="'+product.url+'"><div class="title" itemprop="name">'+product.description+'</div><div class="number">'+product.productcode+'</div><div class="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer"> <meta itemprop="priceCurrency" content="EUR">€ <span itemprop="price">'+product.price+'</span><div class="details"></div></div></a></div>');
+                var $productcontainer = $('<div class="populair container"></div>');
+                var $products = $('<div class="product" data-product-id="' + product.guid + '" link="' + product.url + '" itemtype="http://schema.org/Product"><meta itemprop="url" content="' + window.location.hostname + '/' + product.url + '"><div class="imageFrame"><a href="' + product.url + '"><img src="/image/product/guid/' + product.guid + '/' + product.url + '.jpg?width=175&height=175" alt="' + product.description + '" title="' + product.description + '" itemprop="image"></a></div><a href="' + product.url + '"><div class="title" itemprop="name">' + product.description + '</div><div class="number">' + product.productcode + '</div><div class="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer"> <meta itemprop="priceCurrency" content="EUR">€ <span itemprop="price">' + product.price + '</span><div class="details"></div></div></a></div>');
+                $productscontainer.append($products);
                 $populair.append($productcontainer);
                 /*
                
