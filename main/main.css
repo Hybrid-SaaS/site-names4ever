@@ -250,9 +250,19 @@ u {
   min-height: 199px !important;
   height: 255px !important;
   margin-right: 10px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px;
   float: left;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #D5D5CE;
+  vertical-align: top;
+  width: 182px;
+  min-height: 238px !important;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #5d5d5d;
 }
 .maincontent #columns .main-column-right .-hs-container .product:hover,
 .maincontent #columns .main-column-right .container .product:hover {
@@ -285,6 +295,7 @@ u {
 .maincontent #columns .main-column-right .container .product a {
   font-weight: bold;
   font-size: 10px;
+  text-decoration: none;
 }
 .maincontent #columns .main-column-right .-hs-container .product a:visited,
 .maincontent #columns .main-column-right .container .product a:visited {
