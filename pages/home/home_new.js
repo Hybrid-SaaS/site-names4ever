@@ -79,6 +79,7 @@ $(function () {
 
     // Populaire producten Home
     $.getJSON('/data/product/POPULAIRHOME/related-products').done(function (data) {
+        var $populair = $('#populair');
         var title = '';
         switch (WebPage.Data.language) {
             case 'nl':
