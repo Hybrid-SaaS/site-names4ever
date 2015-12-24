@@ -99,55 +99,31 @@ $(function () {
 
         if (data.related && data.related["Populair"]) {
             console.log(data.related["Populair"]);
-            var $related = $('<div class="related-container"></div>');
-            var handler = function (products, title) {
-                if (typeof products != 'undefined') {
-                    var $populair = $('<div class="related ' + title + '"><div class="imageFrame"><div class="label">' + title + '</div><div class="images"></div></div></div>');
+            
+            for (var x = 0; x < data.related["Populair"].length; x++) {
+                var product = data.related["Populair"][x];
+                var $img = $('<img src="/image/product/guid/' + encodeURIComponent(product.guid) + '?width=175&height=175" />');
 
-                    var $container = $populair.find('.images');
+                $img.attr({ 'title': product.productcode + '\n' + product.description });
+                $populair.data('url', product.url);
 
-                    for (var x = 0; x < products.length; x++) {
-                        var product = products[x];
-                        var $img = $('<img src="/image/product/guid/' + encodeURIComponent(product.guid) + '?width=135&height=94" />');
-                        $img.attr({ 'title': product.productcode + '\n' + product.description });
-                        $img.data('url', product.url);
-                        $container.append($img);
-                    }
+                $populair.append($img);
 
-                    $container.find('img').on('click', function (event) {
-                        var $this = $(event.target);
-                        if ($this.closest('.related.open').length) {
-                            location.href = $this.data('url');
-                        }
-                    });
+                $populair.append($('<div class="title"></div>').text(product.description));
 
-                    $related.append($populair);
+                if (WebPage.Data.country == 'gb') {
+                    $populair.append($('<div class="price"></div>').text(' £ ' + product.price.toFixed(2).replace('.', ',')));
+                } else {
+                    $populair.append($('<div class="price"></div>').text(' € ' + product.price.toFixed(2).replace('.', ',')));
                 }
-            };
+                $populair.attr({ 'title': product.productcode + '\n' + product.description });
 
+                $populair.click(function () {
+                    location.href = $populair.data('url');
+                });
 
-            var product = data.related["Populair"][0];
-            var $img = $('<img src="/image/product/guid/' + encodeURIComponent(product.guid) + '?width=175&height=175" />');
-           
-            $img.attr({ 'title': product.productcode + '\n' + product.description });
-            $populair.data('url', product.url);
-
-            $populair.append($img);
-
-            $populair.append($('<div class="title"></div>').text(product.description));
-
-            if (WebPage.Data.country == 'gb') {
-                $populair.append($('<div class="price"></div>').text(' £ ' + product.price.toFixed(2).replace('.', ',')));
-            } else {                
-                $populair.append($('<div class="price"></div>').text(' € ' + product.price.toFixed(2).replace('.', ',')));
+                $populair.fadeIn(750);
             }
-            $populair.attr({ 'title': product.productcode + '\n' + product.description });
-
-            $populair.click(function () {
-                location.href = $populair.data('url');
-            });
-
-            $populair.fadeIn(750);
             
         }
     });
