@@ -128,7 +128,7 @@ $(function () {
                     location.href = $populair.data('url');
                 });
                 */
-                $populair.fadeIn(750);
+                $populair.fadeIn(0);
             }
             
         }
