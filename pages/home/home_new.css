@@ -26,6 +26,9 @@
   border-bottom: solid 2px #63248f;
   color: black;
 }
+.names4ever .columnx2 {
+  float: left;
+}
 #deal {
   display: none;
   width: 220px;
