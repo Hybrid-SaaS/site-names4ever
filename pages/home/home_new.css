@@ -38,9 +38,16 @@
 }
 .names4ever .columnx2 .link {
   display: block;
+  text-decoration: none;
+  color: #2E2EE9;
 }
 .names4ever .columnx2 .link::before {
   content: "> ";
+}
+.names4ever .columnx2 .description {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  color: black;
 }
 #deal {
   display: none;
