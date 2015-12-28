@@ -72,6 +72,9 @@
   line-height: 22px;
   font-size: 14px;
 }
+.product .details::after {
+  font-weight: normal;
+}
 .language-es .product .details::after {
   content: 'Ver';
 }
