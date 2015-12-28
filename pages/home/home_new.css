@@ -36,6 +36,12 @@
 .names4ever .columnx2 img {
   width: 100%;
 }
+.names4ever .columnx2 .link {
+  display: block;
+}
+.names4ever .columnx2 .link::before {
+  content: "> ";
+}
 #deal {
   display: none;
   width: 220px;
