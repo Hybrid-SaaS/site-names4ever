@@ -74,4 +74,7 @@
   line-height: 26px;
   font-size: 14px;
 }
+.language-es .product .details::after {
+  content: 'Ver';
+}
 /*# sourceMappingURL=products-home.css.map */
