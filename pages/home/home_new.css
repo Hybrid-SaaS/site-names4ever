@@ -18,6 +18,14 @@
 .center-content {
   margin-top: 20px;
 }
+.names4ever .head {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  padding-bottom: 1px;
+  border-bottom: solid 2px #63248f;
+  color: black;
+}
 #deal {
   display: none;
   width: 220px;
