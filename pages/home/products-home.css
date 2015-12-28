@@ -75,4 +75,7 @@
 .language-es .product .details::after {
   content: 'Ver';
 }
+.language-nl .product .details::after {
+  content: 'Bekijk';
+}
 /*# sourceMappingURL=products-home.css.map */
