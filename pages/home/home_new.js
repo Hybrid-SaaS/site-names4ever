@@ -28,7 +28,24 @@ $(function () {
     // Deal of the week
     $.getJSON('/data/product/DEALOFTHEDAY/related-products').done(function (data) {
         var $deal = $('#deal');
-        $('#deal').append('<div class="head">Deal of the Week</div>');
+        switch (WebPage.Data.language) {
+            case 'nl': {
+                $('#deal').append('<div class="head">Speciale aanbieding</div>');
+                break;
+            }
+            case 'de': {
+                $('#deal').append('<div class="head">Spezial-Angebot</div>');
+                break;
+            }
+            case 'en': {
+                $('#deal').append('<div class="head">Special offer</div>');
+                break;
+            }
+            case 'en': {
+                $('#deal').append('<div class="head">Oferta especial</div>');
+                break;
+            }
+        }
 
         if (data.related && data.related["Deal"]) {
             var product = data.related["Deal"][0];
