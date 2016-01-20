@@ -1016,10 +1016,12 @@ u {
   margin-top: 0;
   margin-left: 0;
 }
-.productconfig-options.productconfig-ring1 .description {
+.productconfig-options.productconfig-ring1 .description,
+.productconfig-options.productconfig-ring2 .description {
   width: 95%;
 }
-.productconfig-options.productconfig-ring1 img {
+.productconfig-options.productconfig-ring1 img,
+.productconfig-options.productconfig-ring2 img {
   display: none;
 }
 .productconfig-options.productconfig-ketting .config-product {
