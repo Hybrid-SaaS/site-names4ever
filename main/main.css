@@ -1018,7 +1018,7 @@ u {
 }
 .productconfig-options.productconfig-ring1 .description,
 .productconfig-options.productconfig-ring2 .description {
-  width: 95%;
+  width: 95% !important;
 }
 .productconfig-options.productconfig-ring1 img,
 .productconfig-options.productconfig-ring2 img {
