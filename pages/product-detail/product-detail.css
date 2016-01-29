@@ -19,6 +19,9 @@
   min-height: 280px;
   box-shadow: 0 0 4px rgba(122, 122, 122, 0.5);
 }
+.product-image .imageFrame .smallimage {
+  width: 135px;
+}
 .product-options {
   width: 399px;
   display: inline-block;
