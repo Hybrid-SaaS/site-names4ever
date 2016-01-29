@@ -280,6 +280,7 @@ u {
 .maincontent #columns .main-column-right .-hs-container .product .imageFrame img,
 .maincontent #columns .main-column-right .container .product .imageFrame img {
   max-height: 140px;
+  width: 185px;
 }
 .maincontent #columns .main-column-right .-hs-container .product .number,
 .maincontent #columns .main-column-right .container .product .number {
