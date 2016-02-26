@@ -295,6 +295,7 @@
 }
 .imageFrame img {
   border-radius: 0.75em;
+  width: 100%;
 }
 .header-custom {
   color: gray;
