@@ -22,7 +22,7 @@ $(function () {
 
     
     // Top category
-    $('#topcategory').fadeIn(200);
+    $('#topcategory').remove();
 
 
     // Deal of the week
