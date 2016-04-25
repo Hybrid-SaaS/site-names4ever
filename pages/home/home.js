@@ -32,8 +32,12 @@ $(function () {
     runner();
     setInterval(runner, 10000);
 
-    //
-    $('#topcat').append($('#topcategory'));
+    // append topcategory anders hide
+    if ($('#topcat')) {
+        $('#topcat').append($('#topcategory'));
+    } else {
+        $('#topcategory').hide();
+    }
 
     $.getJSON('/data/product/DEALOFTHEDAY/related-products').done(function (data) {
         var $deal = $('#deal');
