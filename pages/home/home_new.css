@@ -142,7 +142,7 @@
 .usps-content .usp::before {
   display: inline-block;
   content: "";
-  background-image: url(http://names4ever.azurewebsites.net/images/vinkje.svg);
+  background-image: url(//names4ever.azurewebsites.net/images/vinkje.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 22px;
