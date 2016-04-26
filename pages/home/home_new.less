@@ -146,6 +146,17 @@
 
     }
 
+.language-de {
+    .usps-content .usp {
+        margin-left: 35px;
+    }
+}
+.language-nl {
+    .usps-content .usp {
+        margin-left: 33px; 
+    }
+}
+
 .usps-content {
         margin-top: 20px;
         width: 830px;
@@ -157,34 +168,16 @@
         .usp {
             color: white;            
             float: left;
-            position: relative;
-            padding-left: 20px;
+            position: relative;            
             height: 35px;
-            display: inline-block;
-            line-height: 35px;
-
-             &.nr1, &.nr4 {
-                width: 145px;
-             }
-             
-             &.nr2 {
-                width: 135px;
-             }
-             
-             &.nr3 {
-                width: 155px;
-             }          
-                          
-             &.nr5 {
-                width: 160px;
-                padding-left:0;
-             }
+            display: inline;
+            line-height: 35px;            
          }
         
         .usp::before {
             display: inline-block;
             content: "";
-            background-image: url(http://names4ever.azurewebsites.net/images/vinkje.svg);
+            background-image: url(//names4ever.azurewebsites.net/images/vinkje.svg);
             background-size: contain;
             background-repeat: no-repeat;
             width: 22px;
