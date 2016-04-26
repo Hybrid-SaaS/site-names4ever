@@ -143,23 +143,8 @@
   left: -5px;
 }
 #topcategory {
-  font-size: 15px;
-  display: block;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 190px;
-  background-color: white;
-  height: 375px;
-  padding: 10px;
-  opacity: 0.8;
-  border: solid 1px #888888;
-  border-radius: 5px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  vertical-align: top;
+  display: none;
+  left: -9999px;
 }
 #topcategory a {
   color: black;
