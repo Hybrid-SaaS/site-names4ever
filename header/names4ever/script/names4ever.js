@@ -92,7 +92,7 @@ var WebPage;
         References.$body = $(document.body);
 
         //set language
-        Data.language = References.$html.attr('lang');
+        Data.language = References.$html.data('language');
         Data.country = References.$html.data('country');
 
         //set login guid
