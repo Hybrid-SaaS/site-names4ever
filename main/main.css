@@ -1050,23 +1050,13 @@ u {
 .productconfig-options.productconfig-ketting .config-product.nr0 img {
   display: none;
 }
-.productconfig-options.productconfig-ketting .config-product.nr1 .description,
-.productconfig-options.productconfig-ketting .config-product.nr2 .description {
+.productconfig-options.productconfig-ketting .config-product .description {
   text-overflow: clip;
   -ms-text-overflow: clip;
   -o-text-overflow: clip;
   overflow: hidden;
   white-space: nowrap;
   width: 18%;
-}
-.productconfig-options.productconfig-ketting .config-product.nr3 .description,
-.productconfig-options.productconfig-ketting .config-product.nr4 .description {
-  text-overflow: clip;
-  -ms-text-overflow: clip;
-  -o-text-overflow: clip;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 31%;
 }
 .productconfig-options {
   opacity: 0;
