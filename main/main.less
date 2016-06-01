@@ -1336,8 +1336,12 @@ u{
       img {
             display:none;
         }
+      .description{
+          width: 50%;
+      }
     }
-    .config-product {
+    .config-product.nr1, 
+    .config-product.nr2 {
         .description {
             text-overflow: clip;
             -ms-text-overflow: clip;
@@ -1347,6 +1351,18 @@ u{
             width: 18%;
         }
     }
+    .config-product, 
+    .config-product{
+        .description {
+            text-overflow: clip;
+            -ms-text-overflow: clip;
+            -o-text-overflow: clip;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 31%;
+        }
+    }
+
 }
 
 .productconfig-options {
