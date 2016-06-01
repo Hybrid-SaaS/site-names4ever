@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'Decima';
-	src:url('fonts/Decima.eot');
-	src:url('fonts/Decima.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Decima.woff') format('woff'),
-		url('fonts/Decima.ttf') format('truetype'),
-		url('fonts/Decima.svg#Decima') format('svg');
+	src:url('https://names4ever.azurewebsites.net/Responsive/css/fonts/Decima.eot');
+	src:url('https://names4ever.azurewebsites.net/Responsive/css/fonts/Decima.eot?#iefix') format('embedded-opentype'),
+		url('https://names4ever.azurewebsites.net/Responsive/css/fonts/Decima.woff') format('woff'),
+		url('https://names4ever.azurewebsites.net/Responsive/css/fonts/Decima.ttf') format('truetype'),
+		url('https://names4ever.azurewebsites.net/Responsive/css/fonts/Decima.svg#Decima') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
