@@ -1068,9 +1068,8 @@ u {
   -ms-text-overflow: clip;
   -o-text-overflow: clip;
   overflow: hidden;
-  white-space: nowrap;
   width: 31%;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 .productconfig-options {
   opacity: 0;
