@@ -1070,6 +1070,7 @@ u {
   overflow: hidden;
   white-space: nowrap;
   width: 31%;
+  white-space: pre;
 }
 .productconfig-options {
   opacity: 0;
