@@ -388,6 +388,7 @@ $(function () {
             p.before($paymentmethods.filter('.paypal').show());
             p.before($paymentmethods.filter('.visa').show());
             p.before($paymentmethods.filter('.americanexpress').show());
+            p.before($paymentmethods.filter('.manual').hide());
             if (WebPage.Data.country == 'de') {
                 p.before($paymentmethods.filter('.manual').show());
             }
