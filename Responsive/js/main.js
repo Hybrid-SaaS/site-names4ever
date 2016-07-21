@@ -424,6 +424,7 @@ jQuery(document).ready(function () {
 			var h = jQuery(window).height();
 			h -= jQuery('body .wrapper > footer').outerHeight(true);
 			h -= jQuery('#MainNav').outerHeight(true);
+			h -= 200;
 
 			jQuery('#Content, #Content > .container, .four-o-four').css('min-height', h);
 		})();
