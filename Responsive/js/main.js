@@ -425,7 +425,7 @@ jQuery(document).ready(function () {
 			h -= jQuery('body .wrapper > footer').outerHeight(true);
 			h -= jQuery('#MainNav').outerHeight(true);
 
-			jQuery('#Content, .four-o-four').css('min-height', h);
+			jQuery('#Content, #Content > .container, .four-o-four').css('min-height', h);
 		})();
 
 		/* MOBILE MENUS: */
