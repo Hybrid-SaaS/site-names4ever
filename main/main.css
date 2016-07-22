@@ -969,6 +969,7 @@ u {
 .extension.type-productconfig .drop-down {
   border-left: solid 1px #7D7D7F;
   height: 23px;
+  overflow: hidden;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -985,6 +986,13 @@ u {
   -o-transition: all .25s ease;
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
+}
+.extension.type-productconfig .drop-down::before {
+  content: "\25be";
+  font-style: normal;
+  zoom: 3;
+  top: -6px;
+  position: relative;
 }
 .productconfig-options.productconfig-lettertype .config-product .description {
   padding-left: 10px;
