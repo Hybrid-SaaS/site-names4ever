@@ -89,12 +89,12 @@
     });
 
     // ACCORDION FUNCTIE
-    function close_accordion_section() {
-        jQuery('.list-group .list-group-title').removeClass('active');
-        jQuery('.list-group .list-group-content').slideUp(300).removeClass('open');
+    var close_accordion_section = function() {
+        jQuery('.list-group-root .list-group-item').removeClass('active');
+        jQuery('.list-group-root .list-group').slideUp(300).removeClass('open');
     }
 
-    jQuery('.list-group-title').click(function (e) {
+    jQuery('.list-group-item').click(function (e) {
         // Grab current anchor value
         var currentAttrValue = jQuery(this).attr('href');
 
@@ -106,7 +106,7 @@
             // Add active class to section title
             jQuery(this).addClass('active');
             // Open up the hidden content panel
-            jQuery('.list-group ' + currentAttrValue).slideDown(300).addClass('open');
+            jQuery('.list-group-root ' + currentAttrValue).slideDown(300).addClass('open');
         }
 
         e.preventDefault();
