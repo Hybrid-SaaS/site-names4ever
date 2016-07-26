@@ -71,13 +71,7 @@ $(document).ready(function () {
         gaverder = false;
     };
     $(".drop-down-clickme").on("click touchend", Click);
-    $(".drop-down-clickme").hoverIntent({
-        over: Flyout,
-        out: Flyin,
-        timeout: 100,
-        interval: 100
-
-    });
+    
     // Vouwt de openstaande dicht als ergens in de body geklikt wordt
     $("html").bind("click touchend", function () {
         event.stopPropagation();
