@@ -1,8 +1,9 @@
-﻿jQuery.noConflict();
-$(document).ready(function () {
+﻿$(document).ready(function () {
     var gaverder = true;
 
-    var Click = function () {        
+    var Click = function () {
+        var name = $(this).html().replace(/&amp;/g, '&');
+        dataLayer.push({ 'event': 'Top_Menu_Level1', 'eventAction': 'click', 'eventLabel': name });
         var gaverder = true;
         event.stopPropagation();
         event.preventDefault();
@@ -71,7 +72,13 @@ $(document).ready(function () {
         gaverder = false;
     };
     $(".drop-down-clickme").on("click touchend", Click);
-    
+    $(".drop-down-clickme").hoverIntent({
+        over: Flyout,
+        out: Flyin,
+        timeout: 100,
+        interval: 100
+
+    });
     // Vouwt de openstaande dicht als ergens in de body geklikt wordt
     $("html").bind("click touchend", function () {
         event.stopPropagation();
