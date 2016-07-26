@@ -1,5 +1,4 @@
-﻿$.noConflict();
-$(document).ready(function () {
+﻿$(document).ready(function () {
     var gaverder = true;
 
     var Click = function () {
