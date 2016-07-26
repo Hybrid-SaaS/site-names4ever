@@ -89,7 +89,7 @@
     });
 
     // ACCORDION FUNCTIE
-    jQuery('.list-group-item', 'accordion-toggle').click(function (e) {
+    jQuery('.list-group-item, accordion-toggle').click(function (e) {
         // Grab current anchor value
         var currentAttrValue = jQuery(this).attr('href');
 
