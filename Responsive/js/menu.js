@@ -11,8 +11,8 @@
         // Een ander menu item staat open
         if (gaverder) {
             // Vouwt openstaande dicht
-            $('.navbar-collapse.active > ul').slideUp(0);
-            $('.navbar-collapse.active').removeClass('active');
+            $('.drop-down-clickme.active > ul').slideUp(0);
+            $('.drop-down-clickme.active').removeClass('active');
 
             // Vouwt deze open
             if ($(this).children('ul').is(':visible') == false) {
@@ -21,7 +21,7 @@
             }
         } else {
             $(this).children('ul').slideToggle(0);
-            $('.navbar-collapse.active').removeClass('active');
+            $('.drop-down-clickme.active').removeClass('active');
         }
 
         //Verander gaverder variabele waardoor volgende functie niet uitgevoerd wordt
@@ -37,8 +37,8 @@
         // Huidige hover staat nog niet open
         if (gaverder) {
             // Vouwt openstaande dicht
-            $('.navbar-collapse.active > ul').slideUp(0);
-            $('.navbar-collapse.active').removeClass('active');
+            $('.drop-down-clickme.active > ul').slideUp(0);
+            $('.drop-down-clickme.active').removeClass('active');
 
             // Vouwt deze open
             if ($(this).children('ul').is(':visible') == false) {
@@ -51,20 +51,20 @@
         gaverder = false;
     };
 
-    $(".navbar-collapse").on("click touchend", Click);
-    $(".navbar-collapse").hover(Hover);
+    $(".drop-down-clickme").on("click touchend", Click);
+    $(".drop-down-clickme").hover(Hover);
 
     // Vouwt de openstaande dicht als ergens in de body geklikt wordt
     $("html").bind("click touchend", function () {
         if (gaverder) {
-            $('.navbar-collapse.active > ul').slideUp(0);
-            $('.navbar-collapse.active').removeClass('active');
+            $('.drop-down-clickme.active > ul').slideUp(0);
+            $('.drop-down-clickme.active').removeClass('active');
         }
         gaverder = true;
     });
 
     // Behalve als er in het openstaande menu geklikt wordt
-    $('.navbar-collapse > ul').bind("click touchend", function () {
+    $('.drop-down-clickme > ul').bind("click touchend", function () {
         event.stopPropagation();
     });
 });
