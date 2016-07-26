@@ -90,8 +90,8 @@
 
     // ACCORDION FUNCTIE
     var close_accordion_section = function() {
-        jQuery(this).removeClass('active');
-        jQuery(this).sibbling('.list-group').slideUp(300).removeClass('open');
+        jQuery(this).hasClass('.list-group-item').removeClass('active');
+        jQuery(this).sibbeling('.list-group').slideUp(300).removeClass('open');
     }
 
     jQuery('.list-group-item').click(function (e) {
