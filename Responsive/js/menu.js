@@ -89,38 +89,21 @@
     });
 
     // ACCORDION FUNCTIE
-    jQuery('.list-group-item').click(function (e) {
+    jQuery('.list-group-item', 'accordion-toggle').click(function (e) {
         // Grab current anchor value
         var currentAttrValue = jQuery(this).attr('href');
 
         if (jQuery(e.target).is('.active')) {
             jQuery(this).removeClass('active');
-            jQuery('.list-group-root ' + currentAttrValue).slideUp(300).removeClass('open');            
+            jQuery(currentAttrValue).slideUp(300).removeClass('open');            
         } else {
             // Add active class to section title
             jQuery(this).addClass('active');
             // Open up the hidden content panel
-            jQuery('.list-group-root ' + currentAttrValue).slideDown(300).addClass('open');            
+            jQuery(currentAttrValue).slideDown(300).addClass('open');            
         }
 
         e.preventDefault();
     });
-    // ACCORDION FUNCTIE
-    jQuery('.accordion-toggle').click(function (e) {
-        // Grab current anchor value
-        var currentAttrValue = jQuery(this).attr('href');
-
-        if (jQuery(e.target).is('.active')) {
-            jQuery(this).removeClass('active');            
-            jQuery(currentAttrValue).slideUp(300).removeClass('open');
-        } else {
-            // Add active class to section title
-            jQuery(this).addClass('active');
-            // Open up the hidden content panel
-            jQuery(currentAttrValue).slideDown(300).addClass('open');
-            console.log(currentAttrValue);
-        }
-
-        e.preventDefault();
-    });
+    
 });
