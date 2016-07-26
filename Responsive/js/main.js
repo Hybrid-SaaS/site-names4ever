@@ -809,7 +809,7 @@ jQuery(document).ready(function () {
 
 
 	/* tooltips init */
-	jQuery("[data-toggle='tooltip']").tooltip();
+	//jQuery("[data-toggle='tooltip']").tooltip();
 
 	/* google map */
 
