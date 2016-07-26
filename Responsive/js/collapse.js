@@ -35,7 +35,7 @@
     Collapse.TRANSITION_DURATION = 350
 
     Collapse.DEFAULTS = {
-        toggle: false;
+        toggle: false
     }
 
     Collapse.prototype.dimension = function () {
