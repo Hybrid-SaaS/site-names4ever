@@ -1,33 +1,33 @@
 ﻿$.noConflict();
-jQuery(document).ready(function () {
+$(document).ready(function () {
     var gaverder = true;
 
     var Click = function () {
-        var name = jQuery(this).html().replace(/&amp;/g, '&');
+        var name = $(this).html().replace(/&amp;/g, '&');
         dataLayer.push({ 'event': 'Top_Menu_Level1', 'eventAction': 'click', 'eventLabel': name });
         var gaverder = true;
         event.stopPropagation();
         event.preventDefault();
-        if (jQuery(this).hasClass('active')) {
+        if ($(this).hasClass('active')) {
             gaverder = false;
         }
         // Een ander menu item staat open
         if (gaverder) {
             // Vouwt openstaande dicht       
-            jQuery('.drop-down-clickme.active > ul').hide();
-            jQuery('.drop-down-clickme.active').removeClass('active');
+            $('.drop-down-clickme.active > ul').hide();
+            $('.drop-down-clickme.active').removeClass('active');
             // Vouwt deze open
-            if (jQuery(this).children('ul').is(':visible') == false) {
-                jQuery(this).addClass('active');
-                jQuery(this).children('ul').fadeIn("fast").show();
+            if ($(this).children('ul').is(':visible') == false) {
+                $(this).addClass('active');
+                $(this).children('ul').fadeIn("fast").show();
             }
 
         }
             // Hetzelfde menuitem dicht behalve bij hover
         else {
-            if (!jQuery(this).hasClass('disabled')) {
-                jQuery(this).children('ul').hide();
-                jQuery('.drop-down-clickme.active').removeClass('active');
+            if (!$(this).hasClass('disabled')) {
+                $(this).children('ul').hide();
+                $('.drop-down-clickme.active').removeClass('active');
             }
         }
         //Verander gaverder variabele waardoor volgende functie niet uitgevoerd wordt
@@ -36,24 +36,24 @@ jQuery(document).ready(function () {
 
     var Flyout = function () {
         var gaverder = true;
-        if (jQuery(this).hasClass('active')) {
+        if ($(this).hasClass('active')) {
             gaverder = false;
         }
         // Huidige hover staat nog niet open
         if (gaverder) {
             // Vouwt openstaande dicht       
-            jQuery('.drop-down-clickme.active > ul').hide();
-            jQuery('.drop-down-clickme.active').removeClass('active');
-            jQuery('.drop-down-clickme').removeClass('disabled');
+            $('.drop-down-clickme.active > ul').hide();
+            $('.drop-down-clickme.active').removeClass('active');
+            $('.drop-down-clickme').removeClass('disabled');
 
             // Vouwt deze open
-            if (jQuery(this).children('ul').is(':visible') == false) {
-                jQuery(this).addClass('active');
-                jQuery(this).children('ul').fadeIn("fast").show();
-                jQuery(this).addClass('disabled');
+            if ($(this).children('ul').is(':visible') == false) {
+                $(this).addClass('active');
+                $(this).children('ul').fadeIn("fast").show();
+                $(this).addClass('disabled');
                 setTimeout(function () {
                     // enable click after 1 second
-                    jQuery('.drop-down-clickme.disabled').removeClass('disabled');
+                    $('.drop-down-clickme.disabled').removeClass('disabled');
                 }, 3000);
             }
         }
@@ -66,14 +66,14 @@ jQuery(document).ready(function () {
         // Huidige hover staat nog niet open
         if (gaverder) {
             // Vouwt openstaande dicht       
-            jQuery('.drop-down-clickme.active > ul').hide();
-            jQuery('.drop-down-clickme.active').removeClass('active');
+            $('.drop-down-clickme.active > ul').hide();
+            $('.drop-down-clickme.active').removeClass('active');
         }
         //Verander gaverder variabele waardoor volgende functie niet uitgevoerd wordt
         gaverder = false;
     };
-    jQuery(".drop-down-clickme").on("click touchend", Click);
-    jQuery(".drop-down-clickme").hoverIntent({
+    $(".drop-down-clickme").on("click touchend", Click);
+    $(".drop-down-clickme").hoverIntent({
         over: Flyout,
         out: Flyin,
         timeout: 100,
@@ -81,16 +81,16 @@ jQuery(document).ready(function () {
 
     });
     // Vouwt de openstaande dicht als ergens in de body geklikt wordt
-    jQuery("html").bind("click touchend", function () {
+    $("html").bind("click touchend", function () {
         event.stopPropagation();
         if (gaverder) {
-            jQuery('.drop-down-clickme.active > ul').slideUp(0);
-            jQuery('.drop-down-clickme.active').removeClass('active');
+            $('.drop-down-clickme.active > ul').slideUp(0);
+            $('.drop-down-clickme.active').removeClass('active');
         }
         gaverder = true;
     });
     // Behalve als er in het openstaande menu geklikt wordt
-    jQuery('.drop-down-clickme > ul').bind("click touchend", function () {
+    $('.drop-down-clickme > ul').bind("click touchend", function () {
         event.stopPropagation();
     });
 });
