@@ -95,12 +95,14 @@
 
         if (jQuery(e.target).is('.active')) {
             jQuery(this).removeClass('active');
-            jQuery('.list-group-root ','.panel-default' + currentAttrValue).slideUp(300).removeClass('open');
+            jQuery('.list-group-root ' + currentAttrValue).slideUp(300).removeClass('open');
+            jQuery('.accordion-toggle' + currentAttrValue).slideUp(300).removeClass('open');
         } else {
             // Add active class to section title
             jQuery(this).addClass('active');
             // Open up the hidden content panel
-            jQuery('.list-group-root ', '.panel-default' + currentAttrValue).slideDown(300).addClass('open');
+            jQuery('.list-group-root ' + currentAttrValue).slideDown(300).addClass('open');
+            jQuery('.accordion-toggle' + currentAttrValue).slideDown(300).addClass('open');
         }
 
         e.preventDefault();
