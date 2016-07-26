@@ -116,6 +116,7 @@
         } else {
             // Add active class to section title
             jQuery(this).addClass('active');
+            console.log(currentAttrValue);
             // Open up the hidden content panel
             jQuery('.panel-group' + currentAttrValue).slideDown(300).addClass('open');
         }
