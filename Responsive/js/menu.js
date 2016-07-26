@@ -89,17 +89,15 @@
     });
 
     // ACCORDION FUNCTIE
-    var close_accordion_section = function() {
-        jQuery(this).hasClass('.list-group-item').removeClass('active');
-        jQuery(this).siblings('.list-group').slideUp(300).removeClass('open');
-    }
+    
 
     jQuery('.list-group-item').click(function (e) {
         // Grab current anchor value
         var currentAttrValue = jQuery(this).attr('href');
 
         if (jQuery(e.target).is('.active')) {
-            close_accordion_section();
+            jQuery(e.target).hasClass('.list-group-item').removeClass('active');
+            jQuery(e.target).siblings('.list-group').slideUp(300).removeClass('open');
         } else {
             // Add active class to section title
             jQuery(this).addClass('active');
