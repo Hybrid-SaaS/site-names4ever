@@ -87,4 +87,28 @@
     jQuery('.drop-down-clickme > ul').bind("click touchend", function () {
         event.stopPropagation();
     });
+
+    // ACCORDION FUNCTIE
+    function close_accordion_section() {
+        jQuery('.list-group .list-group-title').removeClass('active');
+        jQuery('.list-group .list-group-content').slideUp(300).removeClass('open');
+    }
+
+    jQuery('.list-group-title').click(function (e) {
+        // Grab current anchor value
+        var currentAttrValue = jQuery(this).attr('href');
+
+        if (jQuery(e.target).is('.active')) {
+            close_accordion_section();
+        } else {
+            close_accordion_section();
+
+            // Add active class to section title
+            jQuery(this).addClass('active');
+            // Open up the hidden content panel
+            jQuery('.list-group ' + currentAttrValue).slideDown(300).addClass('open');
+        }
+
+        e.preventDefault();
+    });
 });
