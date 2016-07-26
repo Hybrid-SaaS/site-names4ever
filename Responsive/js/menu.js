@@ -48,10 +48,7 @@
                 $(this).addClass('active');
                 $(this).children('ul').fadeIn("fast").show();
                 $(this).addClass('disabled');
-                setTimeout(function () {
-                    // enable click after 1 second
-                    $('.drop-down-clickme.disabled').removeClass('disabled');
-                }, 3000);
+                
             }
         }
         //Verander gaverder variabele waardoor volgende functie niet uitgevoerd wordt
@@ -70,7 +67,13 @@
         gaverder = false;
     };
     $(".drop-down-clickme").on("click touchend", Click);
-    
+    $(".drop-down-clickme").hoverIntent({
+        over: Flyout,
+        out: Flyin,
+        timeout: 100,
+        interval: 100
+
+    });
     // Vouwt de openstaande dicht als ergens in de body geklikt wordt
     $("html").bind("click touchend", function () {
         event.stopPropagation();
