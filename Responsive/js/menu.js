@@ -1,9 +1,9 @@
-﻿jQuery.noConflict();
-$(document).ready(function () {
-    
+﻿$(document).ready(function () {
     var gaverder = true;
 
-    var Click = function () {        
+    var Click = function () {
+        var name = $(this).html().replace(/&amp;/g, '&');
+        dataLayer.push({ 'event': 'Top_Menu_Level1', 'eventAction': 'click', 'eventLabel': name });
         var gaverder = true;
         event.stopPropagation();
         event.preventDefault();
