@@ -112,13 +112,13 @@
 
         if (jQuery(e.target).is('.active')) {
             jQuery(this).removeClass('active');            
-            jQuery('.panel-group' + currentAttrValue).slideUp(300).removeClass('open');
+            jQuery(currentAttrValue).slideUp(300).removeClass('open');
         } else {
             // Add active class to section title
             jQuery(this).addClass('active');
-            console.log(currentAttrValue);
             // Open up the hidden content panel
-            jQuery('.panel-group' + currentAttrValue).slideDown(300).addClass('open');
+            jQuery(currentAttrValue).slideDown(300).addClass('open');
+            console.log(currentAttrValue);
         }
 
         e.preventDefault();
