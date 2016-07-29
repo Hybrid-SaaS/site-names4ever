@@ -87,23 +87,4 @@
     jQuery('.drop-down-clickme > ul').bind("click touchend", function () {
         event.stopPropagation();
     });
-
-    // ACCORDION FUNCTIE
-    jQuery('.list-group-item, .accordion-toggle').click(function (e) {
-        // Grab current anchor value
-        var currentAttrValue = jQuery(this).attr('href');
-
-        if (jQuery(e.target).is('.active')) {
-            jQuery(this).removeClass('active');
-            jQuery(currentAttrValue).slideUp(300).removeClass('open');            
-        } else {
-            // Add active class to section title
-            jQuery(this).addClass('active');
-            // Open up the hidden content panel
-            jQuery(currentAttrValue).slideDown(300).addClass('open');            
-        }
-
-        e.preventDefault();
-    });
-    
 });
