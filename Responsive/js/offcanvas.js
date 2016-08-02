@@ -3,7 +3,7 @@
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
-(function ($) {
+$(document).ready(function () {
     var pushy = $('.page-content-menu'), //menu css class
 		body = $('body'),
 		container = $('.page-content-right'), //container css class
@@ -185,4 +185,4 @@
             }
         });
     }
-}(jQuery));
+});
