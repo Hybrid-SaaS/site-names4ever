@@ -3629,12 +3629,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-toggle {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  padding: 9px 10px;
-  margin-top: 28px;
-  margin-bottom: 28px;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
