@@ -4,15 +4,15 @@
 * by Christopher Yee */
 
 (function ($) {
-    var pushy = $('.pushy'), //menu css class
+    var pushy = $('.page-content-menu'), //menu css class
 		body = $('body'),
-		container = $('#container'), //container css class
+		container = $('.page-content-right'), //container css class
 		push = $('.push'), //css class to add pushy capability
 		pushyLeft = 'pushy-left', //css class for left menu position
 		pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
 		pushyOpenRight = 'pushy-open-right', //css class when menu is open (right position)
 		siteOverlay = $('.site-overlay'), //site overlay
-		menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
+		menuBtn = $('.navbar-toggle'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
 		submenuClass = '.pushy-submenu',
