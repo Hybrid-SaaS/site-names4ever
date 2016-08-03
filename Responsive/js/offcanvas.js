@@ -135,8 +135,7 @@ $(document).ready(function () {
 
         //toggle menu
         menuBtn.on('click', function () {
-            togglePushy();
-            $('.accordion-toggle').removeClass('active');
+            togglePushy();         
         });
         //close menu when clicking site overlay
         siteOverlay.on('click', function () {
