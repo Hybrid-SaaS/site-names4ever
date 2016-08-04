@@ -445,7 +445,7 @@ jQuery(document).ready(function () {
 
 			shoppingCart.$button.click(function (e) {
 				e.stopPropagation();
-				jQuery('body').removeClass('active-nav').toggleClass('active-sidebar');
+				jQuery('body').removeClass('active-nav').toggleClass('active-mini-cart');
 				if (shoppingCart.$unclick == null) {
 					shoppingCart.$wrap.prepend('<div class="unclick"></div>');
 					shoppingCart.$unclick = jQuery('.unclick', shoppingCart.$wrap);
@@ -453,7 +453,7 @@ jQuery(document).ready(function () {
 					shoppingCart.$panel.height(height + jQuery('#MainNav').height());
 					shoppingCart.$unclick.height(height + 90);
 					shoppingCart.$unclick.click(function () {
-						$body.removeClass('active-sidebar active-nav');
+						$body.removeClass('active-mini-cart active-nav');
 					});
 				}
 			});
@@ -469,7 +469,7 @@ jQuery(document).ready(function () {
 
 			navMenu.$button.click(function (e) {
 				e.stopPropagation();
-				jQuery('body').removeClass('active-sidebar').toggleClass('active-nav');
+				jQuery('body').removeClass('active-mini-cart').toggleClass('active-nav');
 				if (navMenu.$unclick == null) {
 					navMenu.$wrap.prepend('<div class="unclick"></div>');
 					navMenu.$unclick = jQuery('.unclick', navMenu.$wrap);
@@ -477,7 +477,7 @@ jQuery(document).ready(function () {
 					navMenu.$panel.height(height);
 					navMenu.$unclick.height(height);
 					navMenu.$unclick.click(function () {
-						$body.removeClass('active-sidebar active-nav');
+						$body.removeClass('active-mini-cart active-nav');
 					});
 				}
 			});
