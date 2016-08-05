@@ -352,15 +352,16 @@ $(function () {
         var p = $paymentmethods.first();
         if (WebPage.Data.isloggedin) {
             p.before($paymentmethods.filter('.account').show());
-            p.before($paymentmethods.filter('.ideal').show());
+            /*p.before($paymentmethods.filter('.ideal').show());
             p.before($paymentmethods.filter('.mastercard').show());
             p.before($paymentmethods.filter('.paypal').show());
             p.before($paymentmethods.filter('.visa').show());
             p.before($paymentmethods.filter('.americanexpress').show());
             p.before($paymentmethods.filter('.manual').hide());
             if (WebPage.Data.country == 'de') {
-                p.before($paymentmethods.filter('.manual').show());
+            p.before($paymentmethods.filter('.manual').show());
             }
+            */
         } else {
             switch (WebPage.Data.country) {
                 case 'nl':
