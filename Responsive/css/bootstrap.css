@@ -1270,8 +1270,8 @@ pre code {
 .col-xs-4-5, .col-sm-4-5, .col-md-4-5, .col-lg-4-5 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 } 
 .col-xs-1-5 {
   width: 20%;
