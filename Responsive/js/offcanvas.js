@@ -137,12 +137,12 @@ $(document).ready(function () {
         toggleSubmenu();
 
         //toggle menu
-        menuBtn.on('click', function () {
-            pushy.toggleClass('klantenservice');
+        menuBtn.on('click', function () {           
             togglePushy();
         });
         //toggle menu
         optionBtn.on('click', function () {
+            pushy.toggleClass('klantenservice');
             togglePushy();
         });
         //close menu when clicking site overlay
