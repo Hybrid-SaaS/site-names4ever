@@ -138,7 +138,8 @@ $(document).ready(function () {
 
         //toggle menu
         menuBtn.on('click', function () {
-            togglePushy();         
+            pushy.toggleClass('klantenservice');
+            togglePushy();
         });
         //toggle menu
         optionBtn.on('click', function () {
@@ -147,6 +148,7 @@ $(document).ready(function () {
         //close menu when clicking site overlay
         siteOverlay.on('click', function () {
             togglePushy();
+            pushy.removeClass('klantenservice');
         });
     } else {
         //add css class to body
