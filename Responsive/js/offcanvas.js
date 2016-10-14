@@ -13,6 +13,7 @@ $(document).ready(function () {
 		pushyOpenRight = 'mobile-nav-open', //css class when menu is open (right position) // gebruiken wij
 		siteOverlay = $('.site-overlay'), //site overlay
 		menuBtn = $('.navbar-toggle'), //css classes to toggle the menu
+        optionBtn = $('.navbar-toggle-second'),
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
 		submenuClass = '.pushy-submenu',
@@ -22,9 +23,11 @@ $(document).ready(function () {
 
     function togglePushy() {
         //add class to body based on menu position
-        if (pushy.hasClass(pushyLeft)) {
-            body.toggleClass(pushyOpenLeft);
-        } else {
+        if (pushy.hasClass('klantenservice')) {
+            body.toggleClass(pushyOpenRight);
+            body.toggleClass('second');
+        }
+        else {
             body.toggleClass(pushyOpenRight);
         }
     }
@@ -136,6 +139,10 @@ $(document).ready(function () {
         //toggle menu
         menuBtn.on('click', function () {
             togglePushy();         
+        });
+        //toggle menu
+        optionBtn.on('click', function () {
+            togglePushy();
         });
         //close menu when clicking site overlay
         siteOverlay.on('click', function () {
