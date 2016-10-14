@@ -24,7 +24,8 @@ $(document).ready(function () {
     function togglePushy() {
         //add class to body based on menu position
         if (pushy.hasClass('klantenservice')) {
-            body.toggleClass(pushyOpenRight+"-second");           
+            body.toggleClass(pushyOpenRight);
+            body.toggleClass('second');
         }
         else {
             body.toggleClass(pushyOpenRight);
