@@ -131,7 +131,7 @@ $(document).ready(function () {
 
     if (cssTransforms3d) {
         //make menu visible
-        pushy.css({ 'visibility': 'visible' });
+        //pushy.css({ 'visibility': 'visible' });
 
         //toggle submenu
         toggleSubmenu();
@@ -162,7 +162,7 @@ $(document).ready(function () {
         }
 
         //make menu visible
-        pushy.css({ 'visibility': 'visible' });
+        //pushy.css({ 'visibility': 'visible' });
         //fixes IE scrollbar issue
         container.css({ "overflow-x": "hidden" });
 
