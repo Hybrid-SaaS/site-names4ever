@@ -260,19 +260,3 @@ html[xmlns] .flexslider .slides {
 /* ====================================================================================================================
  * RESPONSIVE
  * ====================================================================================================================*/
-@media screen and (max-width: 991px) {
-  .flex-control-nav {
-	 	 display:none !important;
-  }
-  .flex-direction-nav li {
-	  	padding:0 !important;
-  }
-  .flex-direction-nav .flex-prev{
-		opacity: 1;
-		left: 10px;
-  }
-  .flex-direction-nav .flex-next {
-		opacity: 1;
-		right: 10px;
-  }
-}
