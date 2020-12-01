@@ -14,4 +14,7 @@ $Excel.Quit();
 
 #kopieeer bestanden naar Git FOLDER P:\-00- site-names4ever
 
-git all -A
+git add -A
+git commit -m "Prijslijst update"
+git push
+
